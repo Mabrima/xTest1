@@ -9,5 +9,7 @@ public class TrashClass {
 
         // hej hej lisa
 
+        // hej hej monica hej på dig monica
+
     }
 }
