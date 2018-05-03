@@ -4,5 +4,8 @@ public class TrashClass {
         // I can edit
 
         //viktoria skriver
+
+        //Lisa skriver
+
     }
 }
