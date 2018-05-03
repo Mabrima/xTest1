@@ -11,5 +11,7 @@ public class TrashClass {
 
         // hej hej monica hej på dig monica
 
+        //PLEASE PLEASE WOOOOORRRRKKKK
+
     }
 }
