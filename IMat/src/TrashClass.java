@@ -16,6 +16,8 @@ public class TrashClass {
 //Alice testar kommentar: Hej hej hallå
 
         //Alice testar, hälsar och hoppas att detta syns för alla
+
+        //Hej Alice det ser ut att funka bra, himla kul hörru! 
         
     }
 }
