@@ -28,7 +28,7 @@ public class CustomList {
         this.items = items;
     }
 
-
+    //TODO plus minus through the similar to the cart I guess (probably in the controller)
 
 
 }

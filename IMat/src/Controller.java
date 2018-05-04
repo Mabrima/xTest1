@@ -9,9 +9,17 @@ import se.chalmers.cse.dat216.project.*;
 
 public class Controller {
     @FXML
-    private Button testButton;
-    private TextField testText;
-
+    private Button toStartButton;
+    @FXML
+    private Button toCheckoutButton;
+    @FXML
+    private Button toHelpButton;
+    @FXML
+    private Button toHistoryButton;
+    @FXML
+    private Button toCustomListsButton;
+    @FXML
+    private Button toFavoritesButton;
 
     //För att demonstrera hur dataHandlern kommer fungera
     public void test(){
@@ -27,10 +35,10 @@ public class Controller {
     public void initialize(){
 
 
-        testButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        toCheckoutButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-
+                //checkoutScreen.toFront();
             }
         });
     }
