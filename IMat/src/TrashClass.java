@@ -13,5 +13,6 @@ public class TrashClass {
 
         //PLEASE PLEASE WOOOOORRRRKKKK
 
+//Alice testar kommentar: Hej hej hallå
     }
 }
