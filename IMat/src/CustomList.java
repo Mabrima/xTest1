@@ -7,9 +7,7 @@ public class CustomList {
     List<ShoppingItem> items;
     Date date;
 
-    public CustomList(Date date, List<ShoppingItem> items){
-        this.date = date;
-        this.items = items;
+    public CustomList(){
     }
 
     public Date getDate() {

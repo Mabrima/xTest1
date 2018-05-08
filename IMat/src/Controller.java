@@ -5,10 +5,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import se.chalmers.cse.dat216.project.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStreamWriter;
+import java.io.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -18,6 +18,7 @@ public class Controller {
     IMatDataHandler dataHandler;
     List<CustomList> customLists;
     Date date;
+    private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @FXML
     private Button toStartButton;
@@ -52,6 +53,7 @@ public class Controller {
     public void initialize(){
 
         dataHandler = IMatDataHandler.getInstance();
+        loadCustomlists();
 
         //might have to make toStartButton 1-x
         toStartButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
@@ -105,7 +107,7 @@ public class Controller {
                 }
                 else{
                     String searchText = searchField.getAccessibleText();
-                    List<Product> productList = dataHandler.findProducts(searchText); //Would have loved to add some leniency here
+                    List<Product> productList = dataHandler.findProducts(searchText);
                     //handle productList
                 }
             }
@@ -113,31 +115,97 @@ public class Controller {
     }
 
     public void addCartAsCustomList(){
-        customLists.add(new CustomList(date, dataHandler.getShoppingCart().getItems()));
+        CustomList list = new CustomList();
+        list.setDate(date);
+        list.setItems(dataHandler.getShoppingCart().getItems());
+        customLists.add(list);
     }
 
+    private void saveCustomLists() {
+        System.out.println("saveOrders()");
+        Iterator var1 = this.customLists.iterator();
 
+        while(var1.hasNext()) {
+            CustomList customList = (CustomList) var1.next();
+            String filename = this.customListsFile();
 
-
-    private void saveProducts() {
-        try {
-            FileOutputStream fos = new FileOutputStream(this.customListsFile());
-            OutputStreamWriter osw = new OutputStreamWriter(fos, "ISO-8859-1");
-            System.out.println("saveCustomLists()");
-            Iterator var3 = this.customLists.iterator();
-
-            while(var3.hasNext()) {
-                Product p = (Product)var3.next();
+            try {
+                FileOutputStream exc = new FileOutputStream(filename);
+                OutputStreamWriter osw = new OutputStreamWriter(exc, "ISO-8859-1");
                 String line = "";
-                line = p.getProductId() + ";" + p.getCategory() + ";" + p.getName() + ";" + p.getPrice() + ";" + p.getUnit() + ";" + p.getImageName() + ";" + "end\n";
+                line = "" + customListDateFormat.format(customList.getDate()) + "\n";
                 osw.write(line);
-            }
+                List items = customList.getItems();
+                Iterator var8 = items.iterator();
 
-            osw.flush();
-            osw.close();
-        } catch (IOException var6) {
-            var6.printStackTrace();
+                while(var8.hasNext()) {
+                    ShoppingItem item = (ShoppingItem)var8.next();
+                    line = "" + item.getProduct().getProductId() + ";" + item.getAmount() + "\n";
+                    osw.write(line);
+                }
+
+                osw.flush();
+                osw.close();
+            } catch (IOException var10) {
+                var10.printStackTrace();
+            }
         }
 
     }
+
+    private void loadCustomlists() {
+        File orderDir = new File(this.customListsFile());
+        if(orderDir.isDirectory()) {
+            File[] files = orderDir.listFiles();
+
+            for(int i = 0; i < files.length; ++i) {
+                File thisFile = files[i];
+                if(!thisFile.isHidden() && thisFile.getName().endsWith(".txt")) {
+                    this.loadCustomlist(thisFile);
+                }
+            }
+        }
+
+    }
+
+    private void loadCustomlist(File f) {
+        try {
+            BufferedReader exc = new BufferedReader(new InputStreamReader(new FileInputStream(f), "ISO-8859-1"));
+            CustomList customList = new CustomList();
+            ArrayList items = new ArrayList();
+            String line;
+            if((line = exc.readLine()) != null) {
+                this.customLists.add(customList);
+            }
+
+            if((line = exc.readLine()) != null) {
+                Date tokens;
+                try {
+                    tokens = customListDateFormat.parse(line);
+                } catch (Exception var11) {
+                    tokens = new Date();
+                }
+
+                customList.setDate(tokens);
+            }
+
+            while((line = exc.readLine()) != null) {
+                String[] tokens1 = line.split(";");
+                if(tokens1.length == 2) {
+                    Product p = dataHandler.getProduct(Integer.parseInt(tokens1[0]));
+                    double amount = Double.parseDouble(tokens1[1]);
+                    ShoppingItem sci = new ShoppingItem(p, amount);
+                    items.add(sci);
+                }
+            }
+
+            customList.setItems(items);
+            exc.close();
+        } catch (IOException var12) {
+            var12.printStackTrace();
+        }
+
+    }
+
+
 }
