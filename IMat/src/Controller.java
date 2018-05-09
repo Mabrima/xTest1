@@ -21,7 +21,11 @@ public class Controller {
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @FXML
+<<<<<<< HEAD
     private Button homePageButton;
+=======
+    private Button CHANGE;
+>>>>>>> 23b83de79616fcf668f59205e1812b76e9e2f4a7
     @FXML
     private Button toCheckoutButton;
     @FXML
