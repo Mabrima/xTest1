@@ -7,11 +7,10 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField layoutX="737.0" layoutY="202.0" prefHeight="27.0" prefWidth="246.0" />
-      <TextField layoutX="737.0" layoutY="244.0" prefHeight="27.0" prefWidth="246.0" />
+      <TextField layoutX="737.0" layoutY="244.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" />
       <TextField layoutX="737.0" layoutY="284.0" prefHeight="27.0" prefWidth="246.0" />
       <Label layoutX="689.0" layoutY="207.0" text="Bank" AnchorPane.rightAnchor="446.5" />
       <Label layoutX="616.0" layoutY="249.0" text="Kontoinnehavare" AnchorPane.rightAnchor="446.0" />
@@ -30,7 +29,7 @@
       <Label layoutX="143.0" layoutY="151.0" text="Leveransinformation" />
       <Label layoutX="736.0" layoutY="160.0" text="Bankuppgifter" />
       <Button layoutX="999.0" layoutY="9.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
-      <Button layoutX="848.0" layoutY="9.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
+      <Button fx:id="continueShoppingButton" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
       <Button layoutX="715.0" layoutY="9.0" mnemonicParsing="false" text="Fortsätt handla" />
       <Button layoutX="735.0" layoutY="405.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="193.0" text="Genomför köp" />
       <Button layoutX="143.0" layoutY="405.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="193.0" text="Tillbaka " />
