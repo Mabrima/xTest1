@@ -1,11 +1,12 @@
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
 
-public class CartProductListing {
+public class CartProductListing extends AnchorPane{
 
     private Controller parentController;
     private Product product;
