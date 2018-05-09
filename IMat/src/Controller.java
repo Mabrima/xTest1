@@ -21,17 +21,17 @@ public class Controller {
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @FXML
-    private Button toStartButton;
+    private Button homePageButton;
     @FXML
     private Button toCheckoutButton;
     @FXML
-    private Button toHelpButton;
+    private Button helpPageButton;
     @FXML
-    private Button toHistoryButton;
+    private Button historyPageButton;
     @FXML
-    private Button toCustomListsButton;
+    private Button myListPageButton;
     @FXML
-    private Button toFavoritesButton;
+    private Button favoritePageButton;
     @FXML
     private TextField searchField;
 
