@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="230.0" layoutY="160.0" text="Välkommen" />
+      <Line endX="1366.0" layoutY="200.0" />
+      <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/imat/images/depositphotos_36307619-stock-illustration-camera-hand-drawn-of-vector.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="1176.0" layoutY="30.0" text="IMAT AB" />
+      <Label layoutX="1174.0" layoutY="56.0" text="Tel: 031- 765 34 67" />
+      <Label layoutX="1173.0" layoutY="81.0" text="Adress: IMAT vägen 1" />
+      <Label layoutX="1222.0" layoutY="103.0" text="Matland 345 23" />
+      <Label layoutX="1221.0" layoutY="125.0" text="Göteborg" />
+      <Label layoutX="1175.0" layoutY="149.0" text="Mejladress: imat@imat.se" />
+      <Button fx:id="homePageButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="Startsida" />
+      <Button fx:id="myListPage" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="239.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="Mina inköpslistor" />
+      <Button fx:id="favoritePageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="278.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="Favoriter" />
+      <Button fx:id="historyPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="317.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="Historik" />
+      <Button fx:id="helpPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="356.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="Hjälp" />
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="174.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/imat/images/starIFylld.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="174.0" layoutY="250.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/imat/images/lista.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="175.0" layoutY="367.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/imat/images/questionmark.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="-1.0" layoutY="395.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" />
+      <Line endX="200.0" endY="200.0" startX="200.0" startY="768.0" />
+   </children>
+</AnchorPane>

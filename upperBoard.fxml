@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="125.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="imatImage" fitHeight="114.0" fitWidth="161.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../Desktop/depositphotos_36307619-stock-illustration-camera-hand-drawn-of-vector.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="149.0" layoutY="79.0" text="Välkommen " />
+      <Text layoutX="414.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="IMAT AB  " wrappingWidth="66.06396484375" AnchorPane.leftAnchor="414.0" />
+      <Text layoutX="413.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tel: 031-768 45 67" wrappingWidth="134.06396484375" />
+      <Text layoutX="413.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress: " wrappingWidth="134.06396484375" />
+   </children>
+</AnchorPane>
