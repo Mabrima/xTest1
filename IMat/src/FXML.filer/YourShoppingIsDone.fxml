@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
@@ -7,17 +12,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label layoutX="39.0" layoutY="62.0" prefHeight="89.0" prefWidth="291.0" text="Ditt köp är genomfört! Ha en trelig dag!" wrapText="true">
+      <Label fx:id="genomförtLabel" layoutX="39.0" layoutY="62.0" prefHeight="89.0" prefWidth="291.0" text="Ditt köp är genomfört! Ha en trelig dag!" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="155.0" layoutY="177.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Okej!" />
-      <ImageView fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <Button fx:id="genomförtOkejButton" layoutX="155.0" layoutY="177.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Okej!" />
+      <ImageView fx:id="genomförtKryssImage" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Scenebilder till projekt/kryss.png" />
+            <Image url="@../../images/kryss.png" />
          </image>
       </ImageView>
    </children>
