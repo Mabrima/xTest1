@@ -21,11 +21,11 @@ public class Controller {
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @FXML
-<<<<<<< HEAD
     private Button homePageButton;
+<<<<<<< HEAD
+
 =======
-    private Button CHANGE;
->>>>>>> 23b83de79616fcf668f59205e1812b76e9e2f4a7
+>>>>>>> f997d0924fa998e00a10e5efdb8833986c89ed99
     @FXML
     private Button toCheckoutButton;
     @FXML
@@ -60,28 +60,28 @@ public class Controller {
         loadCustomlists();
 
         //might have to make toStartButton 1-x
-        toStartButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        homePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //startScreen.toFront();
             }
         });
 
-        toHistoryButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //historyScreen.toFront();
             }
         });
 
-        toCustomListsButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //customListsScreen.toFront();
             }
         });
 
-        toFavoritesButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        favoritePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //favoritesScreen.toFront();
@@ -95,7 +95,7 @@ public class Controller {
             }
         });
 
-        toHelpButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        helpPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //helpScreen.toFront();
