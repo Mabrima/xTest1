@@ -22,10 +22,6 @@ public class Controller {
 
     @FXML
     private Button homePageButton;
-<<<<<<< HEAD
-
-=======
->>>>>>> f997d0924fa998e00a10e5efdb8833986c89ed99
     @FXML
     private Button toCheckoutButton;
     @FXML
@@ -58,6 +54,7 @@ public class Controller {
 
         dataHandler = IMatDataHandler.getInstance();
         loadCustomlists();
+
 
         //might have to make toStartButton 1-x
         homePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
@@ -210,6 +207,28 @@ public class Controller {
         }
 
     }
+
+    private void removeCustomerInfo(){
+        Customer customer = dataHandler.getCustomer();
+        CreditCard creditCard = dataHandler.getCreditCard();
+        creditCard.setCardNumber("");
+        creditCard.setCardType("");
+        creditCard.setHoldersName("");
+        creditCard.setValidMonth(4);
+        creditCard.setValidYear(18);
+        creditCard.setVerificationCode(0);
+        customer.setAddress("");
+        customer.setEmail("");
+        customer.setFirstName("");
+        customer.setLastName("");
+        customer.setMobilePhoneNumber("");
+        customer.setPhoneNumber("");
+        customer.setPostAddress("");
+        customer.setPostCode("");
+        //todo Uppdate the screen
+    }
+
+
 
 
 }
