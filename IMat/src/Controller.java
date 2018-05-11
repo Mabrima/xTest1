@@ -1,39 +1,40 @@
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.io.*;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 
-public class Controller {
+public class Controller implements Initializable{
     IMatDataHandler dataHandler;
     List<CustomList> customLists;
     Date date;
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     @FXML
-    private Button homePageButton;
+    private Button homePageButton, toCheckoutButton, helpPageButton, historyPageButton, myListPageButton, favoritePageButton;
     @FXML
-    private Button toCheckoutButton;
+    private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton;
     @FXML
-    private Button helpPageButton;
-    @FXML
-    private Button historyPageButton;
-    @FXML
-    private Button myListPageButton;
-    @FXML
-    private Button favoritePageButton;
+    private ImageView areYouSureCrossImage;
     @FXML
     private TextField searchField;
+    @FXML
+    private AnchorPane areYouSureTakeAwaySavedTasksPane;
+    @FXML
+    private Button largeVaresPlussButton;
+
+
 
     private String customListsFile() {
         return System.getProperty("user.home") + File.separatorChar + ".dat215" + File.separatorChar + "imat" + File.separatorChar + "customLists.txt";
@@ -50,7 +51,8 @@ public class Controller {
 
     }
 
-    public void initialize(){
+    @Override
+    public void initialize(URL url, ResourceBundle rb){
 
         dataHandler = IMatDataHandler.getInstance();
         loadCustomlists();
@@ -208,6 +210,7 @@ public class Controller {
 
     }
 
+    @FXML
     private void removeCustomerInfo(){
         Customer customer = dataHandler.getCustomer();
         CreditCard creditCard = dataHandler.getCreditCard();

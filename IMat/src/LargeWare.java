@@ -1,14 +1,21 @@
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 
 import java.io.IOException;
 
-public class LittleFoodLabelPane {
+/**
+ * Created by mabrima27 on 11-May-18.
+ */
+public class LargeWare {
     private Product product;
     private Controller parentController;
+    @FXML
+    private AnchorPane largeWaresPane;
 
-    public LittleFoodLabelPane(Product product, Controller controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML.filer/LittleFoodLabelPane.fxml"));
+    public LargeWare(Product product, Controller controller){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("name.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -22,4 +29,10 @@ public class LittleFoodLabelPane {
         this.parentController = controller;
 
     }
+
+    private void increaseWare(){
+
+    }
+
+
 }
