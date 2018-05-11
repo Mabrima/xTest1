@@ -1,0 +1,37 @@
+.text-normal{
+     -fx-font-size: 13px;
+     -fx-font-family: "Trebuchet MS";
+}
+
+
+
+
+
+
+//Ta inte bort nedan, de kommer från labben, kan vara bra att ha vissa komandon
+//Bra tänkt Alice
+
+.recipe-list-item{
+    -fx-border-width: 1px;
+    -fx-border-color: #999999;
+    -fx-border-radius: 1px;
+    -fx-background-radius: 1px;
+
+}
+
+
+.recipe-list-item:hover {
+-fx-background-color: #FCFCFC;
+}
+
+.recipe-list-item:pressed {
+-fx-background-color: #D0D0D0;
+}
+
+.text-area .content {
+   -fx-background-color: -fx-background;
+}
+
+.text-area  {
+    -fx-background-color: -fx-background;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ScrollBar layoutX="666.0" layoutY="59.0" orientation="VERTICAL" prefHeight="278.0" prefWidth="17.0" />
+      <Label fx:id="varukorgLabel" layoutX="46.0" layoutY="12.0" text="Varukorg">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="varukorgKryssImage" fitHeight="29.0" fitWidth="27.0" layoutX="631.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/kryss.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="VarukorgTaBortImage" layoutX="43.0" layoutY="346.0" mnemonicParsing="false" text="Ta bort varukorg" />
+      <Button fx:id="varukorgFortsättHButton" layoutX="194.0" layoutY="346.0" mnemonicParsing="false" text="Fortsätt handla" />
+      <Button fx:id="varukorgTillBetalningButton" layoutX="556.0" layoutY="346.0" mnemonicParsing="false" text="Till betalning" />
+      <Label fx:id="varukorgTotaltLabel" layoutX="414.0" layoutY="351.0" prefHeight="17.0" prefWidth="130.0" text="Totalt 0 kr" />
+      <Line endX="568.0" layoutX="115.0" layoutY="59.0" startX="-115.0" stroke="#979494" />
+      <Line endX="568.0" layoutX="115.0" layoutY="337.0" startX="-115.0" stroke="#979494" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="littleFoodLabelNoPlusImage" fitHeight="43.0" fitWidth="82.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/product_134.gif" />
+         </image>
+      </ImageView>
+      <Label fx:id="littleFoodLabelNoPlusVaraLabel" layoutX="110.0" layoutY="17.0" prefHeight="17.0" prefWidth="185.0" text="Röda äpplen" />
+      <Label fx:id="littleFoodLabelNoPlusStyckLabel" alignment="CENTER" layoutX="316.0" layoutY="17.0" prefHeight="17.0" prefWidth="52.0" text="10 st" />
+      <Label fx:id="littleFoodLabelNoPlusKronorLabel" layoutX="522.0" layoutY="17.0" prefHeight="17.0" prefWidth="91.0" text="100,00 kr" />
+      <ImageView fx:id="littleFoodLabelNoPlusTrashImage" fitHeight="23.0" fitWidth="18.0" layoutX="645.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/trash.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

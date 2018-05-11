@@ -40,16 +40,6 @@ public class Controller implements Initializable{
         return System.getProperty("user.home") + File.separatorChar + ".dat215" + File.separatorChar + "imat" + File.separatorChar + "customLists.txt";
     }
 
-    //För att demonstrera hur dataHandlern kommer fungera
-    public void test(){
-        IMatDataHandler dataHandler = IMatDataHandler.getInstance();
-        dataHandler.findProducts("type");
-        Customer customer = dataHandler.getCustomer();
-        CreditCard creditCard = dataHandler.getCreditCard();
-
-
-
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb){
@@ -164,14 +154,14 @@ public class Controller implements Initializable{
             for(int i = 0; i < files.length; ++i) {
                 File thisFile = files[i];
                 if(!thisFile.isHidden() && thisFile.getName().endsWith(".txt")) {
-                    this.loadCustomlist(thisFile);
+                    this.loadCustomList(thisFile);
                 }
             }
         }
 
     }
 
-    private void loadCustomlist(File f) {
+    private void loadCustomList(File f) {
         try {
             BufferedReader exc = new BufferedReader(new InputStreamReader(new FileInputStream(f), "ISO-8859-1"));
             CustomList customList = new CustomList();
@@ -230,6 +220,7 @@ public class Controller implements Initializable{
         customer.setPostCode("");
         //todo Uppdate the screen
     }
+
 
 
 
