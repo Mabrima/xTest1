@@ -3,22 +3,44 @@
      -fx-font-family: "Trebuchet MS";
 }
 
+.text-rubriker{
+    -fx-font-size: 18px;
+    -fx-font-family: "St Marie";
+}
+
+.text-buttons{
+    -fx-font-size: 10px;
+    -fx-font-family: "Georgia";
+}
+
+.text-frontpage{
+    -fx-font-size: 18;
+    -fx-font-family: "Georgia";
+}
+
+.text-fontpage-screen{
+    -fx-background-color: #999999;
+    -fx-border-color:
+    -fx-border-radius:
+}
+
+.text-secondScreen{
+       -fx-background-color: //hitta den gröna färgkoden
+
+}
+
+//Alice testar pusha för att se om detta går
 
 
 
-
-
-//Ta inte bort nedan, de kommer från labben, kan vara bra att ha vissa komandon
-//Bra tänkt Alice
+// ____________________________________
 
 .recipe-list-item{
     -fx-border-width: 1px;
     -fx-border-color: #999999;
     -fx-border-radius: 1px;
     -fx-background-radius: 1px;
-
 }
-
 
 .recipe-list-item:hover {
 -fx-background-color: #FCFCFC;
