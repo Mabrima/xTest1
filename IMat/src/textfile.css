@@ -1,59 +1,41 @@
-.text-normal{
-     -fx-font-size: 13px;
-     -fx-font-family: "Trebuchet MS";
+.text-normal-button{
+     -fx-font-size: 16px;
+     -fx-font-family: "Georgia";
 }
 
-.text-rubriker{
-    -fx-font-size: 18px;
-    -fx-font-family: "St Marie";
-}
-
-.text-buttons{
-    -fx-font-size: 10px;
+.text-buttons-green{
+    -fx-font-size: 16px;
     -fx-font-family: "Georgia";
+    -fx-font-color: #F9F3E5; //beige
+    -fx-background-color: #526540; //grön
 }
 
-.text-frontpage{
-    -fx-font-size: 18;
+.text-headers{
+    -fx-font-size: 23px;
     -fx-font-family: "Georgia";
-
+    -fx-font-color: #9B3D3D; //röd
 }
-
 
 .text-frontpage-welcome{
-    -fx-font-size: 72;
+    -fx-font-size: 72px;
     -fx-font-family: "Georgia";
+    -fx-font-color: #9B3D3D; //röd
+}
 
-    }
-
-.text-fontpage-screen{
-    -fx-background-color: #999999;
-    -fx-border-color:
-    -fx-border-radius:
+.text-frontpage-slogan{
+   -fx-font-size: 14px;
+   -fx-font-family: "Georgia";
+   -fx-font-color: #526540;
 }
 
 .background-color-beige{
        -fx-background-color: #F9F3E5;
 }
 
-.text-paymentStepOnePage{
-    -fx-font-size: 20;
+.text-normal{
+    -fx-font-size: 18px;
     -fx-font-family: "Georgia";
-
 }
-
-.text-paymentStepOnePage-normal{
-    -fx-font-size: 18;
-    -fx-font-family: "Georgia";
-
-}
-
-.text-header{
-    -fx-font-size: 23;
-    -fx-font-family: "Georgia";
-
-}
-
 
 
 

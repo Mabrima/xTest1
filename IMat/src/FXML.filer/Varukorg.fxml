@@ -17,20 +17,20 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="varukorgLabel" layoutX="18.0" layoutY="11.0" text="Varukorg">
+      <Label fx:id="varukorgLabel" layoutX="18.0" layoutY="11.0" styleClass="text-header" stylesheets="@../textfile.css" text="Varukorg" textFill="#9b3d3d">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <ImageView fx:id="shoppingCartCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="573.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="shoppingCartCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="565.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/kryss.png" />
          </image>
       </ImageView>
-      <Button fx:id="emptyShoppingCartButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" text="Ta bort varukorg" />
-      <Button fx:id="keepShoppingButton" layoutX="144.0" layoutY="359.0" mnemonicParsing="false" text="Fortsätt handla" />
-      <Button fx:id="toPaymentButton" layoutX="488.0" layoutY="359.0" mnemonicParsing="false" text="Till betalning" />
-      <Label fx:id="shoppingCartTotalLabel" layoutX="270.0" layoutY="363.0" prefHeight="17.0" prefWidth="130.0" text="Totalt 0 kr" />
+      <Button fx:id="emptyShoppingCartButton" layoutX="14.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal" text="Ta bort varukorg" />
+      <Button fx:id="keepShoppingButton" layoutX="144.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal" stylesheets="@../textfile.css" text="Fortsätt handla" />
+      <Button fx:id="toPaymentButton" layoutX="450.0" layoutY="359.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="111.0" styleClass="text-buttons" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+      <Label fx:id="shoppingCartTotalLabel" layoutX="270.0" layoutY="363.0" prefHeight="17.0" prefWidth="130.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Totalt 0 kr" />
       <Line endX="600.0" layoutY="50.0" stroke="#979494" />
       <Line endX="600.0" layoutY="350.0" stroke="#979494" />
       <FlowPane layoutY="55.0" prefHeight="277.0" prefWidth="684.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
