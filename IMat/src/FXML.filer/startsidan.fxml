@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -8,25 +9,46 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #F9F3E5;" styleClass="text-frontpage" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="150.0" fitWidth="150.0" layoutX="25.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/depositphotos_36307619-stock-illustration-camera-hand-drawn-of-vector.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="1137.0" layoutY="30.0" text="IMAT AB" textFill="#526540" />
-      <Label layoutX="1135.0" layoutY="56.0" text="Tel: 031- 765 34 67" textFill="#526540" />
-      <Label layoutX="1134.0" layoutY="81.0" text="Adress: IMAT vägen 1" textFill="#526540" />
-      <Label layoutX="1183.0" layoutY="103.0" text="Matland 345 23" textFill="#526540" />
-      <Label layoutX="1182.0" layoutY="125.0" text="Göteborg" textFill="#526540" />
-      <Label layoutX="1136.0" layoutY="149.0" text="Mejladress: imat@imat.se" textFill="#526540" />
-      <Button fx:id="homePageButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" maxWidth="205.0" mnemonicParsing="false" onMouseDragOver="#f9f0e5" prefHeight="40.0" prefWidth="202.0" style="-fx-background-color: #F9F3E5 #F9F3E5;" text="Startsida" textFill="#9b3d3d" />
-      <Button fx:id="myListPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="239.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" style="-fx-background-color: #F9F3E5 #F9F3E5;" text="Mina inköpslistor" textFill="#526540" />
-      <Button fx:id="favoritePageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="278.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" style="-fx-background-color: #F9F3E5 #F9F3E5;" text="Favoriter" textFill="#9b3d3d" />
-      <Button fx:id="historyPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="317.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" style="-fx-background-color: #F9F3E5 #F9F3E5;" text="Historik" textFill="#526540" />
-      <Button fx:id="helpPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="356.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" style="-fx-background-color: #F9F3E5 #F9F3E5;" text="Hjälp" textFill="#9b3d3d" />
+      <Label layoutX="1137.0" layoutY="30.0" styleClass="text-normal" text="IMAT AB" textFill="#526540" />
+      <Label layoutX="1135.0" layoutY="56.0" styleClass="text-normal" text="Tel: 031- 765 34 67" textFill="#526540" />
+      <Label layoutX="1134.0" layoutY="81.0" styleClass="text-normal" text="Adress: IMAT vägen 1" textFill="#526540" />
+      <Label layoutX="1183.0" layoutY="103.0" styleClass="text-normal" text="Matland 345 23" textFill="#526540" />
+      <Label layoutX="1182.0" layoutY="125.0" styleClass="text-normal" text="Göteborg" textFill="#526540" />
+      <Label layoutX="1136.0" layoutY="149.0" styleClass="text-normal" text="Mejladress: imat@imat.se" textFill="#526540" />
+      <Button fx:id="homePageButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" maxWidth="205.0" mnemonicParsing="false" onMouseDragOver="#f9f0e5" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Startsida" textFill="#9b3d3d">
+         <styleClass>
+            <String fx:value="background-color-beige" />
+            <String fx:value="text-normal-button" />
+         </styleClass></Button>
+      <Button fx:id="myListPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="239.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Mina inköpslistor" textFill="#526540">
+         <styleClass>
+            <String fx:value="background-color-beige" />
+            <String fx:value="text-normal-button" />
+         </styleClass></Button>
+      <Button fx:id="favoritePageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="280.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Favoriter" textFill="#9b3d3d">
+         <styleClass>
+            <String fx:value="background-color-beige" />
+            <String fx:value="text-normal-button" />
+         </styleClass></Button>
+      <Button fx:id="historyPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="320.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Historik" textFill="#526540">
+         <styleClass>
+            <String fx:value="background-color-beige" />
+            <String fx:value="text-normal-button" />
+         </styleClass></Button>
+      <Button fx:id="helpPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="360.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Hjälp" textFill="#9b3d3d">
+         <styleClass>
+            <String fx:value="background-color-beige" />
+            <String fx:value="text-normal-button" />
+         </styleClass></Button>
       <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="174.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/starIFylld.png" />
@@ -42,37 +64,139 @@
             <Image url="@../../images/questionmark.png" />
          </image>
       </ImageView>
-      <Button layoutX="-1.0" layoutY="395.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" style="-fx-background-color: #F9F3E5 #F9F3E5;" />
+      <Button layoutX="-1.0" layoutY="399.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css">
+         <styleClass>
+            <String fx:value="background-color-beige" />
+            <String fx:value="text-normal-button" />
+         </styleClass></Button>
       <Accordion layoutX="-1.0" layoutY="431.0" />
       <AnchorPane layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
          <children>
-             <fx:include source="searchBar.fxml"> </fx:include>
-             <fx:include layoutX="65.0" layoutY="100.0" source="product.fxml" />
-            <Line endX="966.0" layoutX="200.0" layoutY="50.0" startX="-200.0" />
+            <Line endX="966.0" layoutX="200.0" layoutY="40.0" startX="-200.0" />
          </children></AnchorPane>
       <Line endX="1366.0" layoutY="200.0" />
-      <Accordion layoutY="433.0" maxWidth="200.0">
+      <Accordion layoutY="438.0" maxWidth="200.0">
         <panes>
-          <TitledPane animated="false" maxWidth="40.0" minHeight="40.0" prefHeight="120.0" text="untitled 1">
+          <TitledPane animated="false" maxWidth="200.0" minHeight="40.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: #f9f3e5;" styleClass="text-normal" stylesheets="@../textfile.css" text="Kategorier" textFill="#526540">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="394.0" prefWidth="198.0" styleClass="background-color-beige">
+                     <children>
+                        <Accordion layoutX="-1.0">
+                          <panes>
+                            <TitledPane animated="false" prefHeight="154.0" styleClass="text-normal" text="Kött, fisk och chark">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
+                                       <children>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Kött">
+                                             <styleClass>
+                                                <String fx:value="text-normal-button" />
+                                                <String fx:value="background-color-beige" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Fisk">
+                                             <styleClass>
+                                                <String fx:value="text-normal-button" />
+                                                <String fx:value="background-color-beige" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Chark">
+                                             <styleClass>
+                                                <String fx:value="text-normal-button" />
+                                                <String fx:value="background-color-beige" />
+                                             </styleClass>
+                                          </Button>
+                                          <Line endX="200.0" layoutY="40.0" />
+                                          <Line endX="200.0" layoutY="80.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                            </TitledPane>
+                            <TitledPane animated="false" prefHeight="150.0" styleClass="text-normal" text="Skafferi">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="203.0">
+                                       <children>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Bakning">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Konserver">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Pasta, ris m.m.">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Line endX="200.0" layoutY="40.0" />
+                                          <Line endX="200.0" endY="80.0" startY="80.0" />
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </TitledPane>
+                              <TitledPane animated="false" prefHeight="114.0" styleClass="text-normal" text="Frukt &amp; grönt">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="203.0">
+                                       <children>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Frukter">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Grönsaker">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Line endX="200.0" endY="40.0" startY="40.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" prefHeight="110.0" text="Mejeriprodukter">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="203.0">
+                                       <children>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Matlagning">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Button alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Laktosfritt">
+                                             <styleClass>
+                                                <String fx:value="background-color-beige" />
+                                                <String fx:value="text-normal-button" />
+                                             </styleClass>
+                                          </Button>
+                                          <Line endX="200.0" endY="40.0" startY="40.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                          </panes>
+                        </Accordion>
+                     </children></AnchorPane>
             </content>
-          </TitledPane>
-          <TitledPane animated="false" text="untitled 2">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
-          </TitledPane>
-          <TitledPane animated="false" text="untitled 3">
-            <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-            </content>
+               <font>
+                  <Font size="18.0" />
+               </font>
           </TitledPane>
         </panes>
       </Accordion>
       <Line endY="768.0" layoutX="200.0" startY="200.0" />
       <Label layoutX="250.0" layoutY="70.0" styleClass="text-frontpage-welcome" text="Välkommen" textFill="#9b3d3d" />
-      <Label layoutX="250.0" layoutY="151.0" text="Att handla mat online har aldrig varit såhär enkelt!" textFill="#526540" />
+      <Label layoutX="250.0" layoutY="151.0" styleClass="text-frontpage-slogan" text="Att handla mat online har aldrig varit såhär enkelt!" textFill="#526540" />
       <Line endX="200.0" layoutY="240.0" />
       <Line endX="200.0" layoutY="280.0" />
       <Line endX="200.0" layoutY="320.0" />
