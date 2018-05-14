@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pickOnBounds="false" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="230.0" layoutY="27.0" prefHeight="150.0" prefWidth="442.0" text="Välkommen">
          <font>
@@ -73,6 +73,6 @@
           </TitledPane>
         </panes>
       </Accordion>
-      <Line endX="200.0" endY="200.0" startX="200.0" startY="800.0" />
+      <Line endY="800.0" layoutX="200.0" startY="200.0" />
    </children>
 </AnchorPane>
