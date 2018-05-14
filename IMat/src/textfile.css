@@ -1,6 +1,40 @@
+.text-normal-button{
+     -fx-font-size: 16px;
+     -fx-font-family: "Georgia";
+}
+
+.text-buttons-green{
+    -fx-font-size: 16px;
+    -fx-font-family: "Georgia";
+    -fx-font-color: #F9F3E5; //beige
+    -fx-background-color: #526540; //grön
+}
+
+.text-headers{
+    -fx-font-size: 23px;
+    -fx-font-family: "Georgia";
+    -fx-font-color: #9B3D3D; //röd
+}
+
+.text-frontpage-welcome{
+    -fx-font-size: 72px;
+    -fx-font-family: "Georgia";
+    -fx-font-color: #9B3D3D; //röd
+}
+
+.text-frontpage-slogan{
+   -fx-font-size: 14px;
+   -fx-font-family: "Georgia";
+   -fx-font-color: #526540;
+}
+
+.background-color-beige{
+       -fx-background-color: #F9F3E5;
+}
+
 .text-normal{
-     -fx-font-size: 13px;
-     -fx-font-family: "Trebuchet MS";
+    -fx-font-size: 18px;
+    -fx-font-family: "Georgia";
 }
 
 
@@ -8,17 +42,14 @@
 
 
 
-//Ta inte bort nedan, de kommer från labben, kan vara bra att ha vissa komandon
-//Bra tänkt Alice
+// ____________________________________
 
 .recipe-list-item{
     -fx-border-width: 1px;
     -fx-border-color: #999999;
     -fx-border-radius: 1px;
     -fx-background-radius: 1px;
-
 }
-
 
 .recipe-list-item:hover {
 -fx-background-color: #FCFCFC;
