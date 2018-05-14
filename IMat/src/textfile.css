@@ -24,9 +24,8 @@
     -fx-border-radius:
 }
 
-.text-secondScreen{
-       -fx-background-color: //hitta den gröna färgkoden
-
+.background-color-beige{
+       -fx-background-color: #F9F3E5;
 }
 
 
