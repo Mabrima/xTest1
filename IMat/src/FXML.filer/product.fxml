@@ -8,9 +8,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: lightgrey;">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f5efd5;">
          <children>
-            <Label fx:id="itemLabel" layoutX="5.0" layoutY="5.0" prefHeight="17.0" prefWidth="90.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <Label fx:id="itemLabel" layoutX="5.0" layoutY="5.0" prefHeight="17.0" prefWidth="90.0" styleClass="text-normal" stylesheets="@../textfile.css" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
                <font>
                   <Font size="14.0" />
                </font></Label>
@@ -19,7 +19,7 @@
                   <Image url="@../../images/star.png" />
                </image>
             </ImageView>
-            <Label fx:id="priceItem" layoutX="7.0" layoutY="181.0" prefHeight="16.0" prefWidth="51.0" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="7.0" />
+            <Label fx:id="priceItem" layoutX="7.0" layoutY="181.0" prefHeight="16.0" prefWidth="51.0" styleClass="text-normal" stylesheets="@../textfile.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="7.0" />
             <AnchorPane layoutX="124.0" layoutY="181.0" prefHeight="15.0" prefWidth="70.0" style="-fx-background-color: grey;">
                <children>
                   <ImageView fx:id="minusItem" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
