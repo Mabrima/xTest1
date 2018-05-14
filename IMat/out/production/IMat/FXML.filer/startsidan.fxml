@@ -9,7 +9,11 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
+<<<<<<< HEAD
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+=======
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+>>>>>>> 49539cb27b55b53b6567bde1e3e3ea7c497b1787
    <children>
       <Label layoutX="230.0" layoutY="27.0" prefHeight="150.0" prefWidth="442.0" text="Välkommen">
          <font>
@@ -47,6 +51,28 @@
          </image>
       </ImageView>
       <Button layoutX="-1.0" layoutY="395.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" />
+<<<<<<< HEAD
+      <Accordion layoutX="-1.0" layoutY="431.0">
+        <panes>
+          <TitledPane animated="false" text="untitled 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 3">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Line endY="800.0" layoutX="200.0" startY="200.0" />
+=======
       <Accordion layoutX="-1.0" layoutY="431.0" />
       <AnchorPane layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: grey;">
          <children>
@@ -56,5 +82,6 @@
          </children></AnchorPane>
       <Line endY="768.0" layoutX="200.0" startY="200.0" />
       <Line endX="1366.0" layoutY="200.0" />
+>>>>>>> 49539cb27b55b53b6567bde1e3e3ea7c497b1787
    </children>
 </AnchorPane>
