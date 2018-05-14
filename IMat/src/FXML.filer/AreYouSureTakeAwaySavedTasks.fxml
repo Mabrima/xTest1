@@ -12,16 +12,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="areYouSureTakeAwaySavedTasksPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="areYouSureTakeAwaySavedTasksPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="areYouSureLabel" layoutX="39.0" layoutY="60.0" prefHeight="89.0" prefWidth="291.0" text="Är du säker på att du vill ta bort dina sparade uppgifter?" wrapText="true">
+      <Label fx:id="areYouSureLabel" layoutX="39.0" layoutY="60.0" prefHeight="89.0" prefWidth="291.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Är du säker på att du vill ta bort dina sparade uppgifter?" textFill="#526540" wrapText="true">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="areYouSureYesButton" layoutX="39.0" layoutY="182.0" mnemonicParsing="false" onAction="#removeCustomerInfo" prefHeight="27.0" prefWidth="59.0" text="Ja" />
-      <Button fx:id="areYouSureNoButton" layoutX="126.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Nej" />
-      <Button fx:id="areYouSureCancelButton" layoutX="271.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Avbryt" />
+      <Button fx:id="areYouSureYesButton" layoutX="39.0" layoutY="182.0" mnemonicParsing="false" onAction="#removeCustomerInfo" prefHeight="27.0" prefWidth="59.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Ja" />
+      <Button fx:id="areYouSureNoButton" layoutX="126.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Nej" />
+      <Button fx:id="areYouSureCancelButton" layoutX="256.0" layoutY="182.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="74.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Avbryt" />
       <ImageView fx:id="areYouSureCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/kryss.png" />
