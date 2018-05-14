@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
@@ -12,13 +13,28 @@
       <TextField fx:id="bankNameTextField" layoutX="737.0" layoutY="202.0" prefHeight="27.0" prefWidth="246.0" promptText="Handelsbanken" />
       <TextField fx:id="cardNameTextField" layoutX="737.0" layoutY="244.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" />
       <TextField fx:id="cardNumberTextField" layoutX="737.0" layoutY="284.0" prefHeight="27.0" prefWidth="246.0" promptText="1234 5678 9012 3456" />
-      <Label layoutX="689.0" layoutY="207.0" text="Bank" AnchorPane.rightAnchor="446.5" />
-      <Label layoutX="616.0" layoutY="249.0" text="Kontoinnehavare" AnchorPane.rightAnchor="446.0" />
-      <Label layoutX="633.0" layoutY="288.0" text="Kontonummer" AnchorPane.rightAnchor="446.5" />
+      <Label layoutX="689.0" layoutY="207.0" text="Bank" AnchorPane.rightAnchor="446.5">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="616.0" layoutY="249.0" text="Kontoinnehavare" AnchorPane.rightAnchor="446.0">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="633.0" layoutY="288.0" text="Kontonummer" AnchorPane.rightAnchor="446.5">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <TextField fx:id="expireDateTextfield" layoutX="736.0" layoutY="323.0" prefHeight="27.0" prefWidth="33.0" promptText="11" />
-      <Label layoutX="629.0" layoutY="328.0" text="Utgångsdatum" AnchorPane.rightAnchor="446.0" />
-      <TextField fx:id="ccvTextField" layoutX="736.0" layoutY="360.0" prefHeight="27.0" prefWidth="36.0" promptText="123" />
-      <Label layoutX="692.0" layoutY="365.0" text="CCV" AnchorPane.rightAnchor="446.5" />
+      <Label layoutX="629.0" layoutY="328.0" text="Utgångsdatum" AnchorPane.rightAnchor="446.0">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <TextField fx:id="ccvTextField" layoutX="736.0" layoutY="360.0" prefHeight="27.0" prefWidth="40.0" promptText="123" />
+      <Label layoutX="692.0" layoutY="365.0" text="CCV" AnchorPane.rightAnchor="446.5">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <TextFlow layoutX="143.0" layoutY="198.0" prefHeight="186.0" prefWidth="399.0">
          <children>
             <Text fx:id="deliveryInfoTextField" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="395.48779296875" />
@@ -26,12 +42,24 @@
       </TextFlow>
       <TextField fx:id="expireMonthTextField" layoutX="791.0" layoutY="323.0" prefHeight="27.0" prefWidth="33.0" promptText="11" />
       <Label layoutX="778.0" layoutY="327.0" text="/" />
-      <Label layoutX="143.0" layoutY="151.0" text="Leveransinformation" />
-      <Label layoutX="736.0" layoutY="160.0" text="Bankuppgifter" />
+      <Label layoutX="143.0" layoutY="151.0" text="Leveransinformation">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label layoutX="736.0" layoutY="160.0" text="Bankuppgifter">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
       <Button fx:id="deleteMyCardInfoButton" layoutX="999.0" layoutY="9.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
       <Button fx:id="changeMyCardInfoButton" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
       <Button fx:id="continueShoppingButtonPaymentStepTwo" layoutX="715.0" layoutY="9.0" mnemonicParsing="false" text="Fortsätt handla" />
-      <Button fx:id="completePaymentButton" layoutX="735.0" layoutY="405.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="193.0" text="Genomför köp" />
-      <Button fx:id="backToPaymentStepOne" layoutX="143.0" layoutY="405.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="193.0" text="Tillbaka " />
+      <Button fx:id="completePaymentButton" layoutX="735.0" layoutY="396.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="246.0" text="Genomför köp">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
+      <Button fx:id="backToPaymentStepOne" layoutX="143.0" layoutY="405.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="193.0" text="Tillbaka ">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
    </children>
 </AnchorPane>

@@ -6,6 +6,7 @@
 <?import javafx.scene.control.RadioButton?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
@@ -13,30 +14,69 @@
    <children>
       <TextField fx:id="nameInfoTextField" layoutX="254.0" layoutY="198.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" />
       <TextField fx:id="addressTextField" layoutX="254.0" layoutY="240.0" prefHeight="27.0" prefWidth="246.0" promptText="Matvägen 1" />
-      <TextField fx:id="postNumberTextField" layoutX="254.0" layoutY="280.0" prefHeight="27.0" prefWidth="246.0" promptText="XXX XX" />
-      <Label layoutX="124.0" layoutY="203.0" text="För- och efternamn" />
-      <Label layoutX="200.5" layoutY="245.0" text="Adress" />
-      <Label layoutX="165.5" layoutY="284.0" text="Postnummer" />
+      <TextField fx:id="postNumberTextField" layoutX="254.0" layoutY="280.0" prefHeight="27.0" prefWidth="246.0" promptText="123 45" />
+      <Label layoutX="90.0" layoutY="200.0" text="För- och efternamn">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="189.5" layoutY="242.0" text="Adress">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="143.5" layoutY="282.0" text="Postnummer">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <TextField fx:id="phoneNumberTextField" layoutX="253.0" layoutY="319.0" prefHeight="27.0" prefWidth="248.0" promptText="123- 45 67 89" />
-      <Label layoutX="146.5" layoutY="324.0" text="Telefonnummer" />
+      <Label layoutX="118.5" layoutY="321.0" text="Telefonnummer">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
       <TextField fx:id="emailTextField" layoutX="253.0" layoutY="356.0" prefHeight="27.0" prefWidth="248.0" promptText="email@email.com" />
-      <Label layoutX="173.5" layoutY="361.0" text="Mejladress" />
-      <Label layoutX="634.0" layoutY="287.0" text="Datum" />
-      <Label layoutX="653.0" layoutY="327.0" text="Tid" />
-      <Button fx:id="nextToPaymentButton" layoutX="706.0" layoutY="405.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="225.0" text="Nästa" />
+      <Label layoutX="157.5" layoutY="358.0" text="Mejladress">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="600.0" layoutY="219.0" text="Datum">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Label layoutX="627.0" layoutY="267.0" text="Tid">
+         <font>
+            <Font size="17.0" />
+         </font></Label>
+      <Button fx:id="nextToPaymentButton" layoutX="662.0" layoutY="329.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="362.0" text="Nästa">
+         <font>
+            <Font size="20.0" />
+         </font></Button>
       <Button fx:id="deleteMyInfoButton" layoutX="1002.0" layoutY="6.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
       <Button fx:id="changeMyInfoButton" layoutX="851.0" layoutY="6.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
       <Button fx:id="continueShoppingButtonPaymentStepOne" layoutX="718.0" layoutY="6.0" mnemonicParsing="false" text="Fortsätt handla" />
-      <Label layoutX="206.0" layoutY="151.0" text="Namn och personuppgifter" />
-      <Label layoutX="635.0" layoutY="153.0" text="Leveransinformation" />
-      <TextFlow layoutX="636.0" layoutY="194.0" prefHeight="46.0" prefWidth="358.0">
+      <Label layoutX="206.0" layoutY="144.0" text="Namn och personuppgifter">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <Label layoutX="662.0" layoutY="144.0" text="Leveransinformation">
+         <font>
+            <Font size="23.0" />
+         </font></Label>
+      <TextFlow layoutX="662.0" layoutY="172.0" prefHeight="46.0" prefWidth="358.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Din order kommer levereras hem till din dörr.Bla b knvkdsnv sdfnndsd ksflanf aknfanf knsfsndvkn jkse kndj akjge kdsngkdk kds  sdkklsdg dkglsdg." wrappingWidth="357.0657958984375" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Din order kommer levereras hem till din dörr." wrappingWidth="349.11474609375" />
          </children>
       </TextFlow>
-      <DatePicker layoutX="680.0" layoutY="283.0" prefHeight="27.0" prefWidth="350.0" />
-      <RadioButton accessibleRole="COMBO_BOX" layoutX="681.0" layoutY="327.0" mnemonicParsing="false" text="07:00-11:00" />
-      <RadioButton accessibleRole="COMBO_BOX" layoutX="806.0" layoutY="328.0" mnemonicParsing="false" text="11:00-15:00" />
-      <RadioButton accessibleRole="COMBO_BOX" layoutX="928.0" layoutY="328.0" mnemonicParsing="false" text="15:00-19:00" />
+      <DatePicker layoutX="662.0" layoutY="217.0" prefHeight="27.0" prefWidth="362.0" promptText="Välj leverans datum" />
+      <RadioButton accessibleRole="COMBO_BOX" layoutX="663.0" layoutY="267.0" mnemonicParsing="false" text="07:00-11:00">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <RadioButton accessibleRole="COMBO_BOX" layoutX="788.0" layoutY="268.0" mnemonicParsing="false" text="11:00-15:00">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
+      <RadioButton accessibleRole="COMBO_BOX" layoutX="910.0" layoutY="268.0" mnemonicParsing="false" text="15:00-19:00">
+         <font>
+            <Font size="15.0" />
+         </font></RadioButton>
    </children>
 </AnchorPane>
