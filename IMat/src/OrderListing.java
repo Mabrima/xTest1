@@ -12,6 +12,7 @@ public class OrderListing extends AnchorPane {
     private Product product;
 
     //@FXML
+    //TODO what was this supposed to be?
 
     public OrderListing(Product product, Controller controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("name.fxml"));

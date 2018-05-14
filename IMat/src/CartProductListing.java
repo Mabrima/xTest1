@@ -13,6 +13,8 @@ public class CartProductListing extends AnchorPane{
 
     //@FXML
 
+
+    //TODO maybe just use littleFoodLabel here as well, is there any difference?
     public CartProductListing(Product product, Controller controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("name.fxml"));
         fxmlLoader.setRoot(this);
