@@ -16,7 +16,15 @@
 .text-frontpage{
     -fx-font-size: 18;
     -fx-font-family: "Georgia";
+
 }
+
+
+.text-frontpage-welcome{
+    -fx-font-size: 72;
+    -fx-font-family: "Georgia";
+
+    }
 
 .text-fontpage-screen{
     -fx-background-color: #999999;
@@ -28,6 +36,27 @@
        -fx-background-color: //hitta den gröna färgkoden
 
 }
+
+.text-paymentStepOnePage{
+    -fx-font-size: 20;
+    -fx-font-family: "Georgia";
+
+}
+
+.text-paymentStepOnePage-normal{
+    -fx-font-size: 18;
+    -fx-font-family: "Georgia";
+
+}
+
+.text-header{
+    -fx-font-size: 23;
+    -fx-font-family: "Georgia";
+
+}
+
+
+
 
 
 
