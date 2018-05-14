@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -48,13 +49,32 @@
       </ImageView>
       <Button layoutX="-1.0" layoutY="395.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" />
       <Accordion layoutX="-1.0" layoutY="431.0" />
-      <AnchorPane layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: grey;">
+      <AnchorPane layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
          <children>
              <fx:include source="searchBar.fxml" />
-            <Label layoutX="78.0" layoutY="65.0" text="här vill jag klistra in " />
              <fx:include layoutX="50.0" layoutY="100.0" source="product.fxml" />
+            <Line endX="966.0" layoutX="200.0" layoutY="50.0" startX="-200.0" />
          </children></AnchorPane>
-      <Line endY="768.0" layoutX="200.0" startY="200.0" />
       <Line endX="1366.0" layoutY="200.0" />
+      <Accordion layoutY="433.0" maxWidth="200.0">
+        <panes>
+          <TitledPane animated="false" maxWidth="40.0" minHeight="40.0" prefHeight="120.0" text="untitled 1">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+          <TitledPane animated="false" text="untitled 3">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </TitledPane>
+        </panes>
+      </Accordion>
+      <Line endY="768.0" layoutX="200.0" startY="200.0" />
    </children>
 </AnchorPane>
