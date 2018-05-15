@@ -23,10 +23,7 @@ public class Controller implements Initializable{
     Date date;
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
-<<<<<<< HEAD
-    @FXML
-    private Button homePageButton;
-=======
+
 
     //TODO many more button etc connections as well as a rigorous name check
 
@@ -40,7 +37,6 @@ public class Controller implements Initializable{
     private Button homePageButton, checkoutButton, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
     @FXML
     private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton; //areYouSureDeleteSavedInfoPane buttons
->>>>>>> 4cb043512e74522f9309045deae94dee2393de39
     @FXML
     private Button completePaymentButton, backToPaymentStepOne, continueShoppingButtonPaymentStepTwo, changeMyCardInfoButton, deleteMyCardInfoButton; //paymentPaneTwo buttons
     @FXML
