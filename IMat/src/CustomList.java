@@ -5,17 +5,8 @@ import java.util.List;
 
 public class CustomList {
     List<ShoppingItem> items;
-    Date date;
 
     public CustomList(){
-    }
-
-    public Date getDate() {
-        return this.date;
-    }
-
-    public void setDate(Date date) {
-        this.date = date;
     }
 
     public List<ShoppingItem> getItems() {
@@ -26,7 +17,7 @@ public class CustomList {
         this.items = items;
     }
 
-    //TODO plus minus through the similar to the cart I guess (probably in the controller)
+    //TODO plus minus through the similar to the cart I guess (probably in the controller) Don't bother for now
 
 
 }

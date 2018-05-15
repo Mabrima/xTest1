@@ -12,6 +12,7 @@ public class MainProductListing extends AnchorPane{
     private Product product;
 
     //@FXML
+    //TODO somehow make this work with the frontend and update based on favorites category etc
 
     public MainProductListing(Product product, Controller controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("name.fxml"));

@@ -12,6 +12,7 @@ public class OrderListing extends AnchorPane {
     private Product product;
 
     //@FXML
+    //TODO is supposed to be for showing the custom lists. Need to talk about the integration with the drop down boxes.
 
     public OrderListing(Product product, Controller controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("name.fxml"));
