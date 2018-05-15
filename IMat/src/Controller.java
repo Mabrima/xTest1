@@ -22,10 +22,6 @@ public class Controller {
 
     @FXML
     private Button homePageButton;
-<<<<<<< HEAD
-
-=======
->>>>>>> f997d0924fa998e00a10e5efdb8833986c89ed99
     @FXML
     private Button toCheckoutButton;
     @FXML
