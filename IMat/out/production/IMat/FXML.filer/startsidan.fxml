@@ -18,37 +18,17 @@
             <Image url="@../../images/depositphotos_36307619-stock-illustration-camera-hand-drawn-of-vector.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="1137.0" layoutY="30.0" styleClass="text-normal" text="IMAT AB" textFill="#326e16" />
-      <Label layoutX="1135.0" layoutY="56.0" styleClass="text-normal" text="Tel: 031- 765 34 67" textFill="#326e16" />
-      <Label layoutX="1134.0" layoutY="81.0" styleClass="text-normal" text="Adress: IMAT vägen 1" textFill="#326e16" />
-      <Label layoutX="1183.0" layoutY="103.0" styleClass="text-normal" text="Matland 345 23" textFill="#326e16" />
-      <Label layoutX="1182.0" layoutY="125.0" styleClass="text-normal" text="Göteborg" textFill="#326e16" />
-      <Label layoutX="1136.0" layoutY="149.0" styleClass="text-normal" text="Mejladress: imat@imat.se" textFill="#326e16" />
-      <Button fx:id="homePageButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" maxWidth="205.0" mnemonicParsing="false" onMouseDragOver="#f9f0e5" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Startsida" textFill="#326e16">
-         <styleClass>
-            <String fx:value="background-color-beige" />
-            <String fx:value="text-normal-button" />
-         </styleClass></Button>
-      <Button fx:id="myListPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="239.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Mina inköpslistor" textFill="#4d8632">
-         <styleClass>
-            <String fx:value="background-color-beige" />
-            <String fx:value="text-normal-button" />
-         </styleClass></Button>
-      <Button fx:id="favoritePageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="280.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Favoriter" textFill="#326e16">
-         <styleClass>
-            <String fx:value="background-color-beige" />
-            <String fx:value="text-normal-button" />
-         </styleClass></Button>
-      <Button fx:id="historyPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="320.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Historik" textFill="#4d8632">
-         <styleClass>
-            <String fx:value="background-color-beige" />
-            <String fx:value="text-normal-button" />
-         </styleClass></Button>
-      <Button fx:id="helpPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="360.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" stylesheets="@../textfile.css" text="Hjälp" textFill="#326e16">
-         <styleClass>
-            <String fx:value="background-color-beige" />
-            <String fx:value="text-normal-button" />
-         </styleClass></Button>
+      <Label layoutX="1137.0" layoutY="30.0" styleClass="text-frontpage-slogan" text="IMAT AB" textFill="#326e16" />
+      <Label layoutX="1135.0" layoutY="56.0" styleClass="text-frontpage-slogan" text="Tel: 031- 765 34 67" textFill="#326e16" />
+      <Label layoutX="1134.0" layoutY="81.0" styleClass="text-frontpage-slogan" text="Adress: IMAT vägen 1" textFill="#326e16" />
+      <Label layoutX="1183.0" layoutY="103.0" styleClass="text-frontpage-slogan" text="Matland 345 23" textFill="#326e16" />
+      <Label layoutX="1182.0" layoutY="125.0" styleClass="text-frontpage-slogan" text="Göteborg" textFill="#326e16" />
+      <Label layoutX="1136.0" layoutY="149.0" styleClass="text-frontpage-slogan" text="Mejladress: imat@imat.se" textFill="#326e16" />
+      <Button fx:id="homePageButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" maxWidth="205.0" mnemonicParsing="false" onMouseDragOver="#f9f0e5" prefHeight="40.0" prefWidth="202.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Startsida" textFill="#326e16" />
+      <Button fx:id="myListPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="240.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Mina inköpslistor" textFill="#4d8632" />
+      <Button fx:id="favoritePageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="280.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Favoriter" textFill="#326e16" />
+      <Button fx:id="historyPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="320.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Historik" textFill="#4d8632" />
+      <Button fx:id="helpPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="360.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Hjälp" textFill="#326e16" />
       <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="174.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/starIFylld.png" />
@@ -72,60 +52,37 @@
       <Accordion layoutX="-1.0" layoutY="431.0" />
       <AnchorPane layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
          <children>
+            <fx:include source="searchBar.fxml" />
+            <fx:include layoutX="65.0" layoutY="80.0" source="product.fxml" />
             <Line endX="966.0" layoutX="200.0" layoutY="40.0" startX="-200.0" />
          </children></AnchorPane>
       <Line endX="1366.0" layoutY="200.0" />
       <Accordion layoutY="438.0" maxWidth="200.0">
         <panes>
-          <TitledPane animated="false" maxWidth="200.0" minHeight="40.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: #f9f3e5;" styleClass="text-normal" stylesheets="@../textfile.css" text="Kategorier" textFill="#4d8632">
+          <TitledPane animated="false" maxWidth="200.0" minHeight="40.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: #f9f3e5;" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Kategorier" textFill="#4d8632">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="394.0" prefWidth="198.0" styleClass="background-color-beige">
                      <children>
                         <Accordion layoutX="-1.0">
                           <panes>
-                              <TitledPane fx:id="fruitVegetableButton" animated="false" layoutY="4.0" prefHeight="114.0" styleClass="text-normal" text="Frukt &amp; grönt" textFill="#326e16">
+                              <TitledPane fx:id="fruitVegetableButton" animated="false" layoutY="4.0" prefHeight="111.0" styleClass="text-normal" text="Frukt &amp; grönt" textFill="#326e16">
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="203.0">
                                        <children>
-                                          <Button fx:id="fruitButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Frukter" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="vegetableButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Grönsaker" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
+                                          <Button fx:id="fruitButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Frukter" textFill="#4d8632" />
+                                          <Button fx:id="vegetableButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Grönsaker" textFill="#4d8632" />
                                           <Line endX="200.0" endY="40.0" startY="40.0" />
                                        </children>
                                     </AnchorPane>
                                  </content>
                               </TitledPane>
-                            <TitledPane fx:id="meatFishButton" animated="false" layoutY="100.0" prefHeight="154.0" styleClass="text-normal" text="Kött, fisk och chark" textFill="#326e16">
+                            <TitledPane fx:id="meatFishButton" animated="false" layoutY="100.0" prefHeight="150.0" styleClass="text-normal-button" text="Kött, fisk och chark" textFill="#326e16">
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="50.0" prefWidth="200.0">
                                        <children>
-                                          <Button fx:id="meatButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Kött" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="text-normal-button" />
-                                                <String fx:value="background-color-beige" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="fishButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Fisk" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="text-normal-button" />
-                                                <String fx:value="background-color-beige" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="somethingButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Chark" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="text-normal-button" />
-                                                <String fx:value="background-color-beige" />
-                                             </styleClass>
-                                          </Button>
+                                          <Button fx:id="meatButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Kött" textFill="#4d8632" />
+                                          <Button fx:id="fishButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Fisk" textFill="#4d8632" />
+                                          <Button fx:id="somethingButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Chark" textFill="#4d8632" />
                                           <Line endX="200.0" layoutY="40.0" />
                                           <Line endX="200.0" layoutY="80.0" />
                                        </children>
@@ -139,18 +96,8 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="70.0" prefWidth="203.0">
                                        <children>
-                                          <Button fx:id="dairyCookingButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Matlagning" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="lactoseFreeButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Laktosfritt" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
+                                          <Button fx:id="dairyCookingButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="background-color-beige" text="Matlagning" textFill="#4d8632" />
+                                          <Button fx:id="lactoseFreeButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="background-color-beige" text="Laktosfritt" textFill="#4d8632" />
                                           <Line endX="200.0" endY="40.0" startY="40.0" />
                                        </children>
                                     </AnchorPane>
@@ -160,24 +107,9 @@
                               <content>
                                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="115.0" prefWidth="203.0">
                                        <children>
-                                          <Button fx:id="bakingButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Bakning" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="cannedFoodButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Konserver" textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
-                                          <Button fx:id="pastaRiceButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Pasta, ris m.m." textFill="#4d8632">
-                                             <styleClass>
-                                                <String fx:value="background-color-beige" />
-                                                <String fx:value="text-normal-button" />
-                                             </styleClass>
-                                          </Button>
+                                          <Button fx:id="bakingButton" alignment="BASELINE_LEFT" layoutX="-1.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Bakning" textFill="#4d8632" />
+                                          <Button fx:id="cannedFoodButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="40.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Konserver" textFill="#4d8632" />
+                                          <Button fx:id="pastaRiceButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="80.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" text="Pasta, ris m.m." textFill="#4d8632" />
                                           <Line endX="200.0" layoutY="40.0" />
                                           <Line endX="200.0" endY="80.0" startY="80.0" />
                                        </children>
