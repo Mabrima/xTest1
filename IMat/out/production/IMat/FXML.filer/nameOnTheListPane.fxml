@@ -16,9 +16,9 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="namnPåListanAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="683.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="namnPåListanAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="683.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label fx:id="namnPåListanLabel" layoutX="28.0" layoutY="24.0" styleClass="text-headers" text="Namn på lista:" textFill="#9b3d3d">
+      <Label fx:id="namnPåListanLabel" layoutX="28.0" layoutY="24.0" text="Namn på lista:">
          <font>
             <Font size="24.0" />
          </font>
@@ -28,7 +28,7 @@
             <Image url="@../../images/kryss.png" />
          </image>
       </ImageView>
-      <Button fx:id="namnPåListaSparaButton" layoutX="595.0" layoutY="349.0" mnemonicParsing="false" styleClass="text-buttons-green" text="Spara" textFill="#f9f3e5" />
+      <Button fx:id="namnPåListaSparaButton" layoutX="595.0" layoutY="351.0" mnemonicParsing="false" text="Spara" />
       <TextField fx:id="namnPåListanTextfält" layoutX="196.0" layoutY="26.0" prefHeight="27.0" prefWidth="399.0" />
       <AnchorPane fx:id="namnPåListanVarorPane" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0">
          <children>
@@ -50,6 +50,6 @@
       <ScrollBar layoutX="666.0" layoutY="75.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="17.0" />
       <Line endX="566.0" layoutX="116.0" layoutY="75.0" startX="-115.0" stroke="#979494" />
       <Line endX="566.0" layoutX="116.0" layoutY="345.0" startX="-115.0" stroke="#979494" />
-      <Button fx:id="namnPåListaFortsättHandlaButton1" layoutX="14.0" layoutY="349.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="149.0" styleClass="text-normal-button" text="Fortsätt handla " />
+      <Button fx:id="namnPåListaFortsättHandlaButton1" layoutX="14.0" layoutY="351.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="123.0" text="Fortsätt handla " />
    </children>
 </AnchorPane>

@@ -19,6 +19,10 @@ public class TrashClass {
 
         //Hej Alice det ser ut att funka bra, himla kul hörru! 
 
+
+    //Hej viktoria funkar det?
+
         //OMG va kul nu fungerar det!!
     }
+
 }
