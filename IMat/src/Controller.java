@@ -3,6 +3,8 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -22,6 +24,121 @@ public class Controller implements Initializable{
     List<CustomList> customLists;
     Date date;
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+
+    //fxid TILL AreYouSureDeleteSavedInfo
+   @FXML
+    private AnchorPane areYouSureTakeAwaySavedTasksPane;
+    @FXML
+    private ImageView areYouSureCrossImage;
+   @FXML
+    private Label areYouSureLabel;
+   @FXML
+    private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton;
+
+    //fxid TILL myShoppingCart
+    @FXML
+    private AnchorPane minVarukorgAnchorPane;
+    @FXML
+    private Label minVarukorgLabel, minVarukorgTotaltLabel;
+    @FXML
+    private Button minVarukorgFortsattHandlaButton, minVarukorgTaBortButton, minVarukorgSparaListaButton, minVarukorgTillBetalningButton;
+    @FXML
+    private Scrollbar minVarukorgScrollbar;
+
+    //fxid TILL nameOnTheListPane
+    @FXML
+    private AnchorPane namnPaListanAnchorPane, namnPaListanVarorPane;
+    @FXML
+    private TextField namnPaListanTextfalt;
+    @FXML
+    private Label namnPaListanLabel;
+    @FXML
+    private Button namnPaListaFortsattHandlaButton, namnPaListaSparaButton;
+    @FXML
+    private ImageView namnPaListanKryss;
+    @FXML
+    private Scrollbar namnPaListaScrollbar;
+
+    //fxid TILL PaymentStepOne
+    @FXML
+    private AnchorPane paymentStepOneAnchorPane;
+    @FXML
+    private DatePicker chooseDateDatePickerPaymentStepOne;
+    @FXML
+    private Button continueShoppingButtonPaymentStepOne, changeMyInfoButton, deleteMyInfoButton, nextToPaymentButton;
+    @FXML
+    private TextField nameInfoTextField, addressTextField, postNumberTextField, phoneNumberTextField, emailTextField;
+    @FXML
+    private RadioButton time7to11RadioButton, time11to15RadioButton, time15to19RadioButton;
+
+
+    //fxid TILL PaymentStepTwo
+    @FXML
+    private AnchorPane paymentStepTwoAnchorPane;
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button backToPaymentStepOne, completePaymentButton, deleteMyCardInfoButton, changeMyCardInfoButton, continueShoppingButtonPaymentStepTwo;
+    @FXML
+    private TextField bankNameTextField, cardNameTextField, cardNumberTextField, expireDateTextfield, expireMonthTextField, ccvTextField;
+
+
+    //fxid TILL Product
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL SearchBar
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL startsidan
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL toPayment
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL Varukorg
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+
+
+
 
 
     //TODO many more button etc connections as well as a rigorous name check

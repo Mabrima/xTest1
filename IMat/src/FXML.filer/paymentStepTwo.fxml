@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: ffffff;" styleClass="text-normal" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="paymentStepTwoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: ffffff;" styleClass="text-normal" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="bankNameTextField" layoutX="737.0" layoutY="185.0" prefHeight="27.0" prefWidth="246.0" promptText="Handelsbanken" />
       <TextField fx:id="cardNameTextField" layoutX="737.0" layoutY="230.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" />
@@ -50,9 +50,9 @@
          <font>
             <Font size="23.0" />
          </font></Label>
-      <Button fx:id="deleteMyCardInfoButton" layoutX="999.0" layoutY="9.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
-      <Button fx:id="changeMyCardInfoButton" layoutX="848.0" layoutY="9.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
-      <Button fx:id="continueShoppingButtonPaymentStepTwo" layoutX="715.0" layoutY="9.0" mnemonicParsing="false" text="Fortsätt handla" />
+      <Button fx:id="deleteMyCardInfoButton" layoutX="942.0" layoutY="17.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
+      <Button fx:id="changeMyCardInfoButton" layoutX="731.0" layoutY="17.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
+      <Button fx:id="continueShoppingButtonPaymentStepTwo" layoutX="568.0" layoutY="17.0" mnemonicParsing="false" text="Fortsätt handla" />
       <Button fx:id="completePaymentButton" layoutX="735.0" layoutY="410.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="246.0" style="-fx-background-color: #526540;" styleClass="text-buttons-green" text="Genomför köp" textFill="#f9f3e5">
          <font>
             <Font size="20.0" />
