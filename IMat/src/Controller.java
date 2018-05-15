@@ -8,6 +8,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.awt.*;
@@ -384,6 +385,23 @@ public class Controller implements Initializable{
     }
 
     private void addToCart(){
+
+    }
+
+    @FXML private FlowPane cartListFlowPane;
+    ShoppingCart shoppingcart;
+    private void updateCart(){
+        cartListFlowPane.getChildren().clear();
+         List<ShoppingItem> products= shoppingcart.getItems();
+
+
+         for (int i = 0; i<products.size(); i++) //bör snyggas till
+         {
+             cartList product = new cartList(products.get(i), this);
+             cartListFlowPane.getChildren().add(product);
+         }
+
+
 
     }
 
