@@ -13,7 +13,7 @@ public class Main extends Application {
 
         ResourceBundle rb = java.util.ResourceBundle.getBundle("ResourceBundle");
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/startsidan.fxml"), rb);
+        Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/paymentStepOne.fxml"), rb);
 
         Scene scene = new Scene(root, 1400, 800);
 
