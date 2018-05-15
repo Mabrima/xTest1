@@ -6,9 +6,8 @@ import se.chalmers.cse.dat216.project.ShoppingCart;
 
 import java.io.IOException;
 
-/**
- * Created by mabrima27 on 11-May-18.
- */
+//TODO mighr be outdated and ready for deletion
+
 public class LargeWare {
     private Product product;
     private Controller parentController;

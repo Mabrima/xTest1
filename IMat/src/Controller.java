@@ -8,11 +8,13 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.*;
 
+import java.awt.*;
 import java.io.*;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import java.util.List;
 
 
 public class Controller implements Initializable{
@@ -21,19 +23,33 @@ public class Controller implements Initializable{
     Date date;
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
+
+    @FXML //all crossImageViews
+    private ImageView areYouSureCrossImage, homePageImage;
     @FXML
-    private Button homePageButton, toCheckoutButton, helpPageButton, historyPageButton, myListPageButton, favoritePageButton;
+    private AnchorPane areYouSureTakeAwaySavedInfoPane, shoppingPane, cheackoutPane, getPaymentStepOnePane, paymentStepTwoPane; //panes
     @FXML
-    private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton;
+    private AnchorPane myHistoryPane, myListsPane, helpPane, finishedPane, shoppingCartPane; //more panes
     @FXML
-    private ImageView areYouSureCrossImage;
+    private Button homePageButton, checkoutButton, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
+    @FXML
+    private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton; //areYouSureDeleteSavedInfoPane buttons
+    @FXML
+    private Button completePaymentButton, backToPaymentStepOne, continueShoppingButtonPaymentStepTwo, changeMyCardInfoButton, deleteMyCardInfoButton; //paymentPaneTwo buttons
+    @FXML
+    private Button largeWaresPlusButton; //TODO
+    @FXML
+    private Button myWaresToPaymentButton, myWaresSaveListButton, myWaresKeepShoppingButton; //TODO what are these? shoppingCart?
+
+    @FXML
+    private Button shoppingCartEmptyCartButton, shoppingCartSaveListButton, shoppingCartToPaymentButton, shoppingCartKeepShoppingButton; //shoppingCartButtons
+    @FXML
+    private Label shoppingCartTotalLabel;
+
     @FXML
     private TextField searchField;
     @FXML
-    private AnchorPane areYouSureTakeAwaySavedTasksPane;
-    @FXML
-    private Button largeVaresPlussButton;
-
+    private TextField cardNumberTextField, expireDateTextfield, expireMonthTextField, ccvTextField; //paymentPaneTwo textFields
 
 
     private String customListsFile() {
@@ -48,6 +64,7 @@ public class Controller implements Initializable{
         loadCustomlists();
 
 
+
         //might have to make toStartButton 1-x
         homePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -55,39 +72,47 @@ public class Controller implements Initializable{
                 //startScreen.toFront();
             }
         });
+        myWaresKeepShoppingButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                //populatePaneFavorites;
+                //shoppingPane.toFront;
+            }
+        });
 
         historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                //historyScreen.toFront();
+                myHistoryPane.toFront();
             }
         });
 
         myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                //customListsScreen.toFront();
+                myListsPane.toFront();
             }
         });
 
         favoritePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                //TODO bit more complicated, needs populateFavorites and populateAll, sort functions and so on
                 //favoritesScreen.toFront();
             }
         });
 
-        toCheckoutButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        checkoutButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                //checkoutScreen.toFront();
+                cheackoutPane.toFront();
             }
         });
 
         helpPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                //helpScreen.toFront();
+                helpPane.toFront();
             }
         });
 
@@ -101,7 +126,7 @@ public class Controller implements Initializable{
                 else{
                     String searchText = searchField.getAccessibleText();
                     List<Product> productList = dataHandler.findProducts(searchText);
-                    //handle productList
+                    //TODO handle productList
                 }
             }
         });
@@ -221,6 +246,9 @@ public class Controller implements Initializable{
         //todo Uppdate the screen
     }
 
+    private void clearCart(){
+        dataHandler.getShoppingCart().clear();
+    }
 
 
 

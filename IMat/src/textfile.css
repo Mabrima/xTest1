@@ -19,7 +19,7 @@
 .text-frontpage-welcome{
     -fx-font-size: 72px;
     -fx-font-family: "Georgia";
-    -fx-font-color: #9B3D3D; //röd
+    -fx-font-color: #9b3d3d; //röd
 }
 
 .text-frontpage-slogan{
@@ -29,7 +29,7 @@
 }
 
 .background-color-beige{
-       -fx-background-color: #F9F3E5;
+       -fx-background-color:  //#F9F3E5;
 }
 
 .text-normal{
