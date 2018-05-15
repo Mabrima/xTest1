@@ -17,7 +17,7 @@ import java.util.*;
 import java.util.List;
 
 
-public class Controller implements Initializable{
+public class Controller implements Initializable {
     IMatDataHandler dataHandler;
     List<CustomList> customLists;
     Date date;
@@ -74,13 +74,6 @@ public class Controller implements Initializable{
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //TODO populate startScreen, needs integration with frontend
-                //populatePaneFavorites;
-            }
-        });
-
-        myWaresKeepShoppingButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //populatePaneFavorites;
             }
         });
@@ -269,6 +262,8 @@ public class Controller implements Initializable{
     private void addToCart(){
 
     }
+
+    //TODO add/remove favorite as well as a way to tell if said product is a favorite
 
 
 }
