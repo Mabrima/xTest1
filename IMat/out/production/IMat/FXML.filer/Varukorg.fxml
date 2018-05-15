@@ -34,5 +34,7 @@
       <Line endX="600.0" layoutY="50.0" stroke="#979494" />
       <Line endX="600.0" layoutY="350.0" stroke="#979494" />
       <FlowPane layoutY="55.0" prefHeight="277.0" prefWidth="684.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+
    </children>
+   <fx:include source="LittleFoodLabelPane.fxml"></fx:include>
 </AnchorPane>
