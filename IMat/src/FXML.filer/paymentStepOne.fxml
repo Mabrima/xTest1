@@ -15,33 +15,33 @@
       <TextField fx:id="nameInfoTextField" layoutX="254.0" layoutY="198.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" styleClass="text-frontpage-slogan" />
       <TextField fx:id="addressTextField" layoutX="254.0" layoutY="240.0" prefHeight="27.0" prefWidth="246.0" promptText="Matvägen 1" styleClass="text-frontpage-slogan" />
       <TextField fx:id="postNumberTextField" layoutX="254.0" layoutY="280.0" prefHeight="27.0" prefWidth="246.0" promptText="123 45" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" />
-      <Label layoutX="90.0" layoutY="200.0" styleClass="text-normal" text="För- och efternamn" textFill="#526540">
+      <Label layoutX="90.0" layoutY="200.0" styleClass="text-normal" text="För- och efternamn" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
-      <Label layoutX="189.5" layoutY="242.0" styleClass="text-normal" text="Adress" textFill="#526540">
+      <Label layoutX="189.5" layoutY="242.0" styleClass="text-normal" text="Adress" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
-      <Label layoutX="143.5" layoutY="282.0" styleClass="text-normal" text="Postnummer" textFill="#526540">
+      <Label layoutX="143.5" layoutY="282.0" styleClass="text-normal" text="Postnummer" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
       <TextField fx:id="phoneNumberTextField" layoutX="253.0" layoutY="319.0" prefHeight="27.0" prefWidth="248.0" promptText="123- 45 67 89" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" />
-      <Label layoutX="118.5" layoutY="321.0" styleClass="text-normal" text="Telefonnummer" textFill="#526540">
+      <Label layoutX="118.5" layoutY="321.0" styleClass="text-normal" text="Telefonnummer" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
       <TextField fx:id="emailTextField" layoutX="253.0" layoutY="356.0" prefHeight="27.0" prefWidth="248.0" promptText="email@email.com" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" />
-      <Label layoutX="157.5" layoutY="358.0" styleClass="text-normal" text="Mejladress" textFill="#526540">
+      <Label layoutX="157.5" layoutY="358.0" styleClass="text-normal" text="Mejladress" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
-      <Label layoutX="600.0" layoutY="219.0" styleClass="text-normal" text="Datum" textFill="#526540">
+      <Label layoutX="600.0" layoutY="219.0" styleClass="text-normal" text="Datum" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
-      <Label layoutX="627.0" layoutY="267.0" styleClass="text-normal" text="Tid" textFill="#526540">
+      <Label layoutX="627.0" layoutY="267.0" styleClass="text-normal" text="Tid" textFill="#4d8632">
          <font>
             <Font size="17.0" />
          </font></Label>
@@ -52,17 +52,17 @@
       <Button fx:id="deleteMyInfoButton" layoutX="1002.0" layoutY="6.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
       <Button fx:id="changeMyInfoButton" layoutX="851.0" layoutY="6.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
       <Button fx:id="continueShoppingButtonPaymentStepOne" layoutX="718.0" layoutY="6.0" mnemonicParsing="false" text="Fortsätt handla" />
-      <Label layoutX="206.0" layoutY="144.0" styleClass="text-headers" text="Namn och personuppgifter" textFill="#9b3d3d">
+      <Label layoutX="206.0" layoutY="144.0" styleClass="text-headers" text="Namn och personuppgifter" textFill="#326e16">
          <font>
             <Font size="23.0" />
          </font></Label>
-      <Label layoutX="662.0" layoutY="144.0" styleClass="text-headers" text="Leveransinformation" textFill="#9b3d3d">
+      <Label layoutX="662.0" layoutY="144.0" styleClass="text-headers" text="Leveransinformation" textFill="#326e16">
          <font>
             <Font size="23.0" />
          </font></Label>
       <TextFlow layoutX="662.0" layoutY="172.0" prefHeight="46.0" prefWidth="358.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-frontpage-slogan" text="Din order kommer levereras hem till din dörr." wrappingWidth="349.11474609375" />
+            <Text fill="#4d8632" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-frontpage-slogan" text="Din order kommer levereras hem till din dörr." wrappingWidth="349.11474609375" />
          </children>
       </TextFlow>
       <DatePicker layoutX="662.0" layoutY="217.0" prefHeight="27.0" prefWidth="362.0" promptText="Välj leverans datum" stylesheets="@../textfile.css" />
