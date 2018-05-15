@@ -12,18 +12,17 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollBar layoutX="1149.0" layoutY="90.0" orientation="VERTICAL" prefHeight="419.0" prefWidth="17.0" />
-      <Button fx:id="minaVarorSparaListaButton" layoutX="861.0" layoutY="523.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Spara lista" />
-      <Button fx:id="minaVarorFortsättHandlaButton" layoutX="21.0" layoutY="522.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" text="Fortsätt handla" />
-      <Button fx:id="minaVarorTillBetalningButton" layoutX="990.0" layoutY="523.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" text="Till betalning" />
-      <Label fx:id="minaVarorLabel" layoutX="43.0" layoutY="29.0" prefHeight="29.0" prefWidth="226.0" text="Mina varor">
+      <Button fx:id="minaVarorSparaListaButton" layoutX="845.0" layoutY="523.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Spara lista" />
+      <Button fx:id="minaVarorFortsättHandlaButton" layoutX="21.0" layoutY="522.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="137.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+      <Button fx:id="minaVarorTillBetalningButton" layoutX="990.0" layoutY="523.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+      <Label fx:id="minaVarorLabel" layoutX="43.0" layoutY="24.0" prefHeight="29.0" prefWidth="226.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Mina varor" textFill="#9b3d3d">
          <font>
-            <Font size="36.0" />
+            <Font size="48.0" />
          </font>
       </Label>
-      <Line endX="1000.0" layoutX="172.0" layoutY="89.0" startX="-172.0" />
+      <Line endX="1000.0" layoutX="172.0" layoutY="70.0" startX="-172.0" />
       <Line endX="1000.0" layoutX="171.0" layoutY="510.0" startX="-172.0" />
       <AnchorPane fx:id="minaVarorvaraAnchorPane" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="1166.0">
          <children>
@@ -50,6 +49,11 @@
                   <Image url="@../../images/trash.png" />
                </image>
             </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="-7.0" layoutY="71.0" prefHeight="438.0" prefWidth="1178.0">
+         <children>
+            <ScrollBar layoutX="1156.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="17.0" />
          </children>
       </AnchorPane>
    </children>
