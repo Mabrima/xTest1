@@ -18,8 +18,9 @@
 
 .text-frontpage-welcome{
     -fx-font-size: 72px;
+    -fx-font-color: #326e16;    //m. grön
     -fx-font-family: "Georgia";
-    -fx-font-color: #9B3D3D; //röd
+
 }
 
 .text-frontpage-slogan{
@@ -28,8 +29,8 @@
    -fx-font-color: #526540;
 }
 
-.background-color-beige{
-       -fx-background-color: #F9F3E5;
+.background-color-white{
+       -fx-background-color: #ffffff;
 }
 
 .text-normal{
