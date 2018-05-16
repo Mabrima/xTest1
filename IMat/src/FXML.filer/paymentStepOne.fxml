@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="paymentStepOneAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="1166.0" styleClass="background-color-white" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root type="AnchorPane" fx:id="paymentStepOneAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="1166.0" styleClass="background-color-white" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="nameInfoTextField" layoutX="254.0" layoutY="198.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" styleClass="text-frontpage-slogan" />
       <TextField fx:id="addressTextField" layoutX="254.0" layoutY="240.0" prefHeight="27.0" prefWidth="246.0" promptText="Matvägen 1" styleClass="text-frontpage-slogan" />
@@ -79,4 +79,4 @@
             <Font size="15.0" />
          </font></RadioButton>
    </children>
-</AnchorPane>
+</fx:root>

@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<TitledPane fx:id="minaInkopslistorTitledPane" animated="false" prefHeight="318.0" prefWidth="1148.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Listnamn" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root type="TitledPane" fx:id="minaInkopslistorTitledPane" animated="false" prefHeight="318.0" prefWidth="1148.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Listnamn" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <content>
       <AnchorPane fx:id="KopListorTillAccordionAnchorPane" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
          <children>
@@ -16,4 +16,4 @@
          </children>
       </AnchorPane>
    </content>
-</TitledPane>
+</fx:root>
