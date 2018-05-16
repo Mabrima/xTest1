@@ -1,6 +1,7 @@
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -20,8 +21,6 @@ import java.util.List;
 public class Controller implements Initializable {
     IMatDataHandler dataHandler;
     List<CustomList> customLists;
-    Date date;
-    private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
     //TODO many more button etc connections as well as a rigorous name check
@@ -33,7 +32,7 @@ public class Controller implements Initializable {
     @FXML
     private AnchorPane myHistoryPane, myListsPane, helpPane, finishedPane, shoppingCartPane; //more panes
     @FXML
-    private Button homePageButton, checkoutButton, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
+    private Button homePageButton, goToCheckout, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
     @FXML
     private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton; //areYouSureDeleteSavedInfoPane buttons
     @FXML
@@ -48,7 +47,7 @@ public class Controller implements Initializable {
     @FXML
     private Label shoppingCartTotalLabel;
 
-    //TODO add focus property to all TextFields (except searchfield) so that they save once you are done writing
+    //TODO add focus property to all TextFields (except searchfield) so that they save once you are done writing (actually maybe not necessary)
     @FXML
     private TextField searchField;
     @FXML
@@ -61,12 +60,13 @@ public class Controller implements Initializable {
 
 
     @Override
-    public void initialize(URL url, ResourceBundle rb){
+    public void initialize(URL url, ResourceBundle rb) {
+
 
         dataHandler = IMatDataHandler.getInstance();
         loadCustomLists();
 
-
+        
 
         //TODO add more connections for all the buttons etc and what they should do
         //might have to make toStartButton 1-x
@@ -81,14 +81,14 @@ public class Controller implements Initializable {
         historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                myHistoryPane.toFront();
+                //myHistoryPane.toFront();
             }
         });
 
         myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                myListsPane.toFront();
+                //myListsPane.toFront();
             }
         });
 
@@ -100,21 +100,21 @@ public class Controller implements Initializable {
             }
         });
 
-        checkoutButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+/*        goToCheckout.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                cheackoutPane.toFront();
+                //checkoutPane.toFront();
             }
-        });
+        }); */
 
         helpPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                helpPane.toFront();
+                //helpPane.toFront();
             }
         });
 
-        searchField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+        /*searchField.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
 
@@ -127,7 +127,7 @@ public class Controller implements Initializable {
                     //TODO handle productList
                 }
             }
-        });
+        });*/
     }
 
     public void addCartAsCustomList(){
@@ -249,10 +249,13 @@ public class Controller implements Initializable {
         customLists.add(newList);
     }
 
+    //numId corresponds to where in the list of lists it is
     private void removeCustomList(int numId){
         customLists.remove(numId);
     }
 
+
+    //to be called when program closes to save files
     private void shutDown(){
         saveCustomLists();
         dataHandler.shutDown();
