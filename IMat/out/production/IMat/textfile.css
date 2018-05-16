@@ -30,6 +30,7 @@
 
 .background-color-white{
        -fx-background-color: #ffffff;
+}
 
 .text-normal{
     -fx-font-size: 18px;

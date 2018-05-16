@@ -4,9 +4,12 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.DatePicker;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.awt.*;
@@ -22,6 +25,119 @@ public class Controller implements Initializable {
     IMatDataHandler dataHandler;
     List<CustomList> customLists;
 
+
+/**<<<<<<< HEAD
+    //fxid TILL AreYouSureDeleteSavedInfo
+   @FXML
+    private AnchorPane areYouSureTakeAwaySavedTasksPane;
+    @FXML
+    private ImageView areYouSureCrossImage;
+   @FXML
+    private Label areYouSureLabel;
+   @FXML
+    private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton;
+
+    //fxid TILL myShoppingCart
+    @FXML
+    private AnchorPane minVarukorgAnchorPane;
+    @FXML
+    private Label minVarukorgLabel, minVarukorgTotaltLabel;
+    @FXML
+    private Button minVarukorgFortsattHandlaButton, minVarukorgTaBortButton, minVarukorgSparaListaButton, minVarukorgTillBetalningButton;
+    @FXML
+    private Scrollbar minVarukorgScrollbar;
+
+    //fxid TILL nameOnTheListPane
+    @FXML
+    private AnchorPane namnPaListanAnchorPane, namnPaListanVarorPane;
+    @FXML
+    private TextField namnPaListanTextfalt;
+    @FXML
+    private Label namnPaListanLabel;
+    @FXML
+    private Button namnPaListaFortsattHandlaButton, namnPaListaSparaButton;
+    @FXML
+    private ImageView namnPaListanKryss;
+    @FXML
+    private Scrollbar namnPaListaScrollbar;
+
+    //fxid TILL PaymentStepOne
+    @FXML
+    private AnchorPane paymentStepOneAnchorPane;
+    @FXML
+    private DatePicker chooseDateDatePickerPaymentStepOne;
+    @FXML
+    private Button continueShoppingButtonPaymentStepOne, changeMyInfoButton, deleteMyInfoButton, nextToPaymentButton;
+    @FXML
+    private TextField nameInfoTextField, addressTextField, postNumberTextField, phoneNumberTextField, emailTextField;
+    @FXML
+    private RadioButton time7to11RadioButton, time11to15RadioButton, time15to19RadioButton;
+
+
+    //fxid TILL PaymentStepTwo
+    @FXML
+    private AnchorPane paymentStepTwoAnchorPane;
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button backToPaymentStepOne, completePaymentButton, deleteMyCardInfoButton, changeMyCardInfoButton, continueShoppingButtonPaymentStepTwo;
+    @FXML
+    private TextField bankNameTextField, cardNameTextField, cardNumberTextField, expireDateTextfield, expireMonthTextField, ccvTextField;
+
+
+    //fxid TILL Product
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL SearchBar
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL startsidan
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL toPayment
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    //fxid TILL Varukorg
+    @FXML
+    private AnchorPane
+    @FXML
+    private ImageView
+    @FXML
+    private Label
+    @FXML
+    private Button
+
+    **/
 
     //TODO many more button etc connections as well as a rigorous name check
 
@@ -66,7 +182,13 @@ public class Controller implements Initializable {
         dataHandler = IMatDataHandler.getInstance();
         loadCustomLists();
 
+<<<<<<< HEAD
         
+=======
+        updateCart();
+        updateHomePage();
+
+>>>>>>> c3e71e7144b6b5c94506c950f3274d02f25889aa
 
         //TODO add more connections for all the buttons etc and what they should do
         //might have to make toStartButton 1-x
@@ -127,7 +249,12 @@ public class Controller implements Initializable {
                     //TODO handle productList
                 }
             }
+<<<<<<< HEAD
         });*/
+=======
+        });
+
+>>>>>>> c3e71e7144b6b5c94506c950f3274d02f25889aa
     }
 
     public void addCartAsCustomList(){
@@ -267,6 +394,46 @@ public class Controller implements Initializable {
     }
 
     //TODO add/remove favorite as well as a way to tell if said product is a favorite
+
+
+    //försök att lägga varor i varukorgen
+    @FXML private FlowPane cartListFlowPane;
+    ShoppingCart shoppingcart;
+
+    private void updateCart(){
+        cartListFlowPane.getChildren().clear();
+         List<ShoppingItem> products= shoppingcart.getItems();
+
+
+         for (int i = 0; i<products.size(); i++) //bör snyggas till
+         {
+             cartList product = new cartList(products.get(i), this);
+             cartListFlowPane.getChildren().add(product);
+         }
+
+
+
+    }
+
+
+
+    //Försök att gör rutnät av produkterna på startsidan
+    @FXML private FlowPane flowPaneHomePage;
+    IMatDataHandler imatdatahandler;
+
+    private void updateHomePage(){
+        flowPaneHomePage.getChildren().clear();
+        List<Product> allProducts= imatdatahandler.getProducts();
+
+
+        for (int i = 0; i<allProducts.size(); i++) //bör snyggas till med
+        {
+            productGridItem productItem = new productGridItem(allProducts.get(i), this);
+            flowPaneHomePage.getChildren().add(productItem);
+        }
+
+
+    }
 
 
 }

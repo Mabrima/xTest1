@@ -8,6 +8,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
@@ -52,9 +53,8 @@
       <Accordion layoutX="-1.0" layoutY="431.0" />
       <AnchorPane layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
          <children>
-            <fx:include source="searchBar.fxml" />
-            <fx:include layoutX="65.0" layoutY="80.0" source="product.fxml" />
             <Line endX="966.0" layoutX="200.0" layoutY="40.0" startX="-200.0" />
+            <FlowPane fx:id="flowPaneHomePage" layoutX="1.0" layoutY="40.0" prefHeight="528.0" prefWidth="1166.0" />
          </children></AnchorPane>
       <Line endX="1366.0" layoutY="200.0" />
       <Accordion layoutY="438.0" maxWidth="200.0">
