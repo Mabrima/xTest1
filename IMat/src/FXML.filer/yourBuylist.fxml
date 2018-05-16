@@ -13,7 +13,7 @@
       <Line endX="1080.0" layoutX="99.0" layoutY="115.0" startX="-100.0" />
       <Button fx:id="minaInkopslistorFortsattHandlaButton" layoutX="28.0" layoutY="517.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
       <Line endX="1080.0" layoutX="109.0" layoutY="501.0" startX="-114.0" />
-      <ScrollBar fx:id="minaInkopsListorScrollbar" layoutX="1148.0" layoutY="117.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="17.0" />
+      <ScrollBar fx:id="minaInkopsListorScrollbar" layoutX="1149.0" layoutY="117.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="17.0" />
       <Accordion fx:id="minaInkopslistorAccordion" layoutY="116.0" prefHeight="384.0" prefWidth="1148.0" styleClass="background-color-beige" stylesheets="@../textfile.css" />
    </children>
 </fx:root>

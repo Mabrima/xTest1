@@ -30,11 +30,17 @@ public class Controller implements Initializable {
 
     //NEDAN STÅR ALLA FXML FXIDn i samma ordning som de står i FXML.filer listan till vänster.
 
-
+    @FXML
+    private AnchorPane paymentStepOneAnchorPane;
+    @FXML
+    private AnchorPane areYouSureTakeAwaySavedTasksPane;
 
     //TODO many more button etc connections as well as a rigorous name check
 
 
+    public void closeAreYouSureDeleteView(){
+        areYouSureTakeAwaySavedTasksPane.toBack();
+    }
 
     private String customListsFile() {
         return System.getProperty("user.home") + File.separatorChar + ".dat215" + File.separatorChar + "imat" + File.separatorChar + "customLists.txt";
@@ -53,7 +59,7 @@ public class Controller implements Initializable {
 
         //TODO add more connections for all the buttons etc and what they should do
         //might have to make toStartButton 1-x
-        homePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+    /*    homePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //TODO populate startScreen, needs integration with frontend
@@ -61,15 +67,15 @@ public class Controller implements Initializable {
             }
         });
 
-  /*      historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+       historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //myHistoryPane.toFront();
             }
         });
-        */
 
-     /*   myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+
+        myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 minaInkopslistorAnchorPane.toFront();
@@ -77,7 +83,7 @@ public class Controller implements Initializable {
             }
         });
 
-        */
+
 
         favoritePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -87,12 +93,12 @@ public class Controller implements Initializable {
             }
         });
 
-/*        goToCheckout.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+        goToCheckout.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //checkoutPane.toFront();
             }
-        }); */
+        });
 
         helpPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -101,7 +107,7 @@ public class Controller implements Initializable {
             }
         });
 
-        /*searchField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+        searchField.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
 
@@ -198,8 +204,10 @@ public class Controller implements Initializable {
 
     }
 
+
+
     @FXML
-    private void removeCustomerInfo(){
+    public void removeCustomerInfo(){
         Customer customer = dataHandler.getCustomer();
         CreditCard creditCard = dataHandler.getCreditCard();
         creditCard.setCardNumber("");
@@ -219,19 +227,19 @@ public class Controller implements Initializable {
         //todo Uppdate the screen
     }
 
-    private void clearCart(){
+    public void clearCart(){
         dataHandler.getShoppingCart().clear();
     }
 
-    private void populatePaneFavorites(){
+    public void populatePaneFavorites(){
         //TODO
     }
 
-    private void populateHistoryPane(){
+    public void populateHistoryPane(){
         //TODO
     }
 
-    private void addOldOrderToCustomLists(Order order){
+    public void addOldOrderToCustomLists(Order order){
         //TODO should be able to get said order when you click the button
         CustomList newList = new CustomList();
         newList.setItems(order.getItems());
@@ -239,19 +247,19 @@ public class Controller implements Initializable {
     }
 
     //numId corresponds to where in the list of lists it is
-    private void removeCustomList(int numId){
+    public void removeCustomList(int numId){
         customLists.remove(numId);
     }
 
 
     //to be called when program closes to save files
-    private void shutDown(){
+    public void shutDown(){
         saveCustomLists();
         dataHandler.shutDown();
         System.exit(0);
     }
 
-    private void addToCart(){
+    public void addToCart(){
 
     }
 

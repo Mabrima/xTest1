@@ -1,6 +1,8 @@
 package Views;
 
 import Controller.Controller;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
@@ -39,5 +41,31 @@ public class areYouSureDeleteSavedInfo extends AnchorPane {
         this.product = new ShoppingItem(product);
         this.parentController = controller;
 
+        areYouSureYesButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                parentController.removeCustomerInfo();
+            }
+        });
+
+        areYouSureNoButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                parentController.closeAreYouSureDeleteView();
+            }
+        });
+
+
+        areYouSureCancelButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+            @Override
+            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+                parentController.closeAreYouSureDeleteView();
+            }
+        });
+
+
+
     }
+
+
 }
