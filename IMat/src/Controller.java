@@ -182,6 +182,8 @@ public class Controller implements Initializable{
         dataHandler = IMatDataHandler.getInstance();
         loadCustomLists();
 
+        updateCart();
+        updateHomePage();
 
 
         //TODO add more connections for all the buttons etc and what they should do
@@ -251,6 +253,7 @@ public class Controller implements Initializable{
                 }
             }
         });
+
     }
 
     public void addCartAsCustomList(){
@@ -386,8 +389,11 @@ public class Controller implements Initializable{
 
     }
 
+
+    //försök att lägga varor i varukorgen
     @FXML private FlowPane cartListFlowPane;
     ShoppingCart shoppingcart;
+
     private void updateCart(){
         cartListFlowPane.getChildren().clear();
          List<ShoppingItem> products= shoppingcart.getItems();
@@ -399,6 +405,26 @@ public class Controller implements Initializable{
              cartListFlowPane.getChildren().add(product);
          }
 
+
+
+    }
+
+
+
+    //Försök att gör rutnät av produkterna på startsidan
+    @FXML private FlowPane flowPaneHomePage;
+    IMatDataHandler imatdatahandler;
+
+    private void updateHomePage(){
+        flowPaneHomePage.getChildren().clear();
+        List<Product> allProducts= imatdatahandler.getProducts();
+
+
+        for (int i = 0; i<allProducts.size(); i++) //bör snyggas till med
+        {
+            productGridItem productItem = new productGridItem(allProducts.get(i), this);
+            flowPaneHomePage.getChildren().add(productItem);
+        }
 
 
     }

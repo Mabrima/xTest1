@@ -12,7 +12,7 @@
             <Image url="@../../images/product_8.jpg" />
          </image>
       </ImageView>
-      <Label fx:id="productNamePopUpCart" layoutX="66.0" layoutY="16.0" prefHeight="21.0" prefWidth="191.0" styleClass="text-normal" stylesheets="@../textfile.css" />
+      <Label fx:id="productNamePopUpCart" layoutX="66.0" layoutY="16.0" prefHeight="21.0" prefWidth="191.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Bröd" />
       <ImageView fx:id="minusPopUpCart" fitHeight="26.0" fitWidth="29.0" layoutX="278.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/minus.png" />
@@ -23,8 +23,8 @@
             <Image url="@../../images/plus.png" />
          </image>
       </ImageView>
-      <Label fx:id="amountProductsPopUpCart" alignment="CENTER" layoutX="300.0" layoutY="18.0" prefHeight="17.0" prefWidth="52.0" styleClass="text-normal" stylesheets="@../textfile.css" />
-      <Label fx:id="totalPricePopUpCart" layoutX="431.0" layoutY="16.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" />
+      <Label fx:id="amountProductsPopUpCart" alignment="CENTER" layoutX="300.0" layoutY="18.0" prefHeight="17.0" prefWidth="52.0" styleClass="text-normal" stylesheets="@../textfile.css" text="10 st" />
+      <Label fx:id="totalPricePopUpCart" layoutX="431.0" layoutY="16.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" text="100.00kr" />
       <ImageView fx:id="deleteProductPopUpCart" fitHeight="26.0" fitWidth="25.0" layoutX="564.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/trash.png" />
