@@ -13,10 +13,9 @@ public class CartProductListing extends AnchorPane{
 
     //@FXML
 
-
     //TODO maybe just use littleFoodLabel here as well, is there any difference?
-    public CartProductListing(Product product, Controller controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("name.fxml"));
+    public CartProductListing(Product product, Controller controller){             //BV vi hade döpt den cartList så behövs ändras i varukorg.
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("LittleFoodLabelPane"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -26,8 +25,17 @@ public class CartProductListing extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
-        this.product = product;
-        this.parentController = controller;
+        this.product = product;                 //BV hade skrivit this.shoppingitem= shoppingitem;
+        this.parentController = controller;     //BV hade skrivit this.parentController=parentController;
+
+        /* Bv vi hade sedan skrivit:
+
+                productImagePopUpCart.setImage(imatdatahandler.getFXImage(shoppingitem.getProduct()));
+
+                productNamePopUpCart.setText(this.shoppingitem.getProduct().getName());
+
+                totalPricePopUpCart.setText(this.shoppingitem.getProduct().getPrice() + "kr");
+         */
 
     }
 
