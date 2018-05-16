@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="productAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root type="AnchorPane" fx:id="productAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="230.0" prefWidth="230.0" style="-fx-background-color: lightgrey;">
          <children>
@@ -24,11 +24,11 @@
                   <Image url="@../../images/star.png" />
                </image>
             </ImageView>
-<<<<<<< HEAD
+
             <Label fx:id="productPriceItem" layoutX="4.0" layoutY="206.0" prefHeight="16.0" prefWidth="85.0" styleClass="text-normal" stylesheets="@../textfile.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="4.0">
-=======
+
             <Label fx:id="priceItem" layoutX="4.0" layoutY="207.0" prefHeight="16.0" prefWidth="85.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="13,30kr/kr" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="4.0">
->>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
+
                <font>
                   <Font size="14.0" />
                </font></Label>
@@ -63,4 +63,4 @@
       <Line endY="230.0" />
       <Line endX="230.0" endY="230.0" startX="230.0" />
    </children>
-</AnchorPane>
+</fx:root>
