@@ -1,3 +1,5 @@
+package Controller;
+
 import se.chalmers.cse.dat216.project.*;
 
 import java.util.Date;
