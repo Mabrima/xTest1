@@ -1,3 +1,5 @@
+package Controller;
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,7 +13,7 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
 
-        ResourceBundle rb = java.util.ResourceBundle.getBundle("ResourceBundle");
+        ResourceBundle rb = java.util.ResourceBundle.getBundle("Controller/ResourceBundle");
 
         Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/startsidan.fxml"), rb);
 

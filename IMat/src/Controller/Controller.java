@@ -25,10 +25,17 @@ import java.util.List;
 
 
 public class Controller implements Initializable {
-    IMatDataHandler dataHandler;
+    public IMatDataHandler dataHandler;
     List<CustomList> customLists;
 
-    //NEDAN STÅR ALLA FXML FXIDn i samma ordning som de står i FXML.filer listan till vänster.
+
+    //För nu eftersom det är startsidan som con
+
+    @FXML
+    private AnchorPane homepageAnchorPane;
+    @FXML
+    private FlowPane flowPaneHomePage;
+
 
     @FXML
     private AnchorPane paymentStepOneAnchorPane;
@@ -132,7 +139,7 @@ public class Controller implements Initializable {
     }
 
     private void saveCustomLists() {
-        System.out.println("saveOrders()");
+        System.out.println("saveCustomLists()");
         Iterator var1 = this.customLists.iterator();
 
         while(var1.hasNext()) {
@@ -268,27 +275,26 @@ public class Controller implements Initializable {
 
     //försök att lägga varor i varukorgen
     @FXML private FlowPane cartListFlowPane;
-    ShoppingCart shoppingcart;
+
 
     private void updateCart(){
-        cartListFlowPane.getChildren().clear();
-         List<ShoppingItem> products= shoppingcart.getItems();
+         cartListFlowPane.getChildren().clear();
+         List<ShoppingItem> products = dataHandler.getShoppingCart().getItems();
 
 
          for (int i = 0; i<products.size(); i++) //bör snyggas till
          {
-             cartList product = new cartList(products.get(i), this);
+             CartProductListing product = new CartProductListing(products.get(i), this);
              cartListFlowPane.getChildren().add(product);
          }
     }
 
 
 
-    IMatDataHandler imatdatahandler;
 
     private void updateHomePage(){
         flowPaneHomePage.getChildren().clear();
-        List<Product> allProducts= imatdatahandler.getProducts();
+        List<Product> allProducts= dataHandler.getProducts();
 
 
         for (int i = 0; i<allProducts.size(); i++) //bör snyggas till med
