@@ -1,6 +1,7 @@
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
@@ -21,11 +22,9 @@ import java.util.*;
 import java.util.List;
 
 
-public class Controller implements Initializable{
+public class Controller implements Initializable {
     IMatDataHandler dataHandler;
     List<CustomList> customLists;
-    Date date;
-    private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     //NEDAN STÅR ALLA FXML FXIDn i samma ordning som de står i FXML.filer listan till vänster.
 
@@ -224,7 +223,11 @@ public class Controller implements Initializable{
     @FXML
     private AnchorPane myHistoryPane, myListsPane, helpPane, finishedPane, shoppingCartPane; //more panes
     @FXML
+<<<<<<< HEAD
     private Button checkoutButton, helpPageButton, historyPageButton; //main page buttons
+=======
+    private Button homePageButton, goToCheckout, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
+>>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
     @FXML
     private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton; //areYouSureDeleteSavedInfoPane buttons
     @FXML
@@ -239,7 +242,7 @@ public class Controller implements Initializable{
     @FXML
     private Label shoppingCartTotalLabel;
 
-    //TODO add focus property to all TextFields (except searchfield) so that they save once you are done writing
+    //TODO add focus property to all TextFields (except searchfield) so that they save once you are done writing (actually maybe not necessary)
     @FXML
     private TextField searchField;
     @FXML
@@ -252,11 +255,13 @@ public class Controller implements Initializable{
 
 
     @Override
-    public void initialize(URL url, ResourceBundle rb){
+    public void initialize(URL url, ResourceBundle rb) {
+
 
         dataHandler = IMatDataHandler.getInstance();
         loadCustomLists();
-
+        updateCart();
+        updateHomePage();
 
 
         //TODO add more connections for all the buttons etc and what they should do
@@ -269,24 +274,21 @@ public class Controller implements Initializable{
             }
         });
 
-        myWaresKeepShoppingButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
-            @Override
-            public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                //populatePaneFavorites;
-            }
-        });
-
         historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                myHistoryPane.toFront();
+                //myHistoryPane.toFront();
             }
         });
 
         myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
+<<<<<<< HEAD
                 minaInkopslistorAnchorPane.toFront();
+=======
+                //myListsPane.toFront();
+>>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
             }
         });
 
@@ -298,21 +300,21 @@ public class Controller implements Initializable{
             }
         });
 
-        checkoutButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+/*        goToCheckout.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                cheackoutPane.toFront();
+                //checkoutPane.toFront();
             }
-        });
+        }); */
 
         helpPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                helpPane.toFront();
+                //helpPane.toFront();
             }
         });
 
-        searchField.focusedProperty().addListener(new ChangeListener<Boolean>() {
+        /*searchField.focusedProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
 
@@ -325,7 +327,9 @@ public class Controller implements Initializable{
                     //TODO handle productList
                 }
             }
-        });
+        });*/
+
+
     }
 
     public void addCartAsCustomList(){
@@ -447,10 +451,13 @@ public class Controller implements Initializable{
         customLists.add(newList);
     }
 
+    //numId corresponds to where in the list of lists it is
     private void removeCustomList(int numId){
         customLists.remove(numId);
     }
 
+
+    //to be called when program closes to save files
     private void shutDown(){
         saveCustomLists();
         dataHandler.shutDown();
@@ -461,8 +468,13 @@ public class Controller implements Initializable{
 
     }
 
+    //TODO add/remove favorite as well as a way to tell if said product is a favorite
+
+
+    //försök att lägga varor i varukorgen
     @FXML private FlowPane cartListFlowPane;
     ShoppingCart shoppingcart;
+
     private void updateCart(){
         cartListFlowPane.getChildren().clear();
          List<ShoppingItem> products= shoppingcart.getItems();
@@ -474,6 +486,26 @@ public class Controller implements Initializable{
              cartListFlowPane.getChildren().add(product);
          }
 
+
+
+    }
+
+
+
+    //Försök att gör rutnät av produkterna på startsidan
+    @FXML private FlowPane flowPaneHomePage;
+    IMatDataHandler imatdatahandler;
+
+    private void updateHomePage(){
+        flowPaneHomePage.getChildren().clear();
+        List<Product> allProducts= imatdatahandler.getProducts();
+
+
+        for (int i = 0; i<allProducts.size(); i++) //bör snyggas till med
+        {
+            productGridItem productItem = new productGridItem(allProducts.get(i), this);
+            flowPaneHomePage.getChildren().add(productItem);
+        }
 
 
     }

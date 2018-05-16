@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<<<<<<< HEAD
 <AnchorPane fx:id="searchbarAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+=======
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+>>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
    <children>
       <ImageView fitHeight="47.0" fitWidth="35.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -16,14 +19,24 @@
       </ImageView>
       <TextField fx:id="searchField" layoutX="65.0" layoutY="5.0" prefHeight="30.0" prefWidth="462.0" promptText="Hitta vara" styleClass="text-frontpage-slogan" AnchorPane.leftAnchor="65.0" />
       <Button fx:id="searchButton" layoutX="529.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="59.0" styleClass="text-normal-button" text="Sök" />
+<<<<<<< HEAD
       <Button fx:id="searchbarGoToCheckout" layoutX="900.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" styleClass="text-normal-button" text="Gå till kassan" />
       <Button fx:id="searchbarCart" layoutX="1022.0" layoutY="4.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="142.0" styleClass="text-normal-button" />
       <ImageView fx:id="cart" fitHeight="20.0" fitWidth="20.0" layoutX="1120.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+=======
+      <Button fx:id="goToCheckout" layoutX="900.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" styleClass="text-normal-button" text="Gå till kassan" />
+      <Button fx:id="cart" layoutX="1022.0" layoutY="4.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="142.0" styleClass="text-normal-button" text="Varukorgen        " />
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="1124.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+>>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
          <image>
             <Image url="@../../images/varukorg.png" />
          </image>
       </ImageView>
+<<<<<<< HEAD
       <Label fx:id="searchbarCartLabel" layoutX="1047.0" layoutY="10.0" styleClass="text-normal-button" text="Varukorg" />
       <Button fx:id="searchbarContinueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
+=======
+      <Button fx:id="continueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
+>>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
    </children>
 </AnchorPane>
