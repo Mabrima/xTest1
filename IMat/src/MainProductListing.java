@@ -1,4 +1,4 @@
-import javafx.fxml.FXML;
+import Controller.Controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;

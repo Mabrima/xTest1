@@ -1,3 +1,4 @@
+import Controller.Controller;
 import com.sun.javafx.geom.BaseBounds;
 import com.sun.javafx.geom.transform.BaseTransform;
 import com.sun.javafx.jmx.MXNodeAlgorithm;
@@ -10,7 +11,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
-import se.chalmers.cse.dat216.project.ShoppingItem;
 
 import java.io.IOException;
 
