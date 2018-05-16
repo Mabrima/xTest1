@@ -7,31 +7,31 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="productAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="230.0" prefWidth="230.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="230.0" prefWidth="230.0" style="-fx-background-color: lightgrey;">
          <children>
-            <Label fx:id="itemLabel" layoutX="3.0" layoutY="3.0" prefHeight="17.0" prefWidth="90.0" styleClass="text-header" stylesheets="@../textfile.css" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="3.0">
+            <Label fx:id="productItemLabel" layoutX="3.0" layoutY="3.0" prefHeight="17.0" prefWidth="90.0" styleClass="text-header" stylesheets="@../textfile.css" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="3.0">
                <font>
                   <Font size="18.0" />
                </font></Label>
-            <ImageView fx:id="favoriteStar" fitHeight="36.0" fitWidth="23.0" layoutX="203.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="productFavoriteStar" fitHeight="36.0" fitWidth="23.0" layoutX="203.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../images/star.png" />
                </image>
             </ImageView>
-            <Label fx:id="priceItem" layoutX="4.0" layoutY="206.0" prefHeight="16.0" prefWidth="85.0" styleClass="text-normal" stylesheets="@../textfile.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="4.0">
+            <Label fx:id="productPriceItem" layoutX="4.0" layoutY="206.0" prefHeight="16.0" prefWidth="85.0" styleClass="text-normal" stylesheets="@../textfile.css" AnchorPane.bottomAnchor="6.0" AnchorPane.leftAnchor="4.0">
                <font>
                   <Font size="14.0" />
                </font></Label>
             <AnchorPane layoutX="118.5" layoutY="202.5" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="2.0">
                <children>
-                  <ImageView fx:id="minusItem" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="productMinusItem" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/minus.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="plusItem" fitHeight="25.0" fitWidth="25.0" layoutX="86.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="productPlusItem" fitHeight="25.0" fitWidth="25.0" layoutX="86.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/plus.png" />
                      </image>
@@ -45,7 +45,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <ImageView fx:id="imageItem" fitHeight="173.0" fitWidth="230.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="productImageItem" fitHeight="173.0" fitWidth="230.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/product_1.jpg" />
          </image>

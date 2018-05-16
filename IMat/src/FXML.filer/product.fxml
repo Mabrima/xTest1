@@ -26,12 +26,12 @@
                </font></Label>
             <AnchorPane layoutX="118.5" layoutY="202.5" prefHeight="25.0" prefWidth="110.0" style="-fx-background-color: grey;" AnchorPane.bottomAnchor="3.0" AnchorPane.rightAnchor="2.0">
                <children>
-                  <ImageView fx:id="minusItem" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="productMinusItem" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/minus.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="plusItem" fitHeight="25.0" fitWidth="25.0" layoutX="86.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="productPlusItem" fitHeight="25.0" fitWidth="25.0" layoutX="86.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../images/plus.png" />
                      </image>

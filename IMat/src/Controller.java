@@ -2,9 +2,8 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -12,6 +11,8 @@ import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.*;
 
 import java.awt.*;
+import java.awt.Label;
+import java.awt.ScrollPane;
 import java.io.*;
 import java.net.URL;
 import java.text.DateFormat;
@@ -26,6 +27,7 @@ public class Controller implements Initializable{
     Date date;
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
+    //NEDAN STÅR ALLA FXML FXIDn i samma ordning som de står i FXML.filer listan till vänster.
 
     //fxid TILL AreYouSureDeleteSavedInfo
    @FXML
@@ -37,6 +39,43 @@ public class Controller implements Initializable{
    @FXML
     private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton;
 
+
+    //fxid TILL FoodLabelPane
+    @FXML
+    private AnchorPane foodLabelPaneAnchorPane;
+    @FXML
+    private Label foodLabelPaneVaraLabel, foodLabelPaneAmountLabel, foodLabelPanePrice;
+    @FXML
+    private ImageView foodLabelPlusImage, foodLabelPaneMinusImage, foodLabelPaneTrashImage;
+
+
+    //fxid TILL FoodLabelPaneNoPlus
+    @FXML
+    private AnchorPane foodPaneNoPlusAnchorPane;
+    @FXML
+    private Label foodPaneNoPlusVaraLabel, foodPaneNoPlusPriceLabel;
+    @FXML
+    private ImageView foodPaneNoPlusTrashImage, foodPaneNoPlusImageView;
+
+
+    //fxid TILL LittleFoodLabelPane
+    @FXML
+    private AnchorPane AnchorPanePopUpCart;
+    @FXML
+    private Label productNamePopUpCart, amountProductsPopUpCart, totalPricePopUpCart;
+    @FXML
+    private ImageView minusPopUpCart, plusPopUpCart, deleteProductPopUpCart, productImagePopUpCart;
+
+
+    //fxid TILL LittleFoodLabelPaneNoPlus
+    @FXML
+    private AnchorPane littleFoodLabelNoPlusAnchorPane;
+    @FXML
+    private Label littleFoodLabelNoPlusVaraLabel, littleFoodLabelNoPlusAmountLabel, littleFoodLabelNoPlusPriceLabel;
+    @FXML
+    private ImageView littleFoodLabelNoPlusImage, littleFoodLabelNoPlusTrashImage;
+
+
     //fxid TILL myShoppingCart
     @FXML
     private AnchorPane minVarukorgAnchorPane;
@@ -46,6 +85,7 @@ public class Controller implements Initializable{
     private Button minVarukorgFortsattHandlaButton, minVarukorgTaBortButton, minVarukorgSparaListaButton, minVarukorgTillBetalningButton;
     @FXML
     private Scrollbar minVarukorgScrollbar;
+
 
     //fxid TILL nameOnTheListPane
     @FXML
@@ -60,6 +100,7 @@ public class Controller implements Initializable{
     private ImageView namnPaListanKryss;
     @FXML
     private Scrollbar namnPaListaScrollbar;
+
 
     //fxid TILL PaymentStepOne
     @FXML
@@ -85,56 +126,93 @@ public class Controller implements Initializable{
 
     //fxid TILL Product
     @FXML
-    private AnchorPane
+    private AnchorPane productAnchorPane;
     @FXML
-    private ImageView
+    private ImageView productFavoriteStar, productImageItem, productPlusItem, productMinusItem;
     @FXML
-    private Label
-    @FXML
-    private Button
+    private Label productItemLabel, productPriceItem, amountItemProductView;
 
-    /*
+
     //fxid TILL SearchBar
     @FXML
-    private AnchorPane
+    private AnchorPane searchbarAnchorPane;
     @FXML
-    private ImageView
+    private TextField searchField;
     @FXML
-    private Label
-    @FXML
-    private Button
+    private Button searchButton, searchbarContinueShoppingButton, searchbarGoToCheckout, searchbarCart;
+
 
     //fxid TILL startsidan
     @FXML
-    private AnchorPane
+    private AnchorPane homepageAnchorPane;
     @FXML
-    private ImageView
+    private ImageView ImatImageView;
     @FXML
-    private Label
+    private Button homePageButton, myListPageButton, favoritePageButton, historyPageButton, helpPageButton, fruitButton, vegetableButton, meatButton, fishButton;
     @FXML
-    private Button
+    private  Button  charkButton, dairyCookingButton, lactoseFreeButton, bakingButton, cannedFoodButton, pastaRiceButton;
+    @FXML
+    private FlowPane flowPaneHomePage;
+    @FXML
+    private Accordion homepageAccordion;
+    @FXML
+    private TitledPane homepageCathegorysTitledPane, fruitVegetableButton, meatFishButton, dairyProductsButton, pantryButton ;
+
+
+    //fxid TILL TitledPaneKöpListor
+    @FXML
+    private AnchorPane minaInkopslistorAnchorPane;
+    @FXML
+    private TitledPane minaInkopslistorTitledPane;
+    @FXML
+    private Label titledPaneKopListorPriceLabel;
+    @FXML
+    private Button titledPaneKopListorListaIVarukorgButton, titledPaneKopListorRedigeraButton, titledPaneKopListorRemoveButton;
+
 
     //fxid TILL toPayment
     @FXML
-    private AnchorPane
+    private AnchorPane minaVarorAnchorPane, minaVarorVaraAnchorPane,
     @FXML
-    private ImageView
+    private Scrollbar minaVarorScrollPane;
     @FXML
-    private Label
-    @FXML
-    private Button
+    private Button minaVarorSparaListaButton, minaVarorFortsattHandlaButton, minaVarorTillBetalningButton;
+
 
     //fxid TILL Varukorg
     @FXML
-    private AnchorPane
+    private AnchorPane varukorgAnchorPane;
     @FXML
-    private ImageView
+    private FlowPane varukorgFlowPane;
     @FXML
-    private Label
+    private Label shoppingCartTotalLabel;
     @FXML
-    private Button
+    private Button varukorgKeepShoppingButton, varukorgTaBortButton, varukorgGoPaymentButton;
+    @FXML
+    private ImageView varukorgCrossImage;
 
-*/
+    //fxid TILL yourBuyList
+    @FXML
+    private AnchorPane minaInkopslistorAnchorPane;
+    @FXML
+    private Button minaInkopslistorFortsattHandlaButton;
+    @FXML
+    private Accordion minaInkopslistorAccordion;
+    @FXML
+    private Scrollbar minaInkopsListorScrollbar;
+    @FXML
+    private AnchorPane
+
+
+    //fxid TILL YourShoppingIsDone
+    @FXML
+    private AnchorPane genomfortAnchorPane;
+    @FXML
+    private Button genomfortOkejButton;
+    @FXML
+    private ImageView genomfortKryssImage;
+
+
 
 
     //TODO many more button etc connections as well as a rigorous name check
@@ -146,7 +224,7 @@ public class Controller implements Initializable{
     @FXML
     private AnchorPane myHistoryPane, myListsPane, helpPane, finishedPane, shoppingCartPane; //more panes
     @FXML
-    private Button homePageButton, checkoutButton, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
+    private Button checkoutButton, helpPageButton, historyPageButton; //main page buttons
     @FXML
     private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton; //areYouSureDeleteSavedInfoPane buttons
     @FXML
@@ -208,7 +286,7 @@ public class Controller implements Initializable{
         myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-                myListsPane.toFront();
+                minaInkopslistorAnchorPane.toFront();
             }
         });
 
