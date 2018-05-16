@@ -27,7 +27,6 @@ public class Controller implements Initializable{
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
-<<<<<<< HEAD
     //fxid TILL AreYouSureDeleteSavedInfo
    @FXML
     private AnchorPane areYouSureTakeAwaySavedTasksPane;
@@ -79,10 +78,6 @@ public class Controller implements Initializable{
     @FXML
     private AnchorPane paymentStepTwoAnchorPane;
     @FXML
-    private ImageView
-    @FXML
-    private Label
-    @FXML
     private Button backToPaymentStepOne, completePaymentButton, deleteMyCardInfoButton, changeMyCardInfoButton, continueShoppingButtonPaymentStepTwo;
     @FXML
     private TextField bankNameTextField, cardNameTextField, cardNumberTextField, expireDateTextfield, expireMonthTextField, ccvTextField;
@@ -98,6 +93,7 @@ public class Controller implements Initializable{
     @FXML
     private Button
 
+    /*
     //fxid TILL SearchBar
     @FXML
     private AnchorPane
@@ -138,12 +134,8 @@ public class Controller implements Initializable{
     @FXML
     private Button
 
+*/
 
-
-
-
-=======
->>>>>>> 40a8bc566cda4ec876426f37166531a1483f6411
 
     //TODO many more button etc connections as well as a rigorous name check
 
