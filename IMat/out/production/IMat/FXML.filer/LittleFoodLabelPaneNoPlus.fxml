@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="littleFoodLabelNoPlusAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fx:id="littleFoodLabelNoPlusImage" fitHeight="43.0" fitWidth="82.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -17,8 +13,8 @@
          </image>
       </ImageView>
       <Label fx:id="littleFoodLabelNoPlusVaraLabel" layoutX="110.0" layoutY="17.0" prefHeight="17.0" prefWidth="185.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Röda äpplen" />
-      <Label fx:id="littleFoodLabelNoPlusStyckLabel" alignment="CENTER" layoutX="316.0" layoutY="17.0" prefHeight="17.0" prefWidth="52.0" styleClass="text-normal" stylesheets="@../textfile.css" text="10 st" />
-      <Label fx:id="littleFoodLabelNoPlusKronorLabel" layoutX="522.0" layoutY="17.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" text="100,00 kr" />
+      <Label fx:id="littleFoodLabelNoPlusAmountLabel" alignment="CENTER" layoutX="316.0" layoutY="17.0" prefHeight="17.0" prefWidth="52.0" styleClass="text-normal" stylesheets="@../textfile.css" text="10 st" />
+      <Label fx:id="littleFoodLabelNoPlusPriceLabel" layoutX="522.0" layoutY="17.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" text="100,00 kr" />
       <ImageView fx:id="littleFoodLabelNoPlusTrashImage" fitHeight="24.0" fitWidth="25.0" layoutX="638.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../images/trash.png" />

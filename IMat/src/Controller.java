@@ -160,7 +160,7 @@ public class Controller implements Initializable {
 
     //fxid TILL TitledPaneKöpListor
     @FXML
-    private AnchorPane minaInkopslistorAnchorPane;
+    private AnchorPane KopListorTillAccordionAnchorPane;
     @FXML
     private TitledPane minaInkopslistorTitledPane;
     @FXML
@@ -171,7 +171,7 @@ public class Controller implements Initializable {
 
     //fxid TILL toPayment
     @FXML
-    private AnchorPane minaVarorAnchorPane, minaVarorVaraAnchorPane,
+    private AnchorPane minaVarorAnchorPane, minaVarorVaraAnchorPane;
     @FXML
     private Scrollbar minaVarorScrollPane;
     @FXML
@@ -199,8 +199,6 @@ public class Controller implements Initializable {
     private Accordion minaInkopslistorAccordion;
     @FXML
     private Scrollbar minaInkopsListorScrollbar;
-    @FXML
-    private AnchorPane
 
 
     //fxid TILL YourShoppingIsDone
@@ -213,40 +211,8 @@ public class Controller implements Initializable {
 
 
 
-
     //TODO many more button etc connections as well as a rigorous name check
 
-    @FXML //all crossImageViews
-    private ImageView areYouSureCrossImage, homePageImage;
-    @FXML
-    private AnchorPane areYouSureTakeAwaySavedInfoPane, shoppingPane, cheackoutPane, getPaymentStepOnePane, paymentStepTwoPane; //panes
-    @FXML
-    private AnchorPane myHistoryPane, myListsPane, helpPane, finishedPane, shoppingCartPane; //more panes
-    @FXML
-<<<<<<< HEAD
-    private Button checkoutButton, helpPageButton, historyPageButton; //main page buttons
-=======
-    private Button homePageButton, goToCheckout, helpPageButton, historyPageButton, myListPageButton, favoritePageButton; //main page buttons
->>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
-    @FXML
-    private Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton; //areYouSureDeleteSavedInfoPane buttons
-    @FXML
-    private Button completePaymentButton, backToPaymentStepOne, continueShoppingButtonPaymentStepTwo, changeMyCardInfoButton, deleteMyCardInfoButton; //paymentPaneTwo buttons
-    @FXML
-    private Button largeWaresPlusButton; //TODO
-    @FXML
-    private Button myWaresToPaymentButton, myWaresSaveListButton, myWaresKeepShoppingButton; //TODO what are these? shoppingCart? maybe irrelevant now
-
-    @FXML
-    private Button shoppingCartEmptyCartButton, shoppingCartSaveListButton, shoppingCartToPaymentButton, shoppingCartKeepShoppingButton; //shoppingCartButtons
-    @FXML
-    private Label shoppingCartTotalLabel;
-
-    //TODO add focus property to all TextFields (except searchfield) so that they save once you are done writing (actually maybe not necessary)
-    @FXML
-    private TextField searchField;
-    @FXML
-    private TextField cardNumberTextField, expireDateTextfield, expireMonthTextField, ccvTextField; //paymentPaneTwo textFields
 
 
     private String customListsFile() {
@@ -274,23 +240,23 @@ public class Controller implements Initializable {
             }
         });
 
-        historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+  /*      historyPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
                 //myHistoryPane.toFront();
             }
         });
+        */
 
-        myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
+     /*   myListPageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
             public void changed(ObservableValue<? extends Boolean> observable, Boolean oldValue, Boolean newValue) {
-<<<<<<< HEAD
                 minaInkopslistorAnchorPane.toFront();
-=======
                 //myListsPane.toFront();
->>>>>>> b2e6fb1ae309b7d67c391c33a4ad70efac7745d1
             }
         });
+
+        */
 
         favoritePageButton.defaultButtonProperty().addListener(new ChangeListener<Boolean>() {
             @Override
@@ -485,15 +451,10 @@ public class Controller implements Initializable {
              cartList product = new cartList(products.get(i), this);
              cartListFlowPane.getChildren().add(product);
          }
-
-
-
     }
 
 
 
-    //Försök att gör rutnät av produkterna på startsidan
-    @FXML private FlowPane flowPaneHomePage;
     IMatDataHandler imatdatahandler;
 
     private void updateHomePage(){

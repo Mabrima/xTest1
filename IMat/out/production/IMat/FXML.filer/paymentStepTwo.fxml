@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane fx:id="paymentStepTwoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="1166.0" style="-fx-background-color: ffffff;" styleClass="text-normal" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="paymentStepTwoAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="1166.0" style="-fx-background-color: ffffff;" styleClass="text-normal" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <TextField fx:id="bankNameTextField" layoutX="737.0" layoutY="185.0" prefHeight="27.0" prefWidth="246.0" promptText="Handelsbanken" />
       <TextField fx:id="cardNameTextField" layoutX="737.0" layoutY="230.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" />
