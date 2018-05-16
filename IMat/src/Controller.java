@@ -27,7 +27,7 @@ public class Controller implements Initializable{
     private static final DateFormat customListDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
 
-<<<<<<< HEAD
+/**<<<<<<< HEAD
     //fxid TILL AreYouSureDeleteSavedInfo
    @FXML
     private AnchorPane areYouSureTakeAwaySavedTasksPane;
@@ -138,12 +138,7 @@ public class Controller implements Initializable{
     @FXML
     private Button
 
-
-
-
-
-=======
->>>>>>> 40a8bc566cda4ec876426f37166531a1483f6411
+    **/
 
     //TODO many more button etc connections as well as a rigorous name check
 
