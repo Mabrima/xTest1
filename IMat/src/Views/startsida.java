@@ -41,8 +41,22 @@ public class startsida extends AnchorPane{
     private Controller parentController;
     private ShoppingItem product;
 
+    public startsida(){
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/startsidan.fxml"));
+        fxmlLoader.setRoot(this);
+        fxmlLoader.setController(this);
+
+        try {
+            fxmlLoader.load();
+        } catch (IOException exception) {
+            throw new RuntimeException(exception);
+        }
+
+
+    }
+
     public startsida(Product product, Controller controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML.filer/startsida.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/startsidan.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 

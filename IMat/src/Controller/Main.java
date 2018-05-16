@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import Views.startsida;
 
 import java.util.ResourceBundle;
 
@@ -15,9 +16,12 @@ public class Main extends Application {
 
         ResourceBundle rb = java.util.ResourceBundle.getBundle("Controller/ResourceBundle");
 
-        Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/startsidan.fxml"), rb);
+        //Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/startsidan.fxml"), rb);
 
-        Scene scene = new Scene(root, 1400, 800);
+
+        startsida startsida = new startsida();
+
+        Scene scene = new Scene(startsida, 1368, 768);
 
         stage.setTitle(rb.getString("application.name"));
         stage.setScene(scene);
