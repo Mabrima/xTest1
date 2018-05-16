@@ -181,14 +181,9 @@ public class Controller implements Initializable {
 
         dataHandler = IMatDataHandler.getInstance();
         loadCustomLists();
-
-<<<<<<< HEAD
-        
-=======
         updateCart();
         updateHomePage();
 
->>>>>>> c3e71e7144b6b5c94506c950f3274d02f25889aa
 
         //TODO add more connections for all the buttons etc and what they should do
         //might have to make toStartButton 1-x
@@ -249,12 +244,9 @@ public class Controller implements Initializable {
                     //TODO handle productList
                 }
             }
-<<<<<<< HEAD
         });*/
-=======
-        });
 
->>>>>>> c3e71e7144b6b5c94506c950f3274d02f25889aa
+
     }
 
     public void addCartAsCustomList(){
