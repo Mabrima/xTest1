@@ -5,10 +5,13 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.control.Label;
+import javafx.scene.layout.Pane;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCart;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
-import java.awt.*;
 import java.io.IOException;
 
 public class product extends AnchorPane {
@@ -18,26 +21,40 @@ public class product extends AnchorPane {
     @FXML
     private AnchorPane productAnchorPane;
     @FXML
-    private ImageView productFavoriteStar, productImageItem, productPlusItem, productMinusItem;
+    private ImageView productFavoriteStar;
     @FXML
-    private Label productItemLabel, productPriceItem, amountItemProductView;
+    private  ImageView productImageItem;
+    @FXML
+    private ImageView productPlusItem;
+    @FXML
+    private  ImageView productMinusItem;
+    @FXML
+    private Label productItemLabel;
+    @FXML
+    private Label productPriceItem;
+    @FXML
+    private Label amountItemProductView;
 
     private Controller parentController;
-    private ShoppingItem product;
+    private ShoppingItem product2;
+    Product product;
+    IMatDataHandler db= IMatDataHandler.getInstance();
+    ShoppingCart shoppingCart;
 
-    public product(Product product, Controller controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML.filer/product.fxml"));
-        fxmlLoader.setRoot(this);
+    public product(Product product) throws IOException{
+        this.product = product;
+        System.out.println(product.getName());
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/product.fxml"));
         fxmlLoader.setController(this);
+        fxmlLoader.setRoot(this);
+        fxmlLoader.load();
 
-        try {
-            fxmlLoader.load();
-        } catch (IOException exception) {
-            throw new RuntimeException(exception);
-        }
 
-        this.product = new ShoppingItem(product);
-        this.parentController = controller;
+        productImageItem.setImage(db.getFXImage(product, 100, 100));
+        productItemLabel.setText(product.getName());
+        productPriceItem.setText(Double.toString(product.getPrice()) + product.getUnit());
 
+        shoppingCart = db.getShoppingCart();
     }
+
 }

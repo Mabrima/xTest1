@@ -2,7 +2,10 @@ package Views;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ProductCategory;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 import Controller.Controller;
 
@@ -10,6 +13,9 @@ import Controller.Controller;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Button;
@@ -39,6 +45,8 @@ public class startsida extends AnchorPane{
     @FXML Button vegetableButton;
     @FXML Button meatButton;
     @FXML Button fishButton;
+    @FXML ScrollPane productScroll;
+    @FXML FlowPane productFlow;
     @FXML
     private  Button  charkButton, dairyCookingButton, lactoseFreeButton, bakingButton, cannedFoodButton, pastaRiceButton;
     @FXML
@@ -50,25 +58,29 @@ public class startsida extends AnchorPane{
 
     private Controller parentController;
     private ShoppingItem product;
-
+    public IMatDataHandler dataHandler;
 
     public startsida(){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/HomPage1.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-
+        dataHandler = IMatDataHandler.getInstance();
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
+        //addProducts();
         myListPageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
             MyListAnchorPane.toFront();
         });
         homePageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
+            ArrayList<Product> pl = new ArrayList<>();
+            pl.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.FISH));
+            pl.addAll(IMatDataHandler.getInstance().getProducts(ProductCategory.MEAT));
+            addProducts(pl);
         });
         favoritePageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
@@ -91,6 +103,21 @@ public class startsida extends AnchorPane{
         this.parentController = controller;
 
     }
+    private void addProducts(List<Product> pl){
+        productFlow.getChildren().clear();
+       try {
+           for(Product p : pl) {
+
+               productFlow.getChildren().add(new product(p));
+               productFlow.getChildren().add(new javafx.scene.control.Label("   "));
+           }
+
+
+       }
+       catch (Exception e){
+            e.printStackTrace();
+       }
+       }
 
    // @FXML AnchorPane HomePageAnchorPane;
     @FXML AnchorPane MyListAnchorPane;
