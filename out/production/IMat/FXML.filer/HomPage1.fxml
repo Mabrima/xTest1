@@ -3,8 +3,12 @@
 <?import java.lang.String?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollBar?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -13,12 +17,144 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<fx:root fx:id="HomePageBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="HomePageBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane fx:id="MyListAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
+      <StackPane fx:id="categoryPane" layoutX="200.0" layoutY="200.0" prefHeight="588.0" prefWidth="1166.0">
          <children>
-            <Label layoutX="80.0" layoutY="80.0" text="Mina inköpslistor" />
+            <AnchorPane prefHeight="568.0" prefWidth="1166.0">
+               <children>
+                  <FlowPane fx:id="categoryFlow" prefHeight="528.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;" />
+                  <Label fx:id="categoryLabel" prefHeight="57.0" prefWidth="683.0" text="Kategori">
+                     <font>
+                        <Font size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="varukorgLabel" layoutX="18.0" layoutY="11.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Varukorg" textFill="#9b3d3d">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="varukorgCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="565.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/kryss.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="varukorgTaBortButton" layoutX="7.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Ta bort varukorg" />
+                  <Button fx:id="varukorgKeepShoppingButton" layoutX="157.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Button fx:id="varukorgGoPaymentButton" layoutX="441.0" layoutY="359.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+                  <Label fx:id="shoppingCartTotalLabel" layoutX="308.0" layoutY="363.0" prefHeight="17.0" prefWidth="130.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Totalt 0 kr" />
+                  <Line endX="600.0" layoutY="50.0" stroke="#979494" />
+                  <Line endX="600.0" layoutY="350.0" stroke="#979494" />
+                  <AnchorPane fx:id="cartListFlowPane" layoutY="50.0" prefHeight="300.0" prefWidth="600.0">
+                     <children>
+                        <FlowPane prefHeight="300.0" prefWidth="600.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="minaVarorAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Button fx:id="minaVarorSparaListaButton" layoutX="845.0" layoutY="523.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Spara lista" />
+                  <Button fx:id="minaVarorFortsattHandlaButton" layoutX="21.0" layoutY="522.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="137.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Button fx:id="minaVarorTillBetalningButton" layoutX="990.0" layoutY="523.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+                  <Label fx:id="minaVarorLabel" layoutX="43.0" layoutY="24.0" prefHeight="29.0" prefWidth="226.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Mina varor" textFill="#9b3d3d">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Line endX="1000.0" layoutX="172.0" layoutY="70.0" startX="-172.0" />
+                  <Line endX="1000.0" layoutX="171.0" layoutY="510.0" startX="-172.0" />
+                  <AnchorPane fx:id="minaVarorVaraAnchorPane" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="1166.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/product_117.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="111.0" layoutY="28.0" prefHeight="0.0" prefWidth="185.0" text="Röda äpplen" />
+                        <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="621.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/plus.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="525.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/minus.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" layoutX="557.0" layoutY="29.0" prefHeight="17.0" prefWidth="52.0" text="10 st" />
+                        <Label layoutX="872.0" layoutY="27.0" prefHeight="17.0" prefWidth="91.0" text="100,00 kr" />
+                        <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="1091.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/trash.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="-7.0" layoutY="71.0" prefHeight="438.0" prefWidth="1178.0">
+                     <children>
+                        <ScrollBar fx:id="minaVarorScrollPane" layoutX="1156.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="17.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="areYouSureTakeAwaySavedTasksPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0">
+               <children>
+                  <Label fx:id="areYouSureLabel" layoutX="39.0" layoutY="60.0" prefHeight="89.0" prefWidth="291.0" text="Är du säker på att du vill ta bort dina sparade uppgifter?" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="areYouSureYesButton" layoutX="39.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Ja" />
+                  <Button fx:id="areYouSureNoButton" layoutX="126.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Nej" />
+                  <Button fx:id="areYouSureCancelButton" layoutX="271.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Avbryt" />
+                  <ImageView fx:id="areYouSureCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/kryss.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="searchbarAnchorPane" layoutX="200.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="35.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/MAgnifyingGlass.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="searchField" layoutX="65.0" layoutY="5.0" prefHeight="30.0" prefWidth="462.0" promptText="Hitta vara" styleClass="text-frontpage-slogan" AnchorPane.leftAnchor="65.0" />
+            <Button fx:id="searchButton" layoutX="529.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="59.0" styleClass="text-normal-button" text="Sök" />
+            <Button fx:id="searchbarGoToCheckout" layoutX="900.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" styleClass="text-normal-button" text="Gå till kassan" />
+            <Button fx:id="searchbarCart" layoutX="1022.0" layoutY="4.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="142.0" styleClass="text-normal-button" />
+            <ImageView fx:id="cart" fitHeight="20.0" fitWidth="20.0" layoutX="1120.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/varukorg.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="searchbarCartLabel" layoutX="1047.0" layoutY="10.0" styleClass="text-normal-button" text="Varukorg" />
+            <Button fx:id="searchbarContinueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
+            <Button fx:id="continueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="favoriteAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: fffff;">
@@ -26,16 +162,291 @@
             <Label text="favoriter" />
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="MyListAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
+         <children>
+            <Label layoutX="80.0" layoutY="80.0" text="Mina inköpslistor" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="historyAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="historyLabel" layoutX="30.0" layoutY="80.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Historik" textFill="#9b3d3d" />
+                  <Line endX="1080.0" layoutX="99.0" layoutY="115.0" startX="-100.0" />
+                  <Button fx:id="historyFortsattHandlaButton" layoutX="28.0" layoutY="517.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Line endX="1080.0" layoutX="109.0" layoutY="501.0" startX="-114.0" />
+                  <ScrollBar fx:id="historyScrollbar" layoutX="1149.0" layoutY="117.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="17.0" />
+                  <Accordion fx:id="historyAccordion" layoutY="116.0" prefHeight="384.0" prefWidth="1148.0" styleClass="background-color-beige" stylesheets="@../textfile.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="minVarukorgAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <AnchorPane fx:id="dinVarukorgLabel" minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                     <children>
+                        <Button fx:id="minVarukorgSparaListaButton" layoutX="377.0" layoutY="525.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Spara lista" />
+                        <Button fx:id="minVarukorgFortsattHandlaButton" layoutX="30.0" layoutY="526.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="150.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                        <Button fx:id="minVarukorgTillBetalningButton" layoutX="983.0" layoutY="524.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="123.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+                        <Button fx:id="minVarukorgTaBortButton" layoutX="204.0" layoutY="525.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="144.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Ta bort varukorg" />
+                        <Label fx:id="minVarukorgTotaltLabel" layoutX="796.0" layoutY="530.0" prefHeight="24.0" prefWidth="131.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Totalt: 0,0 kr" />
+                     </children>
+                  </AnchorPane>
+                  <Label fx:id="minVarukorgLabel" layoutX="12.0" layoutY="19.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Min varukorg" textFill="#9b3d3d">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <Line endX="1021.0" layoutX="145.0" layoutY="69.0" startX="-144.0" stroke="#979494" />
+                  <Line endX="1026.0" layoutX="140.0" layoutY="514.0" startX="-144.0" stroke="#979494" />
+                  <ScrollBar fx:id="minVarukorgScrollbar" layoutX="1149.0" layoutY="70.0" orientation="VERTICAL" prefHeight="443.0" prefWidth="17.0" styleClass="background-color-beige" stylesheets="@../textfile.css" />
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
+      <AnchorPane fx:id="namnPaListanAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="683.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="namnPaListanLabel" layoutX="28.0" layoutY="24.0" styleClass="text-headers" text="Namn på lista:" textFill="#9b3d3d">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="namnPaListanKryss" fitHeight="22.0" fitWidth="22.0" layoutX="649.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/kryss.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="namnPaListaSparaButton" layoutX="595.0" layoutY="349.0" mnemonicParsing="false" styleClass="text-buttons-green" text="Spara" textFill="#f9f3e5" />
+                  <TextField fx:id="namnPaListanTextfalt" layoutX="196.0" layoutY="26.0" prefHeight="27.0" prefWidth="399.0" />
+                  <AnchorPane fx:id="namnPaListanVarorPane" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0">
+                     <children>
+                        <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/product_122.jpg" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="110.0" layoutY="17.0" prefHeight="17.0" prefWidth="185.0" text="Röda äpplen" />
+                        <Label alignment="CENTER" layoutX="316.0" layoutY="17.0" prefHeight="17.0" prefWidth="52.0" text="10 st" />
+                        <Label layoutX="483.0" layoutY="17.0" prefHeight="17.0" prefWidth="91.0" text="100,00 kr" />
+                        <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="627.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../images/trash.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <ScrollBar fx:id="namnPaListaScrollbar" layoutX="666.0" layoutY="75.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="17.0" />
+                  <Line endX="566.0" layoutX="116.0" layoutY="75.0" startX="-115.0" stroke="#979494" />
+                  <Line endX="566.0" layoutX="116.0" layoutY="345.0" startX="-115.0" stroke="#979494" />
+                  <Button fx:id="namnPaListaFortsattHandlaButton" layoutX="14.0" layoutY="349.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="149.0" styleClass="text-normal-button" text="Fortsätt handla " />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paymentStepOneAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="1166.0" styleClass="background-color-white" stylesheets="@../textfile.css">
+               <children>
+                  <TextField fx:id="nameInfoTextField" layoutX="254.0" layoutY="198.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" styleClass="text-frontpage-slogan" />
+                  <TextField fx:id="addressTextField" layoutX="254.0" layoutY="240.0" prefHeight="27.0" prefWidth="246.0" promptText="Matvägen 1" styleClass="text-frontpage-slogan" />
+                  <TextField fx:id="postNumberTextField" layoutX="254.0" layoutY="280.0" prefHeight="27.0" prefWidth="246.0" promptText="123 45" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" />
+                  <Label layoutX="90.0" layoutY="200.0" styleClass="text-normal" text="För- och efternamn" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="189.5" layoutY="242.0" styleClass="text-normal" text="Adress" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="143.5" layoutY="282.0" styleClass="text-normal" text="Postnummer" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="phoneNumberTextField" layoutX="253.0" layoutY="319.0" prefHeight="27.0" prefWidth="248.0" promptText="123- 45 67 89" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" />
+                  <Label layoutX="118.5" layoutY="321.0" styleClass="text-normal" text="Telefonnummer" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="emailTextField" layoutX="253.0" layoutY="356.0" prefHeight="27.0" prefWidth="248.0" promptText="email@email.com" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" />
+                  <Label layoutX="157.5" layoutY="358.0" styleClass="text-normal" text="Mejladress" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="600.0" layoutY="219.0" styleClass="text-normal" text="Datum" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="627.0" layoutY="267.0" styleClass="text-normal" text="Tid" textFill="#4d8632">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="nextToPaymentButton" layoutX="662.0" layoutY="329.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="362.0" styleClass="text-buttons-green" text="Nästa" textFill="#f9f3e5">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="deleteMyInfoButton" layoutX="1002.0" layoutY="6.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
+                  <Button fx:id="changeMyInfoButton" layoutX="851.0" layoutY="6.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
+                  <Button fx:id="continueShoppingButtonPaymentStepOne" layoutX="718.0" layoutY="6.0" mnemonicParsing="false" text="Fortsätt handla" />
+                  <Label layoutX="206.0" layoutY="144.0" styleClass="text-headers" text="Namn och personuppgifter" textFill="#326e16">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="662.0" layoutY="144.0" styleClass="text-headers" text="Leveransinformation" textFill="#326e16">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="662.0" layoutY="172.0" prefHeight="46.0" prefWidth="358.0">
+                     <children>
+                        <Text fill="#4d8632" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text-frontpage-slogan" text="Din order kommer levereras hem till din dörr." wrappingWidth="349.11474609375" />
+                     </children>
+                  </TextFlow>
+                  <DatePicker fx:id="chooseDateDatePickerPaymentStepOne" layoutX="662.0" layoutY="217.0" prefHeight="27.0" prefWidth="362.0" promptText="Välj leverans datum" stylesheets="@../textfile.css" />
+                  <RadioButton fx:id="time7to11RadioButton" accessibleRole="COMBO_BOX" layoutX="663.0" layoutY="267.0" mnemonicParsing="false" text="07:00-11:00" textFill="#526540">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="time11to15RadioButton" accessibleRole="COMBO_BOX" layoutX="788.0" layoutY="268.0" mnemonicParsing="false" text="11:00-15:00" textFill="#526540">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="time15to19RadioButton" accessibleRole="COMBO_BOX" layoutX="910.0" layoutY="268.0" mnemonicParsing="false" text="15:00-19:00" textFill="#526540">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="paymentStepTwoAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="1166.0" style="-fx-background-color: ffffff;" styleClass="text-normal" stylesheets="@../textfile.css">
+               <children>
+                  <TextField fx:id="bankNameTextField" layoutX="737.0" layoutY="185.0" prefHeight="27.0" prefWidth="246.0" promptText="Handelsbanken" />
+                  <TextField fx:id="cardNameTextField" layoutX="737.0" layoutY="230.0" prefHeight="27.0" prefWidth="246.0" promptText="Förnamn Efternamn" />
+                  <TextField fx:id="cardNumberTextField" layoutX="737.0" layoutY="275.0" prefHeight="27.0" prefWidth="246.0" promptText="1234 5678 9012 3456" />
+                  <Label layoutX="689.0" layoutY="185.0" styleClass="text-paymentStepOnePage-normal" text="Bank" textFill="#4d8632" AnchorPane.rightAnchor="446.5">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="616.0" layoutY="230.0" styleClass="text-paymentStepOnePage-normal" text="Kontoinnehavare" textFill="#4d8632" AnchorPane.rightAnchor="446.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="633.0" layoutY="275.0" styleClass="text-paymentStepOnePage-normal" text="Kontonummer" textFill="#4d8632" AnchorPane.rightAnchor="446.5">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="expireDateTextfield" layoutX="736.0" layoutY="320.0" prefHeight="27.0" prefWidth="33.0" promptText="11" />
+                  <Label layoutX="629.0" layoutY="320.0" styleClass="text-paymentStepOnePage-normal" text="Utgångsdatum" textFill="#4d8632" AnchorPane.rightAnchor="446.0">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="ccvTextField" layoutX="736.0" layoutY="365.0" prefHeight="27.0" prefWidth="40.0" promptText="123" />
+                  <Label layoutX="692.0" layoutY="365.0" styleClass="text-paymentStepOnePage-normal" text="CCV" textFill="#4d8632" AnchorPane.rightAnchor="446.5">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextFlow layoutX="143.0" layoutY="198.0" prefHeight="186.0" prefWidth="399.0">
+                     <children>
+                        <Text fx:id="deliveryInfoTextField" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="395.48779296875" />
+                     </children>
+                  </TextFlow>
+                  <TextField fx:id="expireMonthTextField" layoutX="791.0" layoutY="320.0" prefHeight="27.0" prefWidth="33.0" promptText="11" />
+                  <Label layoutX="778.0" layoutY="320.0" text="/" />
+                  <Label layoutX="143.0" layoutY="144.0" styleClass="text-header" text="Leveransinformation" textFill="#326e16">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="736.0" layoutY="144.0" styleClass="text-header" text="Bankuppgifter" textFill="#326e16">
+                     <font>
+                        <Font size="23.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="deleteMyCardInfoButton" layoutX="942.0" layoutY="17.0" mnemonicParsing="false" text="Ta bort mina uppgifter " />
+                  <Button fx:id="changeMyCardInfoButton" layoutX="731.0" layoutY="17.0" mnemonicParsing="false" text="Ändra mina uppgifter" />
+                  <Button fx:id="continueShoppingButtonPaymentStepTwo" layoutX="568.0" layoutY="17.0" mnemonicParsing="false" text="Fortsätt handla" />
+                  <Button fx:id="completePaymentButton" layoutX="735.0" layoutY="410.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="246.0" style="-fx-background-color: #526540;" styleClass="text-buttons-green" text="Genomför köp" textFill="#f9f3e5">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="backToPaymentStepOne" layoutX="143.0" layoutY="410.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="193.0" styleClass="text-paymentStepOnePage-normal" text="Tillbaka ">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="minaInkopslistorAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="minaInkopslistorLabel" layoutX="30.0" layoutY="80.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Mina inköpslistor" textFill="#9b3d3d" />
+                  <Line endX="1080.0" layoutX="99.0" layoutY="115.0" startX="-100.0" />
+                  <Button fx:id="minaInkopslistorFortsattHandlaButton" layoutX="28.0" layoutY="517.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Line endX="1080.0" layoutX="109.0" layoutY="501.0" startX="-114.0" />
+                  <ScrollBar fx:id="minaInkopsListorScrollbar" layoutX="1149.0" layoutY="117.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="17.0" />
+                  <Accordion fx:id="minaInkopslistorAccordion" layoutY="116.0" prefHeight="384.0" prefWidth="1148.0" styleClass="background-color-beige" stylesheets="@../textfile.css" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="genomfortAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="genomförtLabel2" layoutX="39.0" layoutY="62.0" prefHeight="89.0" prefWidth="291.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Ditt köp är genomfört! Ha en trevlig dag!" textFill="#526540" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="genomfortOkejButton2" layoutX="137.0" layoutY="161.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="95.0" style="-fx-background-color: #526540;" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Okej!" textFill="#f9f3e5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <ImageView fx:id="genomfortKryssImage2" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../images/kryss.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children></AnchorPane>
       <AnchorPane fx:id="HomePageAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: ffffff;">
          <children>
-            <Label layoutX="1120.0" layoutY="130.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="Mejladress: imat@imat.se" textFill="#326e16" />
-            <Label layoutX="1168.0" layoutY="80.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="Matland 345 23" textFill="#326e16" />
-            <Label layoutX="220.0" layoutY="72.0" styleClass="text-frontpage-welcome" stylesheets="@../textfile.css" text="Välkommen" textFill="#326e16" />
-            <Label layoutX="230.0" layoutY="161.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="Att handla mat online har aldrig varit såhär enkelt!" textFill="#4d8632" />
-            <Label layoutX="1120.0" layoutY="30.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="IMAT AB" textFill="#326e16" />
-            <Label layoutX="1120.0" layoutY="155.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="Tel: 031- 765 34 67" textFill="#326e16" />
-            <Label layoutX="1120.0" layoutY="55.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="Adress: IMAT vägen 1" textFill="#326e16" />
-            <Label layoutX="1168.0" layoutY="105.0" styleClass="text-frontpage-slogan" stylesheets="@../textfile.css" text="Göteborg" textFill="#326e16" />
+            <Label layoutX="1120.0" layoutY="130.0" styleClass="text-frontpage-slogan" text="Mejladress: imat@imat.se" textFill="#326e16" />
+            <Label layoutX="1168.0" layoutY="80.0" styleClass="text-frontpage-slogan" text="Matland 345 23" textFill="#326e16" />
+            <Label layoutX="230.0" layoutY="140.0" styleClass="text-frontpage-welcome" text="Välkommen" textFill="#326e16" />
+            <Label layoutX="230.0" layoutY="170.0" styleClass="text-frontpage-slogan" text="Att handla mat online har aldrig varit såhär enkelt!" textFill="#4d8632" />
+            <Label layoutX="1120.0" layoutY="30.0" styleClass="text-frontpage-slogan" text="IMAT AB" textFill="#326e16" />
+            <Label layoutX="1120.0" layoutY="155.0" styleClass="text-frontpage-slogan" text="Tel: 031- 765 34 67" textFill="#326e16" />
+            <Label layoutX="1120.0" layoutY="55.0" styleClass="text-frontpage-slogan" text="Adress: IMAT vägen 1" textFill="#326e16" />
+            <Label layoutX="1168.0" layoutY="105.0" styleClass="text-frontpage-slogan" text="Göteborg" textFill="#326e16" />
             <Button fx:id="homePageButton" alignment="BASELINE_LEFT" contentDisplay="CENTER" layoutX="-1.0" layoutY="200.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Startsida" textFill="#326e16" />
             <Button fx:id="myListPageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="240.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="201.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Mina inköpslistor" textFill="#4d8632" />
             <Button fx:id="favoritePageButton" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="279.0" maxWidth="205.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="201.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Favoriter" textFill="#326e16" />
@@ -150,15 +561,17 @@
             </TitledPane>
             <Line endY="768.0" layoutX="200.0" startY="200.0" />
             <Line endX="1366.0" layoutY="200.0" />
-            <StackPane fx:id="centerStageStackPain" layoutX="200.0" layoutY="200.0" prefHeight="567.0" prefWidth="1166.0">
+            <StackPane fx:id="centerStageStackPain" layoutX="200.0" layoutY="200.0" prefHeight="528.0" prefWidth="1166.0">
                <children>
-                  <AnchorPane fx:id="productPane" prefHeight="200.0" prefWidth="200.0">
+                  <AnchorPane fx:id="productPane" prefHeight="620.0" prefWidth="1207.0">
                      <children>
-                        <FlowPane fx:id="productFlow" layoutX="18.0" layoutY="46.0" prefHeight="513.0" prefWidth="1145.0" />
+                        <FlowPane fx:id="productFlow" layoutX="4.0" layoutY="64.0" prefHeight="500.0" prefWidth="1166.0" />
                      </children>
                   </AnchorPane>
                </children>
             </StackPane>
+            <Button fx:id="fishMeatChickenButtonfishMeatChickenButton" layoutX="70.0" layoutY="143.0" mnemonicParsing="false" text="fishMeatChickenButton" />
+            <Button fx:id="fruitButton" layoutX="83.0" layoutY="66.0" mnemonicParsing="false" text="fruitButton" />
          </children>
       </AnchorPane>
    </children>
