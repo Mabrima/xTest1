@@ -30,8 +30,15 @@ public class startsida extends AnchorPane{
     @FXML AnchorPane HomePageAnchorPane;
     @FXML
     private ImageView ImatImageView;
-    @FXML Button homePageButton, MyListPageButton, favoritePageButton, historyPageButton, helpPageButton, fruitButton, vegetableButton, meatButton, fishButton;
+    @FXML Button homePageButton;
     @FXML Button myListPageButton;
+    @FXML Button favoritePageButton;
+    @FXML Button historyPageButton;
+    @FXML Button helpPageButton;
+    @FXML Button fruitButton;
+    @FXML Button vegetableButton;
+    @FXML Button meatButton;
+    @FXML Button fishButton;
     @FXML
     private  Button  charkButton, dairyCookingButton, lactoseFreeButton, bakingButton, cannedFoodButton, pastaRiceButton;
     @FXML
@@ -55,9 +62,17 @@ public class startsida extends AnchorPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
         myListPageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
             MyListAnchorPane.toFront();
+        });
+        homePageButton.setOnAction(e -> {
+            HomePageAnchorPane.toFront();
+        });
+        favoritePageButton.setOnAction(e -> {
+            HomePageAnchorPane.toFront();
+            favoriteAnchorPane.toFront();
         });
     }
 
@@ -83,11 +98,7 @@ public class startsida extends AnchorPane{
 
 
 
-    @FXML
-    public void myListOnClick(ActionEvent event){
-        HomePageAnchorPane.toFront();
-        MyListAnchorPane.toFront();
-    }
+
 
 
 }
