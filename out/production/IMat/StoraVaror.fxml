@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="largeWaresPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="1166.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/product_133.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="111.0" layoutY="28.0" prefHeight="0.0" prefWidth="185.0" text="Röda äpplen" />
+      <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="524.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/minus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="largeWaresPlussButton" fitHeight="26.0" fitWidth="29.0" layoutX="618.0" layoutY="25.0" onMouseReleased="#increaseWare" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/plus.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="557.0" layoutY="29.0" prefHeight="17.0" prefWidth="52.0" text="10 st" />
+      <Label layoutX="872.0" layoutY="27.0" prefHeight="17.0" prefWidth="91.0" text="100,00 kr" />
+      <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="1091.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/trash.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

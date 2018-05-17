@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<fx:root type="AnchorPane" fx:id="AnchorPanePopUpCart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="600.0" styleClass="background-color-beige" stylesheets="@../textfile.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fx:id="productImagePopUpCart" fitHeight="43.0" fitWidth="82.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/product_8.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="productNamePopUpCart" layoutX="66.0" layoutY="16.0" prefHeight="21.0" prefWidth="191.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Bröd" />
+      <ImageView fx:id="minusPopUpCart" fitHeight="26.0" fitWidth="29.0" layoutX="228.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/minus.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="plusPopUpCart" fitHeight="26.0" fitWidth="29.0" layoutX="299.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/plus.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="amountProductsPopUpCart" alignment="CENTER" layoutX="250.0" layoutY="18.0" prefHeight="17.0" prefWidth="52.0" styleClass="text-normal" stylesheets="@../textfile.css" text="10 st" />
+      <Label fx:id="totalPricePopUpCart" layoutX="427.0" layoutY="16.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" text="100.00 kr" />
+      <ImageView fx:id="deleteProductPopUpCart" fitHeight="26.0" fitWidth="25.0" layoutX="564.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/trash.png" />
+         </image>
+      </ImageView>
+   </children>
+</fx:root>
