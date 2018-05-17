@@ -18,7 +18,7 @@
                </font></Label>
             <ImageView fx:id="productFavoriteStar" fitHeight="36.0" fitWidth="23.0" layoutX="203.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/star.png" />
+                  <Image url="@../images/star.png" />
                </image>
             </ImageView>
 
@@ -33,12 +33,12 @@
                <children>
                   <ImageView fx:id="productMinusItem" fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../images/minus.png" />
+                        <Image url="@../images/minus.png" />
                      </image>
                   </ImageView>
                   <ImageView fx:id="productPlusItem" fitHeight="25.0" fitWidth="25.0" layoutX="86.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../images/plus.png" />
+                        <Image url="@../images/plus.png" />
                      </image>
                   </ImageView>
                   <Label fx:id="amountItemProductView" layoutX="34.0" layoutY="6.0" prefHeight="13.0" prefWidth="44.0">
@@ -52,7 +52,7 @@
       </AnchorPane>
       <ImageView fx:id="productImageItem" fitHeight="173.0" fitWidth="230.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/product_1.jpg" />
+            <Image url="@../images/product_1.jpg" />
          </image>
       </ImageView>
       <Line endX="230.0" />

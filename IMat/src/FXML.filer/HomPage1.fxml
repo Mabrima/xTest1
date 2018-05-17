@@ -22,152 +22,7 @@
 
 <fx:root fx:id="HomePageBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <StackPane fx:id="categoryPane" layoutX="200.0" layoutY="200.0" prefHeight="588.0" prefWidth="1166.0">
-         <children>
-            <AnchorPane prefHeight="568.0" prefWidth="1166.0">
-               <children>
-                  <FlowPane fx:id="categoryFlow" prefHeight="528.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;" />
-                  <Label fx:id="categoryLabel" prefHeight="57.0" prefWidth="683.0" text="Kategori">
-                     <font>
-                        <Font size="46.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-         </children>
-      </StackPane>
-      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
-         <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
-               <children>
-                  <Label fx:id="varukorgLabel" layoutX="18.0" layoutY="11.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Varukorg" textFill="#9b3d3d">
-                     <font>
-                        <Font size="24.0" />
-                     </font>
-                  </Label>
-                  <ImageView fx:id="varukorgCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="565.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/kryss.png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="varukorgTaBortButton" layoutX="7.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Ta bort varukorg" />
-                  <Button fx:id="varukorgKeepShoppingButton" layoutX="157.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
-                  <Button fx:id="varukorgGoPaymentButton" layoutX="441.0" layoutY="359.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
-                  <Label fx:id="shoppingCartTotalLabel" layoutX="308.0" layoutY="363.0" prefHeight="17.0" prefWidth="130.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Totalt 0 kr" />
-                  <Line endX="600.0" layoutY="50.0" stroke="#979494" />
-                  <Line endX="600.0" layoutY="350.0" stroke="#979494" />
-                  <AnchorPane fx:id="cartListFlowPane" layoutY="50.0" prefHeight="300.0" prefWidth="600.0">
-                     <children>
-                        <FlowPane prefHeight="300.0" prefWidth="600.0" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="minaVarorAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
-         <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
-               <children>
-                  <Button fx:id="minaVarorSparaListaButton" layoutX="845.0" layoutY="523.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Spara lista" />
-                  <Button fx:id="minaVarorFortsattHandlaButton" layoutX="21.0" layoutY="522.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="137.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
-                  <Button fx:id="minaVarorTillBetalningButton" layoutX="990.0" layoutY="523.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
-                  <Label fx:id="minaVarorLabel" layoutX="43.0" layoutY="24.0" prefHeight="29.0" prefWidth="226.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Mina varor" textFill="#9b3d3d">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <Line endX="1000.0" layoutX="172.0" layoutY="70.0" startX="-172.0" />
-                  <Line endX="1000.0" layoutX="171.0" layoutY="510.0" startX="-172.0" />
-                  <AnchorPane fx:id="minaVarorVaraAnchorPane" layoutY="92.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="1166.0">
-                     <children>
-                        <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="22.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/product_117.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="111.0" layoutY="28.0" prefHeight="0.0" prefWidth="185.0" text="Röda äpplen" />
-                        <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="621.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/plus.png" />
-                           </image>
-                        </ImageView>
-                        <ImageView fitHeight="26.0" fitWidth="29.0" layoutX="525.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/minus.png" />
-                           </image>
-                        </ImageView>
-                        <Label alignment="CENTER" layoutX="557.0" layoutY="29.0" prefHeight="17.0" prefWidth="52.0" text="10 st" />
-                        <Label layoutX="872.0" layoutY="27.0" prefHeight="17.0" prefWidth="91.0" text="100,00 kr" />
-                        <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="1091.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/trash.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="-7.0" layoutY="71.0" prefHeight="438.0" prefWidth="1178.0">
-                     <children>
-                        <ScrollBar fx:id="minaVarorScrollPane" layoutX="1156.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="17.0" />
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="areYouSureTakeAwaySavedTasksPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
-         <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0">
-               <children>
-                  <Label fx:id="areYouSureLabel" layoutX="39.0" layoutY="60.0" prefHeight="89.0" prefWidth="291.0" text="Är du säker på att du vill ta bort dina sparade uppgifter?" wrapText="true">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="areYouSureYesButton" layoutX="39.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Ja" />
-                  <Button fx:id="areYouSureNoButton" layoutX="126.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Nej" />
-                  <Button fx:id="areYouSureCancelButton" layoutX="271.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Avbryt" />
-                  <ImageView fx:id="areYouSureCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/kryss.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </AnchorPane>
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="searchbarAnchorPane" layoutX="200.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
-         <children>
-            <ImageView fitHeight="47.0" fitWidth="35.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/MAgnifyingGlass.png" />
-               </image>
-            </ImageView>
-            <TextField fx:id="searchField" layoutX="65.0" layoutY="5.0" prefHeight="30.0" prefWidth="462.0" promptText="Hitta vara" styleClass="text-frontpage-slogan" AnchorPane.leftAnchor="65.0" />
-            <Button fx:id="searchButton" layoutX="529.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="59.0" styleClass="text-normal-button" text="Sök" />
-            <Button fx:id="searchbarGoToCheckout" layoutX="900.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" styleClass="text-normal-button" text="Gå till kassan" />
-            <Button fx:id="searchbarCart" layoutX="1022.0" layoutY="4.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="142.0" styleClass="text-normal-button" />
-            <ImageView fx:id="cart" fitHeight="20.0" fitWidth="20.0" layoutX="1120.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../images/varukorg.png" />
-               </image>
-            </ImageView>
-            <Label fx:id="searchbarCartLabel" layoutX="1047.0" layoutY="10.0" styleClass="text-normal-button" text="Varukorg" />
-            <Button fx:id="searchbarContinueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
-            <Button fx:id="continueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="favoriteAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: fffff;">
-         <children>
-            <Label text="favoriter" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="MyListAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0">
-         <children>
-            <Label layoutX="80.0" layoutY="80.0" text="Mina inköpslistor" />
-         </children>
-      </AnchorPane>
-      <AnchorPane fx:id="historyAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+      <AnchorPane fx:id="historyAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
          <children>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
                <children>
@@ -181,7 +36,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="minVarukorgAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+      <AnchorPane fx:id="minVarukorgAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="575.0" prefWidth="1169.0" style="-fx-background-color: lightgrey;">
          <children>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
                <children>
@@ -205,45 +60,28 @@
                </children>
             </AnchorPane>
          </children></AnchorPane>
-      <AnchorPane fx:id="namnPaListanAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+      <StackPane fx:id="categoryPane" layoutX="200.0" layoutY="200.0" prefHeight="588.0" prefWidth="1166.0">
          <children>
-            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="683.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+            <AnchorPane prefHeight="540.0" prefWidth="1166.0">
                <children>
-                  <Label fx:id="namnPaListanLabel" layoutX="28.0" layoutY="24.0" styleClass="text-headers" text="Namn på lista:" textFill="#9b3d3d">
+                  <FlowPane fx:id="categoryFlow" prefHeight="528.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;" />
+                  <Label fx:id="categoryLabel" prefHeight="57.0" prefWidth="683.0" text="Kategori">
                      <font>
-                        <Font size="24.0" />
+                        <Font size="46.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="namnPaListanKryss" fitHeight="22.0" fitWidth="22.0" layoutX="649.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../images/kryss.png" />
-                     </image>
-                  </ImageView>
-                  <Button fx:id="namnPaListaSparaButton" layoutX="595.0" layoutY="349.0" mnemonicParsing="false" styleClass="text-buttons-green" text="Spara" textFill="#f9f3e5" />
-                  <TextField fx:id="namnPaListanTextfalt" layoutX="196.0" layoutY="26.0" prefHeight="27.0" prefWidth="399.0" />
-                  <AnchorPane fx:id="namnPaListanVarorPane" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0">
-                     <children>
-                        <ImageView fitHeight="43.0" fitWidth="82.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/product_122.jpg" />
-                           </image>
-                        </ImageView>
-                        <Label layoutX="110.0" layoutY="17.0" prefHeight="17.0" prefWidth="185.0" text="Röda äpplen" />
-                        <Label alignment="CENTER" layoutX="316.0" layoutY="17.0" prefHeight="17.0" prefWidth="52.0" text="10 st" />
-                        <Label layoutX="483.0" layoutY="17.0" prefHeight="17.0" prefWidth="91.0" text="100,00 kr" />
-                        <ImageView fitHeight="23.0" fitWidth="18.0" layoutX="627.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../images/trash.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <ScrollBar fx:id="namnPaListaScrollbar" layoutX="666.0" layoutY="75.0" orientation="VERTICAL" prefHeight="270.0" prefWidth="17.0" />
-                  <Line endX="566.0" layoutX="116.0" layoutY="75.0" startX="-115.0" stroke="#979494" />
-                  <Line endX="566.0" layoutX="116.0" layoutY="345.0" startX="-115.0" stroke="#979494" />
-                  <Button fx:id="namnPaListaFortsattHandlaButton" layoutX="14.0" layoutY="349.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="149.0" styleClass="text-normal-button" text="Fortsätt handla " />
                </children>
             </AnchorPane>
+         </children>
+      </StackPane>
+      <AnchorPane fx:id="favoriteAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Label text="favoriter" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MyListAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <Label layoutX="80.0" layoutY="80.0" text="Mina inköpslistor" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="paymentStepOneAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
@@ -415,6 +253,35 @@
             </AnchorPane>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="varukorgAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane layoutX="400.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="varukorgLabel" layoutX="18.0" layoutY="11.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Varukorg" textFill="#9b3d3d">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="varukorgCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="565.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/kryss.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="varukorgTaBortButton" layoutX="7.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Ta bort varukorg" />
+                  <Button fx:id="varukorgKeepShoppingButton" layoutX="157.0" layoutY="359.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Button fx:id="varukorgGoPaymentButton" layoutX="441.0" layoutY="359.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="142.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+                  <Label fx:id="shoppingCartTotalLabel" layoutX="308.0" layoutY="363.0" prefHeight="17.0" prefWidth="130.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Totalt 0 kr" />
+                  <Line endX="600.0" layoutY="50.0" stroke="#979494" />
+                  <Line endX="600.0" layoutY="350.0" stroke="#979494" />
+                  <AnchorPane fx:id="cartListFlowPane" layoutY="50.0" prefHeight="300.0" prefWidth="600.0">
+                     <children>
+                        <FlowPane prefHeight="300.0" prefWidth="600.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="genomfortAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
          <children>
             <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
@@ -431,12 +298,126 @@
                   </Button>
                   <ImageView fx:id="genomfortKryssImage2" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../images/kryss.png" />
+                        <Image url="@../images/kryss.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
          </children></AnchorPane>
+      <AnchorPane fx:id="searchbarAnchorPane" layoutX="200.0" layoutY="200.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="35.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/MAgnifyingGlass.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="searchField" layoutX="65.0" layoutY="5.0" prefHeight="30.0" prefWidth="462.0" promptText="Hitta vara" styleClass="text-frontpage-slogan" AnchorPane.leftAnchor="65.0" />
+            <Button fx:id="searchButton" layoutX="529.0" layoutY="5.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="59.0" styleClass="text-normal-button" text="Sök" />
+            <Button fx:id="searchbarGoToCheckout" layoutX="900.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="120.0" styleClass="text-normal-button" text="Gå till kassan" />
+            <Button fx:id="searchbarCart" layoutX="1022.0" layoutY="4.0" mnemonicParsing="false" nodeOrientation="RIGHT_TO_LEFT" prefHeight="31.0" prefWidth="142.0" styleClass="text-normal-button" />
+            <ImageView fx:id="cart" fitHeight="20.0" fitWidth="20.0" layoutX="1120.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/varukorg.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="searchbarCartLabel" layoutX="1047.0" layoutY="10.0" styleClass="text-normal-button" text="Varukorg" />
+            <Button fx:id="searchbarContinueShoppingButton" layoutX="767.0" layoutY="4.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="131.0" styleClass="text-normal-button" text="Fortsätt handla" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="namnPaListanAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="384.0" prefWidth="683.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="namnPaListanLabel" layoutX="28.0" layoutY="24.0" styleClass="text-headers" text="Namn på lista:" textFill="#9b3d3d">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="namnPaListanKryss" fitHeight="22.0" fitWidth="22.0" layoutX="649.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/kryss.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="namnPaListaSparaButton" layoutX="595.0" layoutY="349.0" mnemonicParsing="false" styleClass="text-buttons-green" text="Spara" textFill="#f9f3e5" />
+                  <TextField fx:id="namnPaListanTextfalt" layoutX="196.0" layoutY="26.0" prefHeight="27.0" prefWidth="399.0" />
+                  <AnchorPane fx:id="namnPaListanVarorPane" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="683.0" />
+                  <Line endX="566.0" layoutX="116.0" layoutY="75.0" startX="-115.0" stroke="#979494" />
+                  <Line endX="566.0" layoutX="116.0" layoutY="345.0" startX="-115.0" stroke="#979494" />
+                  <Button fx:id="namnPaListaFortsattHandlaButton" layoutX="14.0" layoutY="349.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="149.0" styleClass="text-normal-button" text="Fortsätt handla " />
+                  <StackPane layoutX="-3.0" layoutY="73.0" prefHeight="276.0" prefWidth="687.0">
+                     <children>
+                        <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="274.0" prefWidth="687.0">
+                                 <children>
+                                    <FlowPane prefHeight="276.0" prefWidth="682.0" />
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </StackPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="areYouSureTakeAwaySavedTasksPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="241.0" prefWidth="368.0">
+               <children>
+                  <Label fx:id="areYouSureLabel" layoutX="39.0" layoutY="60.0" prefHeight="89.0" prefWidth="291.0" text="Är du säker på att du vill ta bort dina sparade uppgifter?" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="areYouSureYesButton" layoutX="39.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Ja" />
+                  <Button fx:id="areYouSureNoButton" layoutX="126.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Nej" />
+                  <Button fx:id="areYouSureCancelButton" layoutX="271.0" layoutY="182.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="59.0" text="Avbryt" />
+                  <ImageView fx:id="areYouSureCrossImage" fitHeight="29.0" fitWidth="27.0" layoutX="317.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/kryss.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="minaVarorAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Button fx:id="minaVarorSparaListaButton" layoutX="845.0" layoutY="523.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="106.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Spara lista" />
+                  <Button fx:id="minaVarorFortsattHandlaButton" layoutX="21.0" layoutY="522.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="137.0" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Button fx:id="minaVarorTillBetalningButton" layoutX="990.0" layoutY="523.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="123.0" styleClass="text-buttons-green" stylesheets="@../textfile.css" text="Till betalning" textFill="#f9f3e5" />
+                  <Label fx:id="minaVarorLabel" layoutX="43.0" layoutY="24.0" prefHeight="29.0" prefWidth="226.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Mina varor" textFill="#9b3d3d">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Line endX="1000.0" layoutX="172.0" layoutY="70.0" startX="-172.0" />
+                  <Line endX="1000.0" layoutX="171.0" layoutY="510.0" startX="-172.0" />
+                  <AnchorPane layoutX="-7.0" layoutY="71.0" prefHeight="438.0" prefWidth="1178.0">
+                     <children>
+                        <ScrollBar fx:id="minaVarorScrollPane" layoutX="1156.0" orientation="VERTICAL" prefHeight="438.0" prefWidth="17.0" />
+                        <StackPane fx:id="minaVarorPane" layoutX="6.0" layoutY="1.0" prefHeight="438.0" prefWidth="1165.0">
+                           <children>
+                              <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                                <content>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="437.0" prefWidth="1165.0">
+                                       <children>
+                                          <FlowPane fx:id="minaVarorFlow" layoutY="-1.0" prefHeight="437.0" prefWidth="1165.0" />
+                                       </children>
+                                    </AnchorPane>
+                                </content>
+                              </ScrollPane>
+                           </children>
+                        </StackPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
       <AnchorPane fx:id="HomePageAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: ffffff;">
          <children>
             <Label layoutX="1120.0" layoutY="130.0" styleClass="text-frontpage-slogan" text="Mejladress: imat@imat.se" textFill="#326e16" />
@@ -460,17 +441,17 @@
             </Button>
             <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="170.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/starIFylld.png" />
+                  <Image url="@../images/starIFylld.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="170.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../images/lista.png" />
+                  <Image url="@../images/lista.png" />
                </image>
             </ImageView>
             <ImageView fitHeight="25.0" fitWidth="20.0" layoutX="170.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" y="200.0">
                <image>
-                  <Image url="@../../images/questionmark.png" />
+                  <Image url="@../images/questionmark.png" />
                </image>
             </ImageView>
             <TitledPane animated="false" layoutY="431.0" maxWidth="200.0" minHeight="40.0" prefHeight="330.0" prefWidth="200.0" style="-fx-background-color: ffffff;" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Kategorier" textFill="#4d8632">
@@ -565,7 +546,11 @@
                <children>
                   <AnchorPane fx:id="productPane" prefHeight="620.0" prefWidth="1207.0">
                      <children>
-                        <FlowPane fx:id="productFlow" layoutX="4.0" layoutY="64.0" prefHeight="500.0" prefWidth="1166.0" />
+                        <ScrollPane layoutY="89.0" prefHeight="467.0" prefWidth="1170.0">
+                           <content>
+                              <FlowPane fx:id="productFlow" prefHeight="479.0" prefWidth="1166.0" />
+                           </content>
+                        </ScrollPane>
                      </children>
                   </AnchorPane>
                </children>

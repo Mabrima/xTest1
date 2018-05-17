@@ -31,12 +31,28 @@ public class startsida extends AnchorPane{
 
 
     //fx:id till alla bakgrunder
+    @FXML private AnchorPane HomePageBase;
     @FXML private AnchorPane HomePageAnchorPane;
-    @FXML private AnchorPane MyListAnchorPane;
-    @FXML private AnchorPane favoriteAnchorPane;
-    @FXML private AnchorPane myHistoryAnchorPane;
+
     @FXML private AnchorPane helpAnchorPane;
+
     @FXML private StackPane categoryPane;
+
+    @FXML private AnchorPane minaVarorAnchorPane;
+    @FXML private AnchorPane areYouSureTakeAwaySavedTaskPane;
+    @FXML private AnchorPane searchbarAnchorPane;
+    @FXML private AnchorPane favoriteAnchorPane;
+    @FXML private AnchorPane MyListAnchorPane;
+    @FXML private AnchorPane historyAnchorPane;
+    @FXML private AnchorPane minVarukorgAnchorPane;
+    @FXML private AnchorPane namnPaListanAnchorPane;
+    @FXML private AnchorPane paymentStepOneAnchorPane;
+    @FXML private AnchorPane paymentStepTwoAnchorPane;
+    @FXML private AnchorPane minaInkopslistorAnchorPane;
+    @FXML private AnchorPane genomfortAnchorPane;
+    @FXML private AnchorPane varukorgAnchorPane;
+
+
 
     @FXML private FlowPane categoryFlow;
 
@@ -47,12 +63,20 @@ public class startsida extends AnchorPane{
     @FXML private Label categoryLabel;
 
 
-    //fx:id för alla knappar
+    //fx:id för alla knappar för meny
     @FXML private Button homePageButton;
     @FXML private Button myListPageButton;
     @FXML private Button favoritePageButton;
     @FXML private Button historyPageButton;
     @FXML private Button helpPageButton;
+
+
+    //fx:id searchbarknappar
+    @FXML private Button searchButton;
+    @FXML private Button searchbarGoToCheckout;
+    @FXML private Button searchbarCart;
+    @FXML private Button searchbarContinueShoppingButton;
+
 
 
     @FXML private Button categoryButton;
@@ -107,6 +131,7 @@ public class startsida extends AnchorPane{
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         dataHandler = IMatDataHandler.getInstance();
+
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
@@ -115,8 +140,10 @@ public class startsida extends AnchorPane{
 
         homePageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
+            searchbarAnchorPane.toFront();
             //Lägger till alla produkter på startsidan
             addProducts(IMatDataHandler.getInstance().getProducts());
+
         });
 
 
@@ -124,6 +151,7 @@ public class startsida extends AnchorPane{
         myListPageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
             MyListAnchorPane.toFront();
+            searchbarAnchorPane.toFront();
         });
 
 
@@ -131,17 +159,20 @@ public class startsida extends AnchorPane{
         favoritePageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
             favoriteAnchorPane.toFront();
+            searchbarAnchorPane.toFront();
         });
 
 
         historyPageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
-            myHistoryAnchorPane.toFront();
+            historyAnchorPane.toFront();
+            searchbarAnchorPane.toFront();
         });
 
         helpPageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
             helpAnchorPane.toFront();
+            searchbarAnchorPane.toFront();
         });
 
 
@@ -203,6 +234,24 @@ public class startsida extends AnchorPane{
 
               addProducts(fishMeatChickenList);
           });*/
+
+
+     searchbarGoToCheckout.setOnAction(e ->{
+         HomePageAnchorPane.toFront();
+         minVarukorgAnchorPane.toFront();
+     });
+
+
+        searchbarCart.setOnAction(e -> {
+            varukorgAnchorPane.toFront();
+        });
+
+        searchbarContinueShoppingButton.setOnAction(e -> {
+            HomePageAnchorPane.toFront();
+            searchbarAnchorPane.toFront();
+
+        });
+
 
 
     }

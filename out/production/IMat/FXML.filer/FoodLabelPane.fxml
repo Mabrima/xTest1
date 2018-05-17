@@ -9,25 +9,25 @@
    <children>
       <ImageView fx:id="foodLabelPaneImageView" fitHeight="43.0" fitWidth="82.0" layoutX="15.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/product_8.jpg" />
+            <Image url="@../images/product_8.jpg" />
          </image>
       </ImageView>
       <Label fx:id="foodLabelPaneVaraLabel" layoutX="115.0" layoutY="22.0" prefHeight="21.0" prefWidth="191.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Röda äpplen" />
       <ImageView fx:id="foodLabelPaneMinusImage" fitHeight="26.0" fitWidth="29.0" layoutX="463.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/minus.png" />
+            <Image url="@../images/minus.png" />
          </image>
       </ImageView>
       <ImageView fx:id="foodLabelPlusImage" fitHeight="26.0" fitWidth="29.0" layoutX="555.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/plus.png" />
+            <Image url="@../images/plus.png" />
          </image>
       </ImageView>
       <Label fx:id="foodLabelPaneAmountLabel" alignment="CENTER" layoutX="496.0" layoutY="22.0" prefHeight="17.0" prefWidth="52.0" styleClass="text-normal" stylesheets="@../textfile.css" text="10 st" />
       <Label fx:id="foodLabelPanePrice" layoutX="883.0" layoutY="21.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" text="100,00 kr" />
       <ImageView fx:id="foodLabelPaneTrashImage" fitHeight="26.0" fitWidth="25.0" layoutX="1094.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/trash.png" />
+            <Image url="@../images/trash.png" />
          </image>
       </ImageView>
    </children>

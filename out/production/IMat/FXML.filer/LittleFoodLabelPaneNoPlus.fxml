@@ -9,7 +9,7 @@
    <children>
       <ImageView fx:id="littleFoodLabelNoPlusImage" fitHeight="43.0" fitWidth="82.0" layoutX="15.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/product_134.gif" />
+            <Image url="@../images/product_134.gif" />
          </image>
       </ImageView>
       <Label fx:id="littleFoodLabelNoPlusVaraLabel" layoutX="110.0" layoutY="17.0" prefHeight="17.0" prefWidth="185.0" styleClass="text-normal" stylesheets="@../textfile.css" text="Röda äpplen" />
@@ -17,7 +17,7 @@
       <Label fx:id="littleFoodLabelNoPlusPriceLabel" layoutX="522.0" layoutY="17.0" prefHeight="17.0" prefWidth="91.0" styleClass="text-normal" stylesheets="@../textfile.css" text="100,00 kr" />
       <ImageView fx:id="littleFoodLabelNoPlusTrashImage" fitHeight="24.0" fitWidth="25.0" layoutX="638.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/trash.png" />
+            <Image url="@../images/trash.png" />
          </image>
       </ImageView>
    </children>
