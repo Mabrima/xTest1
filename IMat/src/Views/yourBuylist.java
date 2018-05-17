@@ -15,14 +15,10 @@ import java.io.IOException;
 public class yourBuylist extends AnchorPane {
 
     //fxid TILL yourBuyList
-    @FXML
-    private AnchorPane minaInkopslistorAnchorPane;
-    @FXML
-    private Button minaInkopslistorFortsattHandlaButton;
-    @FXML
-    private Accordion minaInkopslistorAccordion;
-    @FXML
-    private Scrollbar minaInkopsListorScrollbar;
+    @FXML private AnchorPane minaInkopslistorAnchorPane;
+    @FXML private Button minaInkopslistorFortsattHandlaButton;
+    @FXML private Accordion minaInkopslistorAccordion;
+    @FXML private Scrollbar minaInkopsListorScrollbar;
 
     private Controller parentController;
     private ShoppingItem product;

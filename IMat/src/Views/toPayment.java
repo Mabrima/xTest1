@@ -13,12 +13,12 @@ import java.io.IOException;
 
 public class toPayment extends AnchorPane {
     //fxid TILL toPayment
-    @FXML
-    private AnchorPane minaVarorAnchorPane, minaVarorVaraAnchorPane;
-    @FXML
-    private Scrollbar minaVarorScrollPane;
-    @FXML
-    private Button minaVarorSparaListaButton, minaVarorFortsattHandlaButton, minaVarorTillBetalningButton;
+    @FXML private AnchorPane minaVarorAnchorPane;
+    @FXML private AnchorPane minaVarorVaraAnchorPane;
+    @FXML private Scrollbar minaVarorScrollPane;
+    @FXML private Button minaVarorSparaListaButton;
+    @FXML private Button minaVarorFortsattHandlaButton;
+    @FXML private Button minaVarorTillBetalningButton;
 
     private Controller parentController;
     private ShoppingItem product;

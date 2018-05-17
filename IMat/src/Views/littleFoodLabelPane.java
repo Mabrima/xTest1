@@ -14,12 +14,14 @@ import java.io.IOException;
 public class littleFoodLabelPane extends AnchorPane {
 
     //fxid TILL LittleFoodLabelPane
-    @FXML
-    private AnchorPane AnchorPanePopUpCart;
-    @FXML
-    private Label productNamePopUpCart, amountProductsPopUpCart, totalPricePopUpCart;
-    @FXML
-    private ImageView minusPopUpCart, plusPopUpCart, deleteProductPopUpCart, productImagePopUpCart;
+    @FXML private AnchorPane AnchorPanePopUpCart;
+    @FXML private Label productNamePopUpCart;
+    @FXML private Label amountProductsPopUpCart;
+    @FXML private Label totalPricePopUpCart;
+    @FXML private ImageView minusPopUpCart;
+    @FXML private ImageView plusPopUpCart;
+    @FXML private ImageView deleteProductPopUpCart;
+    @FXML private ImageView productImagePopUpCart;
 
     private Controller parentController;
     private ShoppingItem product;

@@ -16,16 +16,20 @@ import java.io.IOException;
 public class paymentStepOne extends AnchorPane {
 
     //fxid TILL PaymentStepOne
-    @FXML
-    private AnchorPane paymentStepOneAnchorPane;
-    @FXML
-    private DatePicker chooseDateDatePickerPaymentStepOne;
-    @FXML
-    private Button continueShoppingButtonPaymentStepOne, changeMyInfoButton, deleteMyInfoButton, nextToPaymentButton;
-    @FXML
-    private TextField nameInfoTextField, addressTextField, postNumberTextField, phoneNumberTextField, emailTextField;
-    @FXML
-    private RadioButton time7to11RadioButton, time11to15RadioButton, time15to19RadioButton;
+    @FXML private AnchorPane paymentStepOneAnchorPane;
+    @FXML private DatePicker chooseDateDatePickerPaymentStepOne;
+    @FXML private Button continueShoppingButtonPaymentStepOne;
+    @FXML private Button changeMyInfoButton;
+    @FXML private Button deleteMyInfoButton;
+    @FXML private Button nextToPaymentButton;
+    @FXML private TextField nameInfoTextField;
+    @FXML private TextField addressTextField;
+    @FXML private TextField postNumberTextField;
+    @FXML private TextField phoneNumberTextField;
+    @FXML private TextField emailTextField;
+    @FXML private RadioButton time7to11RadioButton;
+    @FXML private RadioButton time11to15RadioButton;
+    @FXML private RadioButton time15to19RadioButton;
 
     private Controller parentController;
     private ShoppingItem product;

@@ -15,15 +15,14 @@ public class foodLabelPaneNoPlus extends AnchorPane {
 
 
     //fxid TILL FoodLabelPaneNoPlus
-    @FXML
-    private AnchorPane foodPaneNoPlusAnchorPane;
-    @FXML
-    private Label foodPaneNoPlusVaraLabel, foodPaneNoPlusPriceLabel;
-    @FXML
-    private ImageView foodPaneNoPlusTrashImage, foodPaneNoPlusImageView;
+    @FXML private AnchorPane foodPaneNoPlusAnchorPane;
+    @FXML private Label foodPaneNoPlusVaraLabel;
+    @FXML private Label foodPaneNoPlusPriceLabel;
+    @FXML private ImageView foodPaneNoPlusTrashImage;
+    @FXML private ImageView foodPaneNoPlusImageView;
 
-    private Controller parentController;
-    private ShoppingItem product;
+    @FXML private Controller parentController;
+    @FXML private ShoppingItem product;
 
     public foodLabelPaneNoPlus(Product product, Controller controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML.filer/foodLabelPaneNoPlus.fxml"));

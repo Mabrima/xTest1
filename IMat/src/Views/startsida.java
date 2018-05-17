@@ -6,7 +6,6 @@ import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 import Controller.Controller;
 
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.io.IOException;
@@ -18,35 +17,29 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 
-
-
-
-
-
-
 public class startsida extends AnchorPane{
     //fxid TILL startsidan
 
     @FXML AnchorPane HomePageAnchorPane;
-    @FXML
-    private ImageView ImatImageView;
-    @FXML Button homePageButton;
-    @FXML Button myListPageButton;
-    @FXML Button favoritePageButton;
-    @FXML Button historyPageButton;
-    @FXML Button helpPageButton;
-    @FXML Button fruitButton;
-    @FXML Button vegetableButton;
-    @FXML Button meatButton;
-    @FXML Button fishButton;
-    @FXML
-    private  Button  charkButton, dairyCookingButton, lactoseFreeButton, bakingButton, cannedFoodButton, pastaRiceButton;
-    @FXML
-    private FlowPane flowPaneHomePage;
-    @FXML
-    private Accordion homepageAccordion;
-    @FXML
-    private TitledPane homepageCathegorysTitledPane, fruitVegetableButton, meatFishButton, dairyProductsButton, pantryButton ;
+    @FXML private ImageView ImatImageView;
+    @FXML private Button homePageButton;
+    @FXML private Button myListPageButton;
+    @FXML private Button favoritePageButton;
+    @FXML private Button historyPageButton;
+    @FXML private Button helpPageButton;
+    @FXML private Button fruitButton;
+    @FXML private Button vegetableButton;
+    @FXML private Button meatButton;
+    @FXML private Button fishButton;
+    @FXML private Button  charkButton;
+    @FXML private Button dairyCookingButton;
+    @FXML private Button lactoseFreeButton;
+    @FXML private Button bakingButton;
+    @FXML private Button cannedFoodButton;
+    @FXML private Button pastaRiceButton;
+    @FXML private FlowPane flowPaneHomePage;
+    @FXML private Accordion homepageAccordion;
+    @FXML private TitledPane homepageCathegorysTitledPane, fruitVegetableButton, meatFishButton, dairyProductsButton, pantryButton ;
 
     private Controller parentController;
     private ShoppingItem product;

@@ -16,18 +16,14 @@ public class nameOnTheListPane extends AnchorPane {
 
 
     //fxid TILL nameOnTheListPane
-    @FXML
-    private AnchorPane namnPaListanAnchorPane, namnPaListanVarorPane;
-    @FXML
-    private TextField namnPaListanTextfalt;
-    @FXML
-    private Label namnPaListanLabel;
-    @FXML
-    private javafx.scene.control.Button namnPaListaFortsattHandlaButton, namnPaListaSparaButton;
-    @FXML
-    private ImageView namnPaListanKryss;
-    @FXML
-    private Scrollbar namnPaListaScrollbar;
+    @FXML private AnchorPane namnPaListanAnchorPane;
+    @FXML private AnchorPane namnPaListanVarorPane;
+    @FXML private TextField namnPaListanTextfalt;
+    @FXML private Label namnPaListanLabel;
+    @FXML private javafx.scene.control.Button namnPaListaFortsattHandlaButton;
+    @FXML private javafx.scene.control.Button namnPaListaSparaButton;
+    @FXML private ImageView namnPaListanKryss;
+    @FXML private Scrollbar namnPaListaScrollbar;
 
     private Controller parentController;
     private ShoppingItem product;

@@ -15,12 +15,12 @@ public class product extends AnchorPane {
 
 
     //fxid TILL Product
-    @FXML
-    private AnchorPane productAnchorPane;
-    @FXML
-    private ImageView productFavoriteStar, productImageItem, productPlusItem, productMinusItem;
-    @FXML
-    private Label productItemLabel, productPriceItem, amountItemProductView;
+    @FXML private AnchorPane productAnchorPane;
+    @FXML private ImageView productFavoriteStar;
+    @FXML private ImageView productImageItem;
+    @FXML private ImageView productPlusItem;
+    @FXML private ImageView productMinusItem;
+    @FXML private Label productItemLabel, productPriceItem, amountItemProductView;
 
     private Controller parentController;
     private ShoppingItem product;

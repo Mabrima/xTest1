@@ -13,14 +13,14 @@ import java.io.IOException;
 public class myShoppingCart extends AnchorPane {
 
     //fxid TILL myShoppingCart
-    @FXML
-    private AnchorPane minVarukorgAnchorPane;
-    @FXML
-    private Label minVarukorgLabel, minVarukorgTotaltLabel;
-    @FXML
-    private javafx.scene.control.Button minVarukorgFortsattHandlaButton, minVarukorgTaBortButton, minVarukorgSparaListaButton, minVarukorgTillBetalningButton;
-    @FXML
-    private Scrollbar minVarukorgScrollbar;
+    @FXML private AnchorPane minVarukorgAnchorPane;
+    @FXML private Label minVarukorgLabel;
+    @FXML private Label minVarukorgTotaltLabel;
+    @FXML private javafx.scene.control.Button minVarukorgFortsattHandlaButton;
+    @FXML private javafx.scene.control.Button minVarukorgTaBortButton;
+    @FXML private javafx.scene.control.Button minVarukorgSparaListaButton;
+    @FXML private javafx.scene.control.Button minVarukorgTillBetalningButton;
+    @FXML private Scrollbar minVarukorgScrollbar;
 
 
     private Controller parentController;

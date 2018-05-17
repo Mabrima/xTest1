@@ -8,6 +8,7 @@ import javafx.scene.layout.AnchorPane;
 import se.chalmers.cse.dat216.project.Product;
 import se.chalmers.cse.dat216.project.ShoppingItem;
 
+import javax.swing.text.LabelView;
 import java.awt.*;
 import java.io.IOException;
 
@@ -15,12 +16,12 @@ public class littleFoodLabelPaneNoPlus extends AnchorPane {
 
 
     //fxid TILL LittleFoodLabelPaneNoPlus
-    @FXML
-    private AnchorPane littleFoodLabelNoPlusAnchorPane;
-    @FXML
-    private Label littleFoodLabelNoPlusVaraLabel, littleFoodLabelNoPlusAmountLabel, littleFoodLabelNoPlusPriceLabel;
-    @FXML
-    private ImageView littleFoodLabelNoPlusImage, littleFoodLabelNoPlusTrashImage;
+    @FXML private AnchorPane littleFoodLabelNoPlusAnchorPane;
+    @FXML private Label littleFoodLabelNoPlusVaraLabel;
+    @FXML private Label littleFoodLabelNoPlusAmountLabel;
+    @FXML private Label littleFoodLabelNoPlusPriceLabel;
+    @FXML private ImageView littleFoodLabelNoPlusImage;
+    @FXML private ImageView littleFoodLabelNoPlusTrashImage;
 
     private Controller parentController;
     private ShoppingItem product;

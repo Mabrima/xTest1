@@ -15,12 +15,12 @@ public class searchBar extends AnchorPane {
 
 
     //fxid TILL SearchBar
-    @FXML
-    private AnchorPane searchbarAnchorPane;
-    @FXML
-    private TextField searchField;
-    @FXML
-    private Button searchButton, searchbarContinueShoppingButton, searchbarGoToCheckout, searchbarCart;
+    @FXML private AnchorPane searchbarAnchorPane;
+    @FXML private TextField searchField;
+    @FXML private Button searchButton;
+    @FXML private Button searchbarContinueShoppingButton;
+    @FXML private Button searchbarGoToCheckout;
+    @FXML private Button searchbarCart;
 
     private Controller parentController;
     private ShoppingItem product;

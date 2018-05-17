@@ -8,13 +8,10 @@ import javafx.scene.layout.AnchorPane;
 
 public class historyTitledPane extends TitledPane {
 
-    @FXML
-    private TitledPane historyTitledPane;
-    @FXML
-    private AnchorPane historyTitledPaneAnchorPane;
-    @FXML
-    private Button historyTitledPaneRemoveButton, historyTitledPaneLaggVarukorgButton;
-    @FXML
-    private Label historyTitledPanePrice;
+    @FXML private TitledPane historyTitledPane;
+    @FXML private AnchorPane historyTitledPaneAnchorPane;
+    @FXML private Button historyTitledPaneRemoveButton;
+    @FXML private Button historyTitledPaneLaggVarukorgButton;
+    @FXML private Label historyTitledPanePrice;
 
 }

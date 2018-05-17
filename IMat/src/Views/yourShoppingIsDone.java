@@ -14,12 +14,9 @@ import java.io.IOException;
 public class yourShoppingIsDone extends AnchorPane{
 
     //fxid TILL YourShoppingIsDone
-    @FXML
-    private AnchorPane genomfortAnchorPane;
-    @FXML
-    private Button genomfortOkejButton;
-    @FXML
-    private ImageView genomfortKryssImage;
+    @FXML private AnchorPane genomfortAnchorPane;
+    @FXML private Button genomfortOkejButton;
+    @FXML private ImageView genomfortKryssImage;
 
     private Controller parentController;
     private ShoppingItem product;
