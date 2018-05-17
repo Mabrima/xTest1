@@ -16,12 +16,12 @@ public class Main extends Application {
 
         ResourceBundle rb = java.util.ResourceBundle.getBundle("Controller/ResourceBundle");
 
-        //Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/startsidan.fxml"), rb);
+        //Parent root = FXMLLoader.load(getClass().getResource("FXML.filer/HomePage1.fxml"), rb);
 
 
-        startsida startsida = new startsida();
+        startsida Startsida = new startsida();
 
-        Scene scene = new Scene(startsida, 1368, 768);
+        Scene scene = new Scene(Startsida, 1368, 768);
 
         stage.setTitle(rb.getString("application.name"));
         stage.setScene(scene);

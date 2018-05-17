@@ -8,6 +8,7 @@ import Controller.Controller;
 
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import javafx.fxml.FXML;
 import javafx.scene.control.Accordion;
@@ -20,15 +21,17 @@ import javafx.scene.layout.FlowPane;
 
 
 
+
+
+
 public class startsida extends AnchorPane{
     //fxid TILL startsidan
 
-    @FXML
-    private AnchorPane homepageAnchorPane;
+    @FXML AnchorPane HomePageAnchorPane;
     @FXML
     private ImageView ImatImageView;
-    @FXML
-    private Button homePageButton, myListPageButton, favoritePageButton, historyPageButton, helpPageButton, fruitButton, vegetableButton, meatButton, fishButton;
+    @FXML Button homePageButton, MyListPageButton, favoritePageButton, historyPageButton, helpPageButton, fruitButton, vegetableButton, meatButton, fishButton;
+    @FXML Button myListPageButton;
     @FXML
     private  Button  charkButton, dairyCookingButton, lactoseFreeButton, bakingButton, cannedFoodButton, pastaRiceButton;
     @FXML
@@ -41,8 +44,9 @@ public class startsida extends AnchorPane{
     private Controller parentController;
     private ShoppingItem product;
 
+
     public startsida(){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/startsidan.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/HomPage1.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -51,12 +55,14 @@ public class startsida extends AnchorPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-
-
+        myListPageButton.setOnAction(e -> {
+            HomePageAnchorPane.toFront();
+            MyListAnchorPane.toFront();
+        });
     }
 
     public startsida(Product product, Controller controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/startsidan.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/FXML.filer/HomPage1.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
 
@@ -70,5 +76,18 @@ public class startsida extends AnchorPane{
         this.parentController = controller;
 
     }
+
+   // @FXML AnchorPane HomePageAnchorPane;
+    @FXML AnchorPane MyListAnchorPane;
+    @FXML AnchorPane favoriteAnchorPane;
+
+
+
+    @FXML
+    public void myListOnClick(ActionEvent event){
+        HomePageAnchorPane.toFront();
+        MyListAnchorPane.toFront();
+    }
+
 
 }
