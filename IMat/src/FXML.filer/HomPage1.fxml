@@ -20,7 +20,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<fx:root fx:id="HomePageBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="HomePageBase" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: black;" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane fx:id="historyAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
          <children>
@@ -74,11 +74,6 @@
             </AnchorPane>
          </children>
       </StackPane>
-      <AnchorPane fx:id="favoriteAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
-         <children>
-            <Label text="favoriter" />
-         </children>
-      </AnchorPane>
       <AnchorPane fx:id="MyListAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
          <children>
             <Label layoutX="80.0" layoutY="80.0" text="Mina inköpslistor" />
@@ -557,6 +552,19 @@
             </StackPane>
             <Button fx:id="fishMeatChickenButtonfishMeatChickenButton" layoutX="70.0" layoutY="143.0" mnemonicParsing="false" text="fishMeatChickenButton" />
             <Button fx:id="fruitButton" layoutX="83.0" layoutY="66.0" mnemonicParsing="false" text="fruitButton" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="favoriteAnchorPane" layoutX="200.0" layoutY="200.0" prefHeight="568.0" prefWidth="1166.0" style="-fx-background-color: lightgrey;">
+         <children>
+            <AnchorPane layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="1166.0" styleClass="background-color-beige" stylesheets="@../textfile.css">
+               <children>
+                  <Label fx:id="favoritesLabel" layoutX="30.0" layoutY="80.0" styleClass="text-headers" stylesheets="@../textfile.css" text="Favoriter" textFill="#326e16" />
+                  <Line endX="1080.0" layoutX="99.0" layoutY="115.0" startX="-100.0" />
+                  <Button fx:id="favoritesFortsattHandlaButton" layoutX="28.0" layoutY="517.0" mnemonicParsing="false" styleClass="text-normal-button" stylesheets="@../textfile.css" text="Fortsätt handla" />
+                  <Line endX="1080.0" layoutX="109.0" layoutY="501.0" startX="-114.0" />
+                  <ScrollBar fx:id="historyScrollbar1" layoutX="1149.0" layoutY="117.0" orientation="VERTICAL" prefHeight="383.0" prefWidth="17.0" />
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

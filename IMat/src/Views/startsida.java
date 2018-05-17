@@ -146,14 +146,11 @@ public class startsida extends AnchorPane{
 
         });
 
-
-
         myListPageButton.setOnAction(e -> {
             HomePageAnchorPane.toFront();
             MyListAnchorPane.toFront();
             searchbarAnchorPane.toFront();
         });
-
 
 
         favoritePageButton.setOnAction(e -> {
