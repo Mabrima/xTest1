@@ -7,13 +7,13 @@
     -fx-font-size: 16px;
     -fx-font-family: "Georgia";
     -fx-font-color: #F9F3E5; //beige
-    -fx-background-color: #526540; //grön
+    -fx-background-color: #326E16; //grön
 }
 
 .text-headers{
     -fx-font-size: 23px;
     -fx-font-family: "Georgia";
-    -fx-font-color: #9B3D3D; //röd
+    -fx-font-color: #326E16; //Den nya gröna
 }
 
 .text-frontpage-welcome{
@@ -32,6 +32,11 @@
        -fx-background-color: #ffffff;
 }
 
+
+.background-color-beige{
+       -fx-background-color: #ffffff;
+}
+
 .text-normal{
     -fx-font-size: 18px;
     -fx-font-family: "Georgia";
@@ -42,7 +47,7 @@
 
 
 
-// ____________________________________
+// __________________________________
 
 .recipe-list-item{
     -fx-border-width: 1px;

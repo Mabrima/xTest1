@@ -13,14 +13,12 @@ import java.io.IOException;
 
 public class TiteledPaneKopListor extends TitledPane {
     //fxid TILL TitledPaneKöpListor
-    @FXML
-    private AnchorPane KopListorTillAccordionAnchorPane;
-    @FXML
-    private TitledPane minaInkopslistorTitledPane;
-    @FXML
-    private Label titledPaneKopListorPriceLabel;
-    @FXML
-    private javafx.scene.control.Button titledPaneKopListorListaIVarukorgButton, titledPaneKopListorRedigeraButton, titledPaneKopListorRemoveButton;
+    @FXML private AnchorPane KopListorTillAccordionAnchorPane;
+    @FXML private TitledPane minaInkopslistorTitledPane;
+    @FXML private Label titledPaneKopListorPriceLabel;
+    @FXML private javafx.scene.control.Button titledPaneKopListorListaIVarukorgButton;
+    @FXML private Button titledPaneKopListorRedigeraButton;
+    @FXML private Button titledPaneKopListorRemoveButton;
 
     private Controller parentController;
     private ShoppingItem product;

@@ -14,12 +14,18 @@ import java.io.IOException;
 public class paymentStepTwo extends AnchorPane {
 
     //fxid TILL PaymentStepTwo
-    @FXML
-    private AnchorPane paymentStepTwoAnchorPane;
-    @FXML
-    private Button backToPaymentStepOne, completePaymentButton, deleteMyCardInfoButton, changeMyCardInfoButton, continueShoppingButtonPaymentStepTwo;
-    @FXML
-    private TextField bankNameTextField, cardNameTextField, cardNumberTextField, expireDateTextfield, expireMonthTextField, ccvTextField;
+    @FXML private AnchorPane paymentStepTwoAnchorPane;
+    @FXML private Button backToPaymentStepOne;
+    @FXML private Button completePaymentButton;
+    @FXML private Button deleteMyCardInfoButton;
+    @FXML private Button changeMyCardInfoButton;
+    @FXML private Button continueShoppingButtonPaymentStepTwo;
+    @FXML private TextField bankNameTextField;
+    @FXML private TextField cardNameTextField;
+    @FXML private TextField cardNumberTextField;
+    @FXML private TextField expireDateTextfield;
+    @FXML private TextField expireMonthTextField;
+    @FXML private TextField ccvTextField;
 
     private Controller parentController;
     private ShoppingItem product;

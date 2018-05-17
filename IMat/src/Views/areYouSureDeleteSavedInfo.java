@@ -15,14 +15,12 @@ import java.io.IOException;
 
 public class areYouSureDeleteSavedInfo extends AnchorPane {
     //fxid TILL AreYouSureDeleteSavedInfo
-    @FXML
-    private AnchorPane areYouSureTakeAwaySavedTasksPane;
-    @FXML
-    private ImageView areYouSureCrossImage;
-    @FXML
-    private Label areYouSureLabel;
-    @FXML
-    private javafx.scene.control.Button areYouSureYesButton, areYouSureNoButton, areYouSureCancelButton;
+    @FXML private AnchorPane areYouSureTakeAwaySavedTasksPane;
+    @FXML private ImageView areYouSureCrossImage;
+    @FXML private Label areYouSureLabel;
+    @FXML private javafx.scene.control.Button areYouSureYesButton;
+    @FXML private javafx.scene.control.Button areYouSureCancelButton;
+    @FXML private javafx.scene.control.Button areYouSureNoButton;
 
     private Controller parentController;
     private ShoppingItem product;

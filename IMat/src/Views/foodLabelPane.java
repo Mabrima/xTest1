@@ -14,14 +14,15 @@ import java.io.IOException;
 public class foodLabelPane extends AnchorPane {
 
     //fxid TILL FoodLabelPane
-    @FXML
-    private AnchorPane foodLabelPaneAnchorPane;
-    @FXML
-    private Label foodLabelPaneVaraLabel, foodLabelPaneAmountLabel, foodLabelPanePrice;
-    @FXML
-    private ImageView foodLabelPlusImage, foodLabelPaneMinusImage, foodLabelPaneTrashImage;
-    private Controller parentController;
-    private ShoppingItem product;
+    @FXML private AnchorPane foodLabelPaneAnchorPane;
+    @FXML private Label foodLabelPaneVaraLabel;
+    @FXML private Label foodLabelPaneAmountLabel;
+    @FXML private Label foodLabelPanePrice;
+    @FXML private ImageView foodLabelPlusImage;
+    @FXML private ImageView foodLabelPaneMinusImage;
+    @FXML private ImageView foodLabelPaneTrashImage;
+    @FXML private Controller parentController;
+    @FXML private ShoppingItem product;
 
     public foodLabelPane(Product product, Controller controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("FXML.filer/foodLabelPane.fxml"));

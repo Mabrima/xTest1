@@ -14,16 +14,13 @@ import java.io.IOException;
 
 public class varukorg extends AnchorPane{
     //fxid TILL Varukorg
-    @FXML
-    private AnchorPane varukorgAnchorPane;
-    @FXML
-    private FlowPane varukorgFlowPane;
-    @FXML
-    private Label shoppingCartTotalLabel;
-    @FXML
-    private javafx.scene.control.Button varukorgKeepShoppingButton, varukorgTaBortButton, varukorgGoPaymentButton;
-    @FXML
-    private ImageView varukorgCrossImage;
+    @FXML private AnchorPane varukorgAnchorPane;
+    @FXML private FlowPane varukorgFlowPane;
+    @FXML private Label shoppingCartTotalLabel;
+    @FXML private javafx.scene.control.Button varukorgKeepShoppingButton;
+    @FXML private Button varukorgTaBortButton;
+    @FXML private Button varukorgGoPaymentButton;
+    @FXML private ImageView varukorgCrossImage;
 
     private Controller parentController;
     private ShoppingItem product;

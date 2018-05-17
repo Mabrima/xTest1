@@ -10,12 +10,8 @@ import java.awt.*;
 public class history extends AnchorPane {
 
 //FXIDn
-    @FXML
-    private AnchorPane historyAnchorPane;
-    @FXML
-    private Button historyFortsattHandlaButton;
-    @FXML
-    private Accordion historyAccordion;
-    @FXML
-    private Scrollbar historyScrollbar;
+    @FXML private AnchorPane historyAnchorPane;
+    @FXML private Button historyFortsattHandlaButton;
+    @FXML private Accordion historyAccordion;
+    @FXML private Scrollbar historyScrollbar;
 }
