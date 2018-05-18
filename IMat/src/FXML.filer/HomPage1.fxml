@@ -413,12 +413,12 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="HomePageAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: ffffff;">
+      <AnchorPane fx:id="HomePageAnchorPane" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: ffffff;" stylesheets="@../textfile.css">
          <children>
             <Label layoutX="1120.0" layoutY="130.0" styleClass="text-frontpage-slogan" text="Mejladress: imat@imat.se" textFill="#326e16" />
             <Label layoutX="1168.0" layoutY="80.0" styleClass="text-frontpage-slogan" text="Matland 345 23" textFill="#326e16" />
-            <Label layoutX="230.0" layoutY="140.0" styleClass="text-frontpage-welcome" text="Välkommen" textFill="#326e16" />
-            <Label layoutX="230.0" layoutY="170.0" styleClass="text-frontpage-slogan" text="Att handla mat online har aldrig varit såhär enkelt!" textFill="#4d8632" />
+            <Label layoutX="230.0" layoutY="76.0" styleClass="text-frontpage-welcome" text="Välkommen" textFill="#326e16" />
+            <Label layoutX="243.0" layoutY="166.0" styleClass="text-frontpage-slogan" text="Att handla mat online har aldrig varit såhär enkelt!" textFill="#4d8632" />
             <Label layoutX="1120.0" layoutY="30.0" styleClass="text-frontpage-slogan" text="IMAT AB" textFill="#326e16" />
             <Label layoutX="1120.0" layoutY="155.0" styleClass="text-frontpage-slogan" text="Tel: 031- 765 34 67" textFill="#326e16" />
             <Label layoutX="1120.0" layoutY="55.0" styleClass="text-frontpage-slogan" text="Adress: IMAT vägen 1" textFill="#326e16" />

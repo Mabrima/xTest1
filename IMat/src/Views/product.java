@@ -3,6 +3,7 @@ package Views;
 import Controller.Controller;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.control.Label;
@@ -34,6 +35,13 @@ public class product extends AnchorPane {
     private Label productPriceItem;
     @FXML
     private Label amountItemProductView;
+    @FXML
+    private Button transparentButtonStar;
+    @FXML
+    private Button transparentButtonMinus;
+    @FXML
+    private Button transparentButtonPlus;
+
 
     private Controller parentController;
     private ShoppingItem product2;
@@ -54,7 +62,22 @@ public class product extends AnchorPane {
         productItemLabel.setText(product.getName());
         productPriceItem.setText(Double.toString(product.getPrice()) + product.getUnit());
 
+        //TODO alice lägger till grejer nedan om + och - knappar samt "antal label"
+       // amountItemProductView.setText(Double.toString(product.get));
+
+
+
         shoppingCart = db.getShoppingCart();
+
+        transparentButtonPlus.setOnAction(e -> {
+            amountItemProductVi
+
+        });
+
+
+
+
+
     }
 
 }
